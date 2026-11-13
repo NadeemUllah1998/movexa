@@ -12,9 +12,9 @@
 <section class="relative text-white overflow-hidden py-10 sm:py-12 lg:py-14 bg-[#0A0D0C] w-full">
     {{-- Photographic Background Image with Clean Neutral Contrast --}}
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <img src="{{ asset('images/hero/movexa-hero-team.jpg') }}" 
+        <img src="{{ asset('images/hero/movexa-hero-team.webp') }}" 
              alt="MOVEXA Moving Services Dubai Fleet and Crew" 
-             class="w-full h-full object-cover object-center opacity-90 scale-100 pointer-events-none">
+             class="w-full h-full object-cover object-center opacity-90 scale-100 pointer-events-none" loading="lazy" decoding="async">
         <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/55 to-black/85"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
     </div>

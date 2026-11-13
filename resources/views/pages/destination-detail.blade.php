@@ -72,7 +72,7 @@
             {{-- Hero Right: Image --}}
             <div class="lg:col-span-5">
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-[4/3] group bg-[#08271F]">
-                    <img src="{{ $destination['image'] }}" alt="Relocation from Dubai to {{ $destination['country'] }} - MOVEXA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <img src="{{ $destination['image'] }}" alt="Relocation from Dubai to {{ $destination['country'] }} - MOVEXA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl text-[#08271F] flex items-center justify-between text-xs">
                         <div>

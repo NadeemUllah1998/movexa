@@ -12,10 +12,10 @@
 <section class="relative bg-neutral-900 text-white py-20 sm:py-28 overflow-hidden">
     {{-- Full Background Cover Picture --}}
     <div class="absolute inset-0 z-0">
-        <img src="{{ asset('images/gallery/movexa-gallery-skyline-crew-fleet.jpg') }}" 
+        <img src="{{ asset('images/gallery/movexa-gallery-skyline-crew-fleet.webp') }}" 
              alt="MOVEXA Moving Fleet & Uniformed Crew with Dubai Skyline" 
              class="w-full h-full object-cover object-center scale-100"
-             loading="eager">
+             loading="eager" decoding="async">
         {{-- Neutral Dark Gradient Overlay (No Green Background) for Optimal Contrast & Readability --}}
         <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/75"></div>
     </div>
@@ -93,7 +93,7 @@
                      alt="{{ $item['title'] }}" 
                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                      style="object-position: {{ $item['object_position'] ?? 'center' }};"
-                     loading="{{ $index < 6 ? 'eager' : 'lazy' }}">
+                     loading="{{ $index < 6 ? 'eager' : 'lazy' }}" decoding="async">
                 
                 {{-- Hover Lightbox Trigger Overlay --}}
                 <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">

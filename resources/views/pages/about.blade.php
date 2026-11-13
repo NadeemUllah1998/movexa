@@ -14,9 +14,9 @@
 <section class="relative text-white overflow-hidden py-10 sm:py-12 lg:py-14 bg-neutral-950 w-full flex items-center justify-center">
     {{-- Full Photographic Mover Background (Villa Relocation & Moving Crew in Action) --}}
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <img src="{{ asset('images/hero/movexa-hero-villa-unloading.jpg') }}" 
+        <img src="{{ asset('images/hero/movexa-hero-villa-unloading.webp') }}" 
              alt="MOVEXA Professional Relocation and Moving Operations in Dubai" 
-             class="w-full h-full object-cover object-center pointer-events-none scale-100">
+             class="w-full h-full object-cover object-center pointer-events-none scale-100" loading="lazy" decoding="async">
         {{-- Clean Neutral Cinematic Tint (No muddy colors, pure high contrast) --}}
         <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85 pointer-events-none"></div>
     </div>
@@ -124,9 +124,9 @@
                 {{-- Luxury Framed Inset Photo Container --}}
                 <div class="p-3 sm:p-3.5 pb-0">
                     <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner group/img">
-                        <img src="{{ asset('images/hero/movexa-hero-team.jpg') }}" 
+                        <img src="{{ asset('images/hero/movexa-hero-team.webp') }}" 
                              alt="MOVEXA 100% In-House Trained Moving Crew in Dubai" 
-                             class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+                             class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                         
                         {{-- Floating Glass Badge --}}
@@ -164,9 +164,9 @@
                 {{-- Luxury Framed Inset Photo Container --}}
                 <div class="p-3 sm:p-3.5 pb-0">
                     <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner group/img">
-                        <img src="{{ asset('images/gallery/movexa-gallery-sofa-living-room-wrapping.jpg') }}" 
+                        <img src="{{ asset('images/gallery/movexa-gallery-sofa-living-room-wrapping.webp') }}" 
                              alt="MOVEXA 5-Ply Protective Furniture Wrapping in Dubai" 
-                             class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+                             class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                         
                         {{-- Floating Glass Badge --}}
@@ -204,9 +204,9 @@
                 {{-- Luxury Framed Inset Photo Container --}}
                 <div class="p-3 sm:p-3.5 pb-0">
                     <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner group/img">
-                        <img src="{{ asset('images/gallery/movexa-gallery-branded-truck-in-transit.jpg') }}" 
+                        <img src="{{ asset('images/gallery/movexa-gallery-branded-truck-in-transit.webp') }}" 
                              alt="MOVEXA Branded Enclosed GPS Moving Truck in Dubai" 
-                             class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+                             class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                         
                         {{-- Floating Glass Badge --}}
@@ -244,9 +244,9 @@
                 {{-- Luxury Framed Inset Photo Container --}}
                 <div class="p-3 sm:p-3.5 pb-0">
                     <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner group/img">
-                        <img src="{{ asset('images/gallery/movexa-gallery-villa-relocation-loading.jpg') }}" 
+                        <img src="{{ asset('images/gallery/movexa-gallery-villa-relocation-loading.webp') }}" 
                              alt="MOVEXA Villa Relocation Loading and Dubai Developer NOC Clearances" 
-                             class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+                             class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                         
                         {{-- Floating Glass Badge --}}
@@ -356,9 +356,9 @@
                 
                 {{-- Main Photographic Card --}}
                 <div class="relative rounded-3xl overflow-hidden shadow-xl border-2 border-white aspect-[4/3] group bg-neutral-900">
-                    <img src="{{ asset('images/why-choose-us/movexa-why-choose-us-team-trucks-pose.jpg') }}" 
+                    <img src="{{ asset('images/why-choose-us/movexa-why-choose-us-team-trucks-pose.webp') }}" 
                          alt="MOVEXA Uniformed Crew and Fleet Ready for Moving in Dubai" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                     
                     {{-- Floating Top-Right Badge --}}
@@ -590,9 +590,9 @@
         <div class="bg-white rounded-3xl border border-[#E2E8E2] overflow-hidden shadow-sm card-hover flex flex-col justify-between group">
             <div>
                 <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                    <img src="{{ asset('images/services/movexa-service-home-moving.jpg') }}" 
+                    <img src="{{ asset('images/services/movexa-service-home-moving.webp') }}" 
                          alt="MOVEXA Residential Home Moving in Dubai" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
                         <i class="fa-solid fa-house-chimney mr-1 text-[#103B30]"></i> Residential
@@ -625,9 +625,9 @@
         <div class="bg-white rounded-3xl border border-[#E2E8E2] overflow-hidden shadow-sm card-hover flex flex-col justify-between group">
             <div>
                 <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                    <img src="{{ asset('images/services/movexa-service-villa-relocation.jpg') }}" 
+                    <img src="{{ asset('images/services/movexa-service-villa-relocation.webp') }}" 
                          alt="MOVEXA Luxury Villa Relocation Dubai" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
                         <i class="fa-solid fa-gem mr-1 text-[#103B30]"></i> Luxury Estates
@@ -660,9 +660,9 @@
         <div class="bg-white rounded-3xl border border-[#E2E8E2] overflow-hidden shadow-sm card-hover flex flex-col justify-between group">
             <div>
                 <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                    <img src="{{ asset('images/services/movexa-service-apartment-moving.jpg') }}" 
+                    <img src="{{ asset('images/services/movexa-service-apartment-moving.webp') }}" 
                          alt="MOVEXA High-Rise Apartment Moving Dubai Marina Downtown" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
                         <i class="fa-solid fa-building mr-1 text-[#103B30]"></i> High-Rise Towers
@@ -695,9 +695,9 @@
         <div class="bg-white rounded-3xl border border-[#E2E8E2] overflow-hidden shadow-sm card-hover flex flex-col justify-between group">
             <div>
                 <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                    <img src="{{ asset('images/services/movexa-service-office-relocation.jpg') }}" 
+                    <img src="{{ asset('images/services/movexa-service-office-relocation.webp') }}" 
                          alt="MOVEXA Corporate Office Shifting Dubai" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
                         <i class="fa-solid fa-briefcase mr-1 text-[#103B30]"></i> Corporate
@@ -730,9 +730,9 @@
         <div class="bg-white rounded-3xl border border-[#E2E8E2] overflow-hidden shadow-sm card-hover flex flex-col justify-between group">
             <div>
                 <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                    <img src="{{ asset('images/services/movexa-service-international-moving.jpg') }}" 
+                    <img src="{{ asset('images/services/movexa-service-international-moving.webp') }}" 
                          alt="MOVEXA International Relocation from Dubai to Worldwide" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
                         <i class="fa-solid fa-plane-departure mr-1 text-[#103B30]"></i> Worldwide
@@ -765,9 +765,9 @@
         <div class="bg-white rounded-3xl border border-[#E2E8E2] overflow-hidden shadow-sm card-hover flex flex-col justify-between group">
             <div>
                 <div class="relative aspect-[16/10] overflow-hidden bg-gray-100">
-                    <img src="{{ asset('images/services/movexa-service-storage-solutions.jpg') }}" 
+                    <img src="{{ asset('images/services/movexa-service-storage-solutions.webp') }}" 
                          alt="MOVEXA Climate-Controlled Storage and Custom Timber Crating Dubai" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
                         <i class="fa-solid fa-warehouse mr-1 text-[#103B30]"></i> Storage & Crates
@@ -862,9 +862,9 @@
                     {{-- Luxury Inset Photographic Header --}}
                     <div class="p-3 sm:p-3.5 pb-0">
                         <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner group/img">
-                            <img src="{{ asset('images/why-choose-us/movexa-why-choose-us-team-skyline.jpg') }}" 
+                            <img src="{{ asset('images/why-choose-us/movexa-why-choose-us-team-skyline.webp') }}" 
                                  alt="MOVEXA Free Relocation Survey and Volume Calculation in Dubai" 
-                                 class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+                                 class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
                             
                             {{-- Floating Glass Badge --}}
@@ -922,9 +922,9 @@
                     {{-- Luxury Inset Photographic Header --}}
                     <div class="p-3 sm:p-3.5 pb-0">
                         <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner group/img">
-                            <img src="{{ asset('images/gallery/movexa-gallery-crew-fleet-ramp.jpg') }}" 
+                            <img src="{{ asset('images/gallery/movexa-gallery-crew-fleet-ramp.webp') }}" 
                                  alt="MOVEXA Move Planning, Dedicated Coordinator, and Logistics Scheduling" 
-                                 class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+                                 class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
                             
                             {{-- Floating Glass Badge --}}
@@ -982,9 +982,9 @@
                     {{-- Luxury Inset Photographic Header --}}
                     <div class="p-3 sm:p-3.5 pb-0">
                         <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner group/img">
-                            <img src="{{ asset('images/gallery/movexa-gallery-sofa-living-room-wrapping.jpg') }}" 
+                            <img src="{{ asset('images/gallery/movexa-gallery-sofa-living-room-wrapping.webp') }}" 
                                  alt="MOVEXA Master Carpentry, 5-Ply Packing and Protective Wrapping" 
-                                 class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+                                 class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
                             
                             {{-- Floating Glass Badge --}}
@@ -1042,9 +1042,9 @@
                     {{-- Luxury Inset Photographic Header --}}
                     <div class="p-3 sm:p-3.5 pb-0">
                         <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-neutral-100 shadow-inner group/img">
-                            <img src="{{ asset('images/hero/movexa-hero-villa-unloading.jpg') }}" 
+                            <img src="{{ asset('images/hero/movexa-hero-villa-unloading.webp') }}" 
                                  alt="MOVEXA Furniture Reassembly, Unpacking and White-Glove Handover" 
-                                 class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out">
+                                 class="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
                             
                             {{-- Floating Glass Badge --}}
@@ -1143,9 +1143,9 @@
             {{-- Item 1: Moving Trucks --}}
             <div class="rounded-3xl border border-[#E2E8E2] bg-white shadow-sm hover:shadow-md overflow-hidden card-hover group">
                 <div class="aspect-[4/3] overflow-hidden bg-neutral-50">
-                    <img src="{{ asset('images/gallery/movexa-gallery-branded-truck-in-transit.jpg') }}" 
+                    <img src="{{ asset('images/gallery/movexa-gallery-branded-truck-in-transit.webp') }}" 
                          alt="MOVEXA Closed Box Moving Truck in Transit Dubai" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="p-5 space-y-2">
                     <span class="text-[11px] font-extrabold text-[#103B30] uppercase tracking-wider block">Modern Fleet</span>
@@ -1159,9 +1159,9 @@
             {{-- Item 2: Fragile Packing --}}
             <div class="rounded-3xl border border-[#E2E8E2] bg-white shadow-sm hover:shadow-md overflow-hidden card-hover group">
                 <div class="aspect-[4/3] overflow-hidden bg-neutral-50">
-                    <img src="{{ asset('images/gallery/movexa-gallery-fragile-room-packing.jpg') }}" 
+                    <img src="{{ asset('images/gallery/movexa-gallery-fragile-room-packing.webp') }}" 
                          alt="MOVEXA Fragile China and Glassware Packing" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="p-5 space-y-2">
                     <span class="text-[11px] font-extrabold text-[#103B30] uppercase tracking-wider block">Specialist Protection</span>
@@ -1175,9 +1175,9 @@
             {{-- Item 3: Furniture Wrap --}}
             <div class="rounded-3xl border border-[#E2E8E2] bg-white shadow-sm hover:shadow-md overflow-hidden card-hover group">
                 <div class="aspect-[4/3] overflow-hidden bg-neutral-50">
-                    <img src="{{ asset('images/gallery/movexa-gallery-mattress-protective-wrap.jpg') }}" 
+                    <img src="{{ asset('images/gallery/movexa-gallery-mattress-protective-wrap.webp') }}" 
                          alt="MOVEXA Mattress and Upholstery Protective Wrapping" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="p-5 space-y-2">
                     <span class="text-[11px] font-extrabold text-[#103B30] uppercase tracking-wider block">Cleanliness & Hygiene</span>
@@ -1191,9 +1191,9 @@
             {{-- Item 4: Villa Loading --}}
             <div class="rounded-3xl border border-[#E2E8E2] bg-white shadow-sm hover:shadow-md overflow-hidden card-hover group">
                 <div class="aspect-[4/3] overflow-hidden bg-neutral-50">
-                    <img src="{{ asset('images/gallery/movexa-gallery-villa-relocation-loading.jpg') }}" 
+                    <img src="{{ asset('images/gallery/movexa-gallery-villa-relocation-loading.webp') }}" 
                          alt="MOVEXA White-Glove Villa Moving Loading" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
                 <div class="p-5 space-y-2">
                     <span class="text-[11px] font-extrabold text-[#103B30] uppercase tracking-wider block">On-Site Logistics</span>

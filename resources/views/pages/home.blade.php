@@ -1067,37 +1067,37 @@ $localDubaiSlides = [
              timer: null,
              slides: [
                  {
-                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-team-trucks-pose.jpg') }}',
+                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-team-trucks-pose.webp') }}',
                      title: '15+ Full-Time Verified MOVEXA Team & Fleet',
                      subtitle: 'Official In-House Moving Crew & Daily Active Fleet in Dubai',
                      tag: 'Official MOVEXA Crew'
                  },
                  {
-                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-composite-services.jpg') }}',
+                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-composite-services.webp') }}',
                      title: 'Turnkey Packing, Assembly & Curtain Installation',
                      subtitle: '5-Ply Cartons, Bubble Wrap & Master Carpentry Handymen',
                      tag: 'Turnkey Relocation'
                  },
                  {
-                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-team-skyline.jpg') }}',
+                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-team-skyline.webp') }}',
                      title: 'Moving Across Dubai & All 7 UAE Emirates',
                      subtitle: 'Burj Khalifa Skyline & Daily Inter-City Relocations',
                      tag: 'UAE-Wide Coverage'
                  },
                  {
-                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-villa-loading.jpg') }}',
+                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-villa-loading.webp') }}',
                      title: 'White-Glove Villa & Luxury Residence Care',
                      subtitle: 'Careful Loading for Palm Jumeirah, Arabian Ranches & Dubai Hills',
                      tag: 'Luxury Villa Care'
                  },
                  {
-                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-crew-fleet.jpg') }}',
+                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-crew-fleet.webp') }}',
                      title: 'Modern GPS-Tracked Closed Fleet & Tail-Lifts',
                      subtitle: 'Hydraulic Tail-Lifts, Heavy-Duty Ramps & Padded Wrapping',
                      tag: 'Dedicated Fleet'
                  },
                  {
-                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-packers-movers-banner.jpg') }}',
+                     image: '{{ asset('images/why-choose-us/movexa-why-choose-us-packers-movers-banner.webp') }}',
                      title: 'Certified Movers & Packers in the UAE',
                      subtitle: 'Quick, Secure and Stress-Free Residential & Commercial Moves',
                      tag: 'Certified Quality'
@@ -1780,19 +1780,21 @@ $localDubaiSlides = [
      SECTIONS 10 & 12: TESTIMONIALS & FINAL CALL TO ACTION (WITH RELOCATION CREW BACKDROP)
      ========================================== --}}
 <div class="relative overflow-hidden bg-white">
-    {{-- Authentic Real Moving Operations Photographic Backdrop (Optimized WebP with Smooth Pure-White Ambient Fade) --}}
+    {{-- Authentic Real Moving Operations Photographic Backdrop (High Clarity & Definition, WebP) --}}
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         <picture>
             <source srcset="{{ asset('images/testimonials/movexa-movers-packing-boxes.webp') }}" type="image/webp">
             <img src="{{ asset('images/testimonials/movexa-movers-packing-boxes.jpg') }}" 
                  alt="MOVEXA Certified Moving & Packing Crew" 
-                 class="w-full h-full object-cover object-center sm:object-[center_20%] opacity-25 sm:opacity-30 filter blur-[0.5px] scale-105"
+                 class="w-full h-full object-cover object-center sm:object-[center_20%] opacity-85 sm:opacity-90 scale-100"
                  loading="lazy"
                  decoding="async">
         </picture>
-        {{-- Smooth White Vignette & Radiant Depth Overlays Ensuring Contrast & Clean Brand White Background --}}
-        <div class="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white pointer-events-none"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(216,243,107,0.12),transparent_70%)] pointer-events-none"></div>
+        {{-- Luxury Minimal Scrim & Seamless Edge Fades (Crisp Photo Visibility while Preserving Clean White Theme) --}}
+        <div class="absolute inset-0 bg-white/40 backdrop-blur-[0.5px] pointer-events-none"></div>
+        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-white via-white/85 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(216,243,107,0.08),transparent_70%)] pointer-events-none"></div>
         <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-70 pointer-events-none"></div>
     </div>
 
@@ -1876,18 +1878,20 @@ $localDubaiSlides = [
     <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-70 pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {{-- Section Heading --}}
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12 space-y-3">
-            <span class="forest-badge">
-                <i class="fa-solid fa-star text-[#D8F36B]"></i>
-                Verified Client Experiences
-            </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#073B2E] tracking-tight">
-                What Our Customers Say.
-            </h2>
-            <p class="text-sm sm:text-base text-[#5A645E] max-w-2xl mx-auto leading-relaxed">
-                Real feedback from clients who trusted MOVEXA with their home moves, villa relocations, and international shipments across Dubai and worldwide.
-            </p>
+        {{-- Section Heading with Frosted Glass Pod for Flawless Readability & Modern Luxury Contrast --}}
+        <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+            <div class="inline-block w-full px-6 py-5 sm:px-8 sm:py-6 rounded-3xl bg-white/92 backdrop-blur-md border border-white/80 shadow-[0_10px_35px_-8px_rgba(7,59,46,0.08)] space-y-2.5">
+                <span class="forest-badge shadow-xs">
+                    <i class="fa-solid fa-star text-[#D8F36B]"></i>
+                    Verified Client Experiences
+                </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black font-heading text-[#073B2E] tracking-tight">
+                    What Our Customers Say.
+                </h2>
+                <p class="text-xs sm:text-sm text-[#4E5B54] max-w-xl mx-auto leading-relaxed">
+                    Real feedback from clients who trusted MOVEXA with their home moves, villa relocations, and international shipments across Dubai and worldwide.
+                </p>
+            </div>
         </div>
 
         {{-- Single-Card Carousel Spotlight Card --}}
@@ -1983,6 +1987,8 @@ $localDubaiSlides = [
                                     @if(!empty($t['avatar']))
                                     <img src="{{ $t['avatar'] }}" 
                                          alt="{{ $t['name'] }}" 
+                                         loading="lazy"
+                                         decoding="async"
                                          class="w-full h-full rounded-full object-cover border-2 border-white ring-2 ring-[#D8F36B] shadow-sm"
                                          onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name={{ urlencode($t['name']) }}&background=103B30&color=D8F36B&bold=true';" />
                                     @else
@@ -2026,8 +2032,8 @@ $localDubaiSlides = [
                 </div>
             </div>
 
-            {{-- Slider Controls & Pagination Bar Below Card --}}
-            <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 px-2">
+            {{-- Slider Controls & Pagination Bar Below Card (Frosted Glass Pod) --}}
+            <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 px-5 py-3 rounded-2xl bg-white/92 backdrop-blur-md border border-white/80 shadow-xs max-w-4xl mx-auto">
                 {{-- Live Counter Indicator --}}
                 <div class="text-xs font-semibold text-[#5A645E] flex items-center gap-2">
                     <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#103B30] animate-pulse"></span>

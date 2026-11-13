@@ -14,15 +14,15 @@
     {{-- Full Natural Hero Background Image Layer --}}
     <div class="absolute inset-0 z-0 bg-[#071712] overflow-hidden pointer-events-none">
         {{-- Ambient soft-blurred backdrop to seamlessly fill any ultrawide aspect ratio --}}
-        <img src="{{ asset('images/gallery/movexa-gallery-truck-house-fleet.jpg') }}" 
+        <img src="{{ asset('images/gallery/movexa-gallery-truck-house-fleet.webp') }}" 
              alt="" 
              aria-hidden="true" 
-             class="absolute inset-0 w-full h-full object-cover filter blur-3xl opacity-30 scale-110 pointer-events-none">
+             class="absolute inset-0 w-full h-full object-cover filter blur-3xl opacity-30 scale-110 pointer-events-none" loading="lazy" decoding="async">
         
         {{-- Main Crisp Hero Slide Image --}}
-        <img src="{{ asset('images/gallery/movexa-gallery-truck-house-fleet.jpg') }}" 
+        <img src="{{ asset('images/gallery/movexa-gallery-truck-house-fleet.webp') }}" 
              alt="Local Movers in Dubai Fleet - MOVEXA" 
-             class="w-full h-full object-cover object-[75%_center] sm:object-[78%_center] md:object-[80%_center] lg:object-center relative z-0">
+             class="w-full h-full object-cover object-[75%_center] sm:object-[78%_center] md:object-[80%_center] lg:object-center relative z-0" loading="lazy" decoding="async">
 
         {{-- Natural Soft Neutral Contrast Gradient (Preserves vivid photo colors while keeping glass card readable) --}}
         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/25 lg:bg-gradient-to-r lg:from-black/75 lg:via-black/35 lg:to-transparent z-10 pointer-events-none"></div>

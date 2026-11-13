@@ -14,9 +14,9 @@
 <section class="relative text-white overflow-hidden py-10 sm:py-12 lg:py-14 bg-[#051712] w-full">
     {{-- Full Photographic Background Image with Clean Deep Contrast Overlay --}}
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <img src="{{ asset('images/services/movexa-service-international-moving.jpg') }}" 
+        <img src="{{ asset('images/services/movexa-service-international-moving.webp') }}" 
              alt="International Moving from Dubai Worldwide - MOVEXA" 
-             class="w-full h-full object-cover object-center lg:object-right opacity-35 scale-105 pointer-events-none filter brightness-90">
+             class="w-full h-full object-cover object-center lg:object-right opacity-35 scale-105 pointer-events-none filter brightness-90" loading="lazy" decoding="async">
         <div class="absolute inset-0 bg-gradient-to-r from-[#04130F] via-[#061E17]/95 to-[#08291F]/80"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-[#051712] via-transparent to-black/30"></div>
     </div>
@@ -511,9 +511,9 @@
             {{-- Right Column: Photographic Showcase Card --}}
             <div class="lg:col-span-5">
                 <div class="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl group">
-                    <img src="{{ asset('images/gallery/movexa-gallery-residential-export-packing.jpg') }}" 
+                    <img src="{{ asset('images/gallery/movexa-gallery-residential-export-packing.webp') }}" 
                          alt="Export Packing Standards - MOVEXA" 
-                         class="w-full h-[440px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700">
+                         class="w-full h-[440px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
                     {{-- Floating Glass Tag on Image --}}
