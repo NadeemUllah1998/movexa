@@ -6,11 +6,8 @@
 ])
 
 <section class="relative my-8 sm:my-12 lg:my-14 mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-5xl">
-    {{-- Ambient Radiant Glow Flare for Depth & Attraction --}}
-    <div class="absolute -inset-4 bg-gradient-to-r from-[#D8F36B]/25 via-[#103B30]/15 to-[#D8F36B]/25 rounded-[3rem] blur-2xl opacity-75 -z-10 pointer-events-none"></div>
-
-    {{-- Clean, Minimal Luxury Card (High-Contrast Typography & Actions) --}}
-    <div class="relative rounded-3xl bg-white border-2 border-[#D8E6D8] shadow-[0_20px_55px_-10px_rgba(7,59,46,0.12),0_0_25px_rgba(216,243,107,0.18)] p-6 sm:p-9 md:p-11 text-center overflow-hidden">
+    {{-- Clean, Minimal Luxury Card (High-Contrast Typography & Actions, Crisp Zero-Blur Design) --}}
+    <div class="relative rounded-3xl bg-white border-2 border-[#D8E6D8] shadow-[0_20px_55px_-10px_rgba(7,59,46,0.14)] p-6 sm:p-9 md:p-11 text-center overflow-hidden">
         {{-- Permanent Top Shining Laser Line & Glow --}}
         <div class="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_15px_#D8F36B] z-20 pointer-events-none"></div>
         

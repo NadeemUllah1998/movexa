@@ -1780,21 +1780,20 @@ $localDubaiSlides = [
      SECTIONS 10 & 12: TESTIMONIALS & FINAL CALL TO ACTION (WITH RELOCATION CREW BACKDROP)
      ========================================== --}}
 <div class="relative overflow-hidden bg-white">
-    {{-- Authentic Real Moving Operations Photographic Backdrop (High Clarity & Definition, WebP) --}}
+    {{-- Authentic Real Moving Operations Photographic Backdrop (Ultra-Sharp Definition, Zero-Blur, WebP) --}}
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         <picture>
             <source srcset="{{ asset('images/testimonials/movexa-movers-packing-boxes.webp') }}" type="image/webp">
             <img src="{{ asset('images/testimonials/movexa-movers-packing-boxes.jpg') }}" 
                  alt="MOVEXA Certified Moving & Packing Crew" 
-                 class="w-full h-full object-cover object-center sm:object-[center_20%] opacity-85 sm:opacity-90 scale-100"
+                 class="w-full h-full object-cover object-[center_30%] opacity-90 sm:opacity-95 scale-100"
                  loading="lazy"
                  decoding="async">
         </picture>
-        {{-- Luxury Minimal Scrim & Seamless Edge Fades (Crisp Photo Visibility while Preserving Clean White Theme) --}}
-        <div class="absolute inset-0 bg-white/40 backdrop-blur-[0.5px] pointer-events-none"></div>
-        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-white via-white/80 to-transparent pointer-events-none"></div>
-        <div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-white via-white/85 to-transparent pointer-events-none"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(216,243,107,0.08),transparent_70%)] pointer-events-none"></div>
+        {{-- Clean, Non-Blur Pure Scrim & Edge Vignettes for Pristine Sharpness & Contrast --}}
+        <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
+        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-white via-white/85 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none"></div>
         <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-70 pointer-events-none"></div>
     </div>
 
@@ -1872,15 +1871,13 @@ $localDubaiSlides = [
          @touchstart.passive="touchStart($event)"
          @touchend.passive="touchEnd($event)">
 
-    {{-- Ambient Radiant Glow Flares for Depth & Contrast --}}
-    <div class="absolute -top-32 right-1/4 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(216,243,107,0.14),transparent_70%)] blur-3xl pointer-events-none -z-10"></div>
-    <div class="absolute -bottom-32 left-10 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,rgba(7,59,46,0.06),transparent_70%)] blur-3xl pointer-events-none -z-10"></div>
+    {{-- Decorative subtle accents (Crisp, Zero Blurring) --}}
     <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-70 pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {{-- Section Heading with Frosted Glass Pod for Flawless Readability & Modern Luxury Contrast --}}
+        {{-- Section Heading with Crisp Solid Premium Card for Flawless Readability & Modern Luxury Contrast --}}
         <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div class="inline-block w-full px-6 py-5 sm:px-8 sm:py-6 rounded-3xl bg-white/92 backdrop-blur-md border border-white/80 shadow-[0_10px_35px_-8px_rgba(7,59,46,0.08)] space-y-2.5">
+            <div class="inline-block w-full px-6 py-5 sm:px-8 sm:py-6 rounded-3xl bg-white/95 border border-[#E2E8E2] shadow-[0_10px_30px_-8px_rgba(7,59,46,0.08)] space-y-2.5">
                 <span class="forest-badge shadow-xs">
                     <i class="fa-solid fa-star text-[#D8F36B]"></i>
                     Verified Client Experiences
@@ -1896,10 +1893,7 @@ $localDubaiSlides = [
 
         {{-- Single-Card Carousel Spotlight Card --}}
         <div class="relative max-w-4xl mx-auto">
-            {{-- Shining Radiant Ambient Glow Flares behind card --}}
-            <div class="absolute -inset-2 bg-gradient-to-r from-[#D8F36B]/25 via-[#103B30]/15 to-[#D8F36B]/25 rounded-[2.5rem] blur-2xl opacity-80 -z-10 pointer-events-none animate-pulse"></div>
-
-            <div class="relative bg-white rounded-3xl sm:rounded-[32px] border border-[#D5E2D5] shadow-[0_12px_45px_-10px_rgba(16,59,48,0.12),0_0_25px_rgba(216,243,107,0.2)] hover:shadow-[0_20px_55px_-10px_rgba(16,59,48,0.18),0_0_35px_rgba(216,243,107,0.35)] overflow-hidden transition-all duration-300 group">
+            <div class="relative bg-white rounded-3xl sm:rounded-[32px] border-2 border-[#DCE4DC] shadow-[0_16px_45px_-10px_rgba(16,59,48,0.14)] hover:shadow-[0_22px_55px_-10px_rgba(16,59,48,0.2)] overflow-hidden transition-all duration-300 group">
                 {{-- Permanent Top Shining Laser Line & Glow --}}
                 <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_15px_#D8F36B] z-30 pointer-events-none"></div>
 
@@ -2032,8 +2026,8 @@ $localDubaiSlides = [
                 </div>
             </div>
 
-            {{-- Slider Controls & Pagination Bar Below Card (Frosted Glass Pod) --}}
-            <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 px-5 py-3 rounded-2xl bg-white/92 backdrop-blur-md border border-white/80 shadow-xs max-w-4xl mx-auto">
+            {{-- Slider Controls & Pagination Bar Below Card (Crisp Solid Pod, Zero Blur) --}}
+            <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 px-5 py-3 rounded-2xl bg-white/95 border border-[#E2E8E2] shadow-xs max-w-4xl mx-auto">
                 {{-- Live Counter Indicator --}}
                 <div class="text-xs font-semibold text-[#5A645E] flex items-center gap-2">
                     <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#103B30] animate-pulse"></span>
