@@ -826,7 +826,7 @@ $heroSlides = [
 @php
 $localDubaiSlides = [
     [
-        'image' => asset('images/gallery/movexa-gallery-apartment-packing-crew.jpg'),
+        'image' => asset('images/gallery/movexa-gallery-apartment-packing-crew.webp'),
         'title' => 'Movers In Dubai',
         'subtitle' => 'Apartment, Villa & Commercial Relocations',
         'trust' => 'Downtown • Dubai Marina • Arabian Ranches • Palm',
@@ -834,7 +834,7 @@ $localDubaiSlides = [
         'position' => 'center 20%',
     ],
     [
-        'image' => asset('images/gallery/movexa-gallery-branded-truck-in-transit.jpg'),
+        'image' => asset('images/gallery/movexa-gallery-branded-truck-in-transit.webp'),
         'title' => 'Movers In Abu Dhabi',
         'subtitle' => 'Express Inter-Emirate Residential Moving',
         'trust' => 'Yas Island • Saadiyat • Al Reem • Khalifa City',
@@ -842,7 +842,7 @@ $localDubaiSlides = [
         'position' => 'center',
     ],
     [
-        'image' => asset('images/gallery/movexa-gallery-villa-relocation-loading.jpg'),
+        'image' => asset('images/gallery/movexa-gallery-villa-relocation-loading.webp'),
         'title' => 'Movers In Sharjah',
         'subtitle' => 'Inter-City & Villa Relocations',
         'trust' => 'Al Majaz • Al Nahda • Daily Scheduled Moving',
@@ -850,7 +850,7 @@ $localDubaiSlides = [
         'position' => 'center 35%',
     ],
     [
-        'image' => asset('images/gallery/movexa-gallery-sofa-living-room-wrapping.jpg'),
+        'image' => asset('images/gallery/movexa-gallery-sofa-living-room-wrapping.webp'),
         'title' => 'Movers In Ajman',
         'subtitle' => 'Cost-Effective Family & Household Shifting',
         'trust' => 'Corniche • Al Nuaimiya • Full Furniture Setup',
@@ -858,7 +858,7 @@ $localDubaiSlides = [
         'position' => 'center',
     ],
     [
-        'image' => asset('images/gallery/movexa-gallery-truck-house-fleet.jpg'),
+        'image' => asset('images/gallery/movexa-gallery-truck-house-fleet.webp'),
         'title' => 'Movers In Ras Al Khaimah',
         'subtitle' => 'Coastal Villa & Community Relocations',
         'trust' => 'Al Hamra Village • Mina Al Arab • Safe Transit',
@@ -866,7 +866,7 @@ $localDubaiSlides = [
         'position' => 'center 20%',
     ],
     [
-        'image' => asset('images/gallery/movexa-gallery-mattress-protective-wrap.jpg'),
+        'image' => asset('images/gallery/movexa-gallery-mattress-protective-wrap.webp'),
         'title' => 'Movers In Fujairah',
         'subtitle' => 'East-Coast Mountain Transit & Relocation',
         'trust' => 'Heavy-Duty Box Trucks • Certified Moving Crew',
@@ -874,7 +874,7 @@ $localDubaiSlides = [
         'position' => 'center 30%',
     ],
     [
-        'image' => asset('images/gallery/movexa-gallery-organized-room-packing.jpg'),
+        'image' => asset('images/gallery/movexa-gallery-organized-room-packing.webp'),
         'title' => 'Movers In Umm Al Quwain',
         'subtitle' => 'Dedicated Residential Shifting & Setup',
         'trust' => 'Peaceful Communities • Door-to-Door Delivery',
@@ -972,6 +972,8 @@ $localDubaiSlides = [
                              {{ $idx !== 0 ? 'x-cloak' : '' }}>
                             <img src="{{ $s['image'] }}" 
                                  alt="{{ $s['title'] }}" 
+                                 loading="lazy"
+                                 decoding="async"
                                  class="w-full h-full object-cover group-hover/slider:scale-105 transition-transform duration-700"
                                  style="object-position: {{ $s['position'] ?? 'center' }};">
                             {{-- Dark Vignette for Visual Contrast --}}
@@ -1223,27 +1225,27 @@ $localDubaiSlides = [
                     @php
                     $slidesData = [
                         [
-                            'src' => asset('images/why-choose-us/movexa-why-choose-us-team-trucks-pose.jpg'),
+                            'src' => asset('images/why-choose-us/movexa-why-choose-us-team-trucks-pose.webp'),
                             'alt' => '15+ Full-Time Verified MOVEXA Team & Moving Fleet in Dubai',
                         ],
                         [
-                            'src' => asset('images/why-choose-us/movexa-why-choose-us-composite-services.jpg'),
+                            'src' => asset('images/why-choose-us/movexa-why-choose-us-composite-services.webp'),
                             'alt' => 'MOVEXA Complete Moving, Packing & Master Carpentry Setup',
                         ],
                         [
-                            'src' => asset('images/why-choose-us/movexa-why-choose-us-team-skyline.jpg'),
+                            'src' => asset('images/why-choose-us/movexa-why-choose-us-team-skyline.webp'),
                             'alt' => 'MOVEXA Professional Moving Fleet & Uniformed Team with Dubai Skyline',
                         ],
                         [
-                            'src' => asset('images/why-choose-us/movexa-why-choose-us-villa-loading.jpg'),
+                            'src' => asset('images/why-choose-us/movexa-why-choose-us-villa-loading.webp'),
                             'alt' => 'MOVEXA Movers Carefully Loading Furniture at Luxury Villa in Dubai',
                         ],
                         [
-                            'src' => asset('images/why-choose-us/movexa-why-choose-us-crew-fleet.jpg'),
+                            'src' => asset('images/why-choose-us/movexa-why-choose-us-crew-fleet.webp'),
                             'alt' => 'Uniformed MOVEXA Relocation Crew with Branded Truck, Ramp and Packing Boxes',
                         ],
                         [
-                            'src' => asset('images/why-choose-us/movexa-why-choose-us-packers-movers-banner.jpg'),
+                            'src' => asset('images/why-choose-us/movexa-why-choose-us-packers-movers-banner.webp'),
                             'alt' => 'Certified Professional Movers & Packers in the UAE with MOVEXA Packing Materials',
                         ],
                     ];
@@ -1255,7 +1257,8 @@ $localDubaiSlides = [
                         <img src="{{ $sData['src'] }}" 
                              alt="{{ $sData['alt'] }}" 
                              class="w-full h-full object-cover group-hover/teamCard:scale-105 transition-transform duration-700 ease-out"
-                             loading="{{ $sIdx === 0 ? 'eager' : 'lazy' }}">
+                             loading="{{ $sIdx === 0 ? 'eager' : 'lazy' }}"
+                             decoding="async">
                         {{-- Subtle Dark Vignette for Floating Overlay Contrast --}}
                         <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10"></div>
                     </div>
@@ -1331,7 +1334,8 @@ $localDubaiSlides = [
                         <img src="{{ $sData['src'] }}" 
                              alt="{{ $sData['alt'] }}" 
                              class="w-full h-full object-cover transition-transform duration-300 group-hover/thumb:scale-110"
-                             loading="lazy">
+                             loading="lazy"
+                             decoding="async">
                         {{-- Active Accent Bar Indicator --}}
                         <div class="absolute inset-x-0 bottom-0 h-0.5 sm:h-1 bg-[#B7E532] transition-opacity duration-200"
                              :class="currentSlide === {{ $sIdx }} ? 'opacity-100' : 'opacity-0'"></div>
@@ -1635,14 +1639,14 @@ $localDubaiSlides = [
             $masonryItems = [
                 // Col 1: Item 0 (Medium Landscape), Item 1 (Medium 4:3)
                 [
-                    'image' => 'images/gallery/movexa-gallery-villa-relocation-loading.jpg',
+                    'image' => 'images/gallery/movexa-gallery-villa-relocation-loading.webp',
                     'alt' => 'Turnkey Luxury Villa Relocation Loading',
                     'caption' => 'Turnkey Luxury Villa Relocation - Full-service moving crew loading wrapped furniture and crated goods at a private Dubai estate.',
                     'position' => 'center',
                     'height' => 'h-[250px] min-[375px]:h-[280px] sm:h-[380px] lg:h-[420px]',
                 ],
                 [
-                    'image' => 'images/gallery/movexa-gallery-residential-export-packing.jpg',
+                    'image' => 'images/gallery/movexa-gallery-residential-export-packing.webp',
                     'alt' => 'Export-Grade Furniture Packaging & Strapping',
                     'caption' => 'Export-Grade Furniture Packaging - Heavy-duty seaworthy shrink-wrapping, reinforced corner shields, and secure strapping.',
                     'position' => 'center 50%',
@@ -1650,14 +1654,14 @@ $localDubaiSlides = [
                 ],
                 // Col 2: Item 2 (Tall Portrait), Item 3 (Wide Landscape)
                 [
-                    'image' => 'images/gallery/movexa-gallery-apartment-packing-crew.jpg',
+                    'image' => 'images/gallery/movexa-gallery-apartment-packing-crew.webp',
                     'alt' => 'White-Glove Apartment Packing Crew',
                     'caption' => 'White-Glove Apartment Packing - Certified MOVEXA specialists carefully boxing, labelling, and protecting fragile glassware and decor.',
                     'position' => 'center',
                     'height' => 'h-[300px] min-[375px]:h-[350px] sm:h-[520px] lg:h-[610px]',
                 ],
                 [
-                    'image' => 'images/gallery/movexa-gallery-skyline-truck-team.png',
+                    'image' => 'images/gallery/movexa-gallery-skyline-truck-team.webp',
                     'alt' => 'Dubai Skyline Operations & Moving Fleet',
                     'caption' => 'Dubai Skyline Operations - Commercial moving fleet and licensed crew handling high-rise residential transfers across Dubai.',
                     'position' => 'center 35%',
@@ -1665,14 +1669,14 @@ $localDubaiSlides = [
                 ],
                 // Col 3: Item 4 (Wide Landscape), Item 5 (Tall Portrait)
                 [
-                    'image' => 'images/gallery/movexa-gallery-sofa-living-room-wrapping.jpg',
+                    'image' => 'images/gallery/movexa-gallery-sofa-living-room-wrapping.webp',
                     'alt' => 'Protective Upholstery & Sofa Wrapping',
                     'caption' => 'Protective Upholstery Wrapping - Multi-layer waterproof stretch wrap encasing upholstered sofas, armchairs, and rolled carpets.',
                     'position' => 'center',
                     'height' => 'h-[200px] min-[375px]:h-[240px] sm:h-[260px] lg:h-[280px]',
                 ],
                 [
-                    'image' => 'images/gallery/movexa-gallery-truck-sofa-fleet.jpg',
+                    'image' => 'images/gallery/movexa-gallery-truck-sofa-fleet.webp',
                     'alt' => 'Commercial Logistics Transport Fleet',
                     'caption' => 'Commercial Logistics Transport - Clean, enclosed MOVEXA truck equipped with hydraulic tail-lift ramp for safe, zero-damage transport.',
                     'position' => 'center 20%',
@@ -1691,6 +1695,8 @@ $localDubaiSlides = [
                     
                     <img src="{{ asset($item['image']) }}" 
                          alt="{{ $item['alt'] }}" 
+                         loading="lazy"
+                         decoding="async"
                          class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                          style="object-position: {{ $item['position'] }};">
 
@@ -1715,6 +1721,8 @@ $localDubaiSlides = [
                     
                     <img src="{{ asset($item['image']) }}" 
                          alt="{{ $item['alt'] }}" 
+                         loading="lazy"
+                         decoding="async"
                          class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                          style="object-position: {{ $item['position'] }};">
 
@@ -1737,6 +1745,8 @@ $localDubaiSlides = [
                     
                     <img src="{{ asset($item['image']) }}" 
                          alt="{{ $item['alt'] }}" 
+                         loading="lazy"
+                         decoding="async"
                          class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                          style="object-position: {{ $item['position'] }};">
 
