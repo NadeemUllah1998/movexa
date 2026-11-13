@@ -111,23 +111,20 @@
                             <div class="h-[3px] w-full bg-gradient-to-r from-[#103B30] via-[#B7E532] to-[#103B30]"></div>
 
                             {{-- Dropdown Header Strip --}}
-                            <div class="bg-[#F2F7F3] px-5 py-3.5 border-b border-[#DDE7DD] flex items-center justify-between"
+                            <div class="bg-[#F2F7F3] px-5 py-3 border-b border-[#DDE7DD] flex items-center justify-between"
                                  style="background-color: #F2F7F3 !important;">
-                                <div class="flex items-center gap-2.5">
-                                    <span class="relative flex h-2.5 w-2.5">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B7E532] opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#B7E532]"></span>
-                                    </span>
-                                    <span class="text-[11.5px] font-black uppercase tracking-wider text-[#103B30]">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 rounded-full bg-[#103B30] shadow-[0_0_6px_#103B30] animate-pulse"></span>
+                                    <span class="text-xs font-black uppercase tracking-wider text-[#103B30]">
                                         Relocation Services Directory
                                     </span>
-                                    <span class="hidden sm:inline-block text-[9.5px] font-bold px-2 py-0.5 rounded-full bg-white text-[#103B30] border border-[#CFE8C7] shadow-2xs">
-                                        7+ Specializations
+                                    <span class="hidden sm:inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-[#103B30] border border-[#CFE8C7] shadow-2xs">
+                                        8 Specializations
                                     </span>
                                 </div>
                                 <a href="{{ route('services.index') }}" 
                                    @click="closeAll()"
-                                   class="group/all text-[11px] font-extrabold text-[#103B30] hover:text-[#073B2E] inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white hover:bg-[#EBF5E7] border border-[#DCE9DC] transition-all shadow-2xs">
+                                   class="group/all text-xs font-extrabold text-[#103B30] hover:text-[#073B2E] inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white hover:bg-[#EBF5E7] border border-[#DCE9DC] transition-all shadow-2xs">
                                     <span>All Services</span>
                                     <i class="fa-solid fa-arrow-right text-[9px] text-[#103B30] group-hover/all:translate-x-0.5 transition-transform"></i>
                                 </a>
@@ -139,77 +136,80 @@
                                 
                                 {{-- Column 1: RESIDENTIAL RELOCATION --}}
                                 <div class="space-y-1">
-                                    <div class="flex items-center gap-2 pb-2 mb-1.5 border-b border-[#EAEFEA]">
-                                        <span class="w-5 h-5 rounded-md bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-[10px]">
-                                            <i class="fa-solid fa-house-chimney"></i>
-                                        </span>
-                                        <span class="text-[11px] font-black uppercase tracking-wider text-[#103B30]">
-                                            Residential Moving
-                                        </span>
+                                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-[#EAEFEA]">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-5 h-5 rounded-md bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-[10px]">
+                                                <i class="fa-solid fa-house-chimney"></i>
+                                            </span>
+                                            <span class="text-xs font-extrabold uppercase tracking-wider text-[#103B30]">
+                                                Residential Moving
+                                            </span>
+                                        </div>
+                                        <span class="text-[10px] font-bold text-[#6B7B71]">4 Services</span>
                                     </div>
 
-                                    <div class="space-y-1.5 pt-0.5">
+                                    <div class="space-y-2 pt-0.5">
                                         {{-- 1. Home Moving --}}
                                         <a href="{{ route('services.show', 'home-moving') }}" 
                                            @click="closeAll()"
-                                           class="group/item flex items-center gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                           class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                            <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
                                                 <i class="fa-solid fa-house"></i>
                                             </span>
                                             <div class="min-w-0 flex-1">
-                                                <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
                                                     <span>Home Moving</span>
-                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
+                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                                 </div>
-                                                <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Household &amp; family residences</div>
+                                                <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Household &amp; family residences</div>
                                             </div>
                                         </a>
 
                                         {{-- 2. Apartment Moving --}}
                                         <a href="{{ route('services.show', 'apartment-moving') }}" 
                                            @click="closeAll()"
-                                           class="group/item flex items-center gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                           class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                            <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
                                                 <i class="fa-solid fa-building"></i>
                                             </span>
                                             <div class="min-w-0 flex-1">
-                                                <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
                                                     <span>Apartment Moving</span>
-                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
+                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                                 </div>
-                                                <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">High-rise elevators &amp; loading bays</div>
+                                                <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">High-rise elevators &amp; loading bays</div>
                                             </div>
                                         </a>
 
                                         {{-- 3. Villa Relocation --}}
                                         <a href="{{ route('services.show', 'villa-moving') }}" 
                                            @click="closeAll()"
-                                           class="group/item flex items-center gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                           class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                            <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
                                                 <i class="fa-solid fa-landmark-dome"></i>
                                             </span>
                                             <div class="min-w-0 flex-1">
-                                                <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
                                                     <span>Villa Relocation</span>
-                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
+                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                                 </div>
-                                                <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Multi-level luxury estate moves</div>
+                                                <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Multi-level luxury estate moves</div>
                                             </div>
                                         </a>
 
                                         {{-- 4. Door-to-Door Moving --}}
                                         <a href="{{ route('services.show', 'door-to-door-moving') }}" 
                                            @click="closeAll()"
-                                           class="group/item flex items-center gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                           class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                            <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
                                                 <i class="fa-solid fa-door-open"></i>
                                             </span>
                                             <div class="min-w-0 flex-1">
-                                                <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
                                                     <span>Door-to-Door Moving</span>
-                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
+                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                                 </div>
-                                                <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Turnkey white-glove setup</div>
+                                                <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Turnkey white-glove setup</div>
                                             </div>
                                         </a>
                                     </div>
@@ -217,109 +217,85 @@
 
                                 {{-- Column 2: COMMERCIAL & STORAGE --}}
                                 <div class="space-y-1">
-                                    <div class="flex items-center gap-2 pb-2 mb-1.5 border-b border-[#EAEFEA]">
-                                        <span class="w-5 h-5 rounded-md bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-[10px]">
-                                            <i class="fa-solid fa-briefcase"></i>
-                                        </span>
-                                        <span class="text-[11px] font-black uppercase tracking-wider text-[#103B30]">
-                                            Commercial &amp; Storage
-                                        </span>
+                                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-[#EAEFEA]">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-5 h-5 rounded-md bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-[10px]">
+                                                <i class="fa-solid fa-briefcase"></i>
+                                            </span>
+                                            <span class="text-xs font-extrabold uppercase tracking-wider text-[#103B30]">
+                                                Commercial &amp; Storage
+                                            </span>
+                                        </div>
+                                        <span class="text-[10px] font-bold text-[#6B7B71]">4 Services</span>
                                     </div>
 
-                                    <div class="space-y-1.5 pt-0.5">
+                                    <div class="space-y-2 pt-0.5">
                                         {{-- 5. Office Relocation --}}
                                         <a href="{{ route('services.show', 'office-relocation') }}" 
                                            @click="closeAll()"
-                                           class="group/item flex items-center gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                           class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                            <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
                                                 <i class="fa-solid fa-briefcase"></i>
                                             </span>
                                             <div class="min-w-0 flex-1">
-                                                <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
                                                     <span>Office Relocation</span>
-                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
+                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                                 </div>
-                                                <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Zero-downtime commercial shifting</div>
+                                                <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Zero-downtime commercial shifting</div>
                                             </div>
                                         </a>
 
                                         {{-- 6. Storage Solutions --}}
                                         <a href="{{ route('services.show', 'storage-solutions') }}" 
                                            @click="closeAll()"
-                                           class="group/item flex items-center gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                           class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                            <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
                                                 <i class="fa-solid fa-warehouse"></i>
                                             </span>
                                             <div class="min-w-0 flex-1">
-                                                <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
                                                     <span>Storage Solutions</span>
-                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
+                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                                 </div>
-                                                <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Climate-controlled 24/7 guarded vaults</div>
+                                                <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Climate-controlled 24/7 guarded vaults</div>
                                             </div>
                                         </a>
 
                                         {{-- 7. International Moving --}}
                                         <a href="{{ route('international-moving') }}" 
                                            @click="closeAll()"
-                                           class="group/item flex items-center gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                           class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                            <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
                                                 <i class="fa-solid fa-plane-departure"></i>
                                             </span>
                                             <div class="min-w-0 flex-1">
-                                                <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
                                                     <span>International Moving</span>
-                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
+                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                                 </div>
-                                                <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Sea freight FCL/LCL &amp; customs setup</div>
+                                                <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Sea freight FCL/LCL &amp; customs setup</div>
                                             </div>
                                         </a>
 
                                         {{-- 8. Local Moving Dubai --}}
                                         <a href="{{ route('local-moving') }}" 
                                            @click="closeAll()"
-                                           class="group/item flex items-center gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                           class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                            <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
                                                 <i class="fa-solid fa-truck-fast"></i>
                                             </span>
                                             <div class="min-w-0 flex-1">
-                                                <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
                                                     <span>Local Movers Dubai</span>
-                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
+                                                    <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                                 </div>
-                                                <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Same-day dispatch across UAE</div>
+                                                <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Same-day dispatch across UAE</div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
 
-                            </div>
-
-                            {{-- Bottom Trust & CTA Strip --}}
-                            <div class="bg-[#F2F7F3] px-5 py-3.5 border-t border-[#DDE7DD] flex items-center justify-between text-xs"
-                                 style="background-color: #F2F7F3 !important;">
-                                <div class="flex items-center gap-2 text-[11px] text-[#405047]">
-                                    <i class="fa-solid fa-shield-check text-[#103B30] text-xs"></i>
-                                    <span class="font-bold text-[#102A20]">Licensed &amp; Insured Across UAE</span>
-                                    <span class="text-gray-400 hidden sm:inline">•</span>
-                                    <span class="text-[10.5px] text-[#55635B] hidden sm:inline">Dubai NOC Compliant</span>
-                                </div>
-                                <div class="flex items-center gap-2.5">
-                                    <button type="button" 
-                                            onclick="openQuoteModal()" 
-                                            @click="closeAll()"
-                                            class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-[#cbf54a] font-black text-[11px] shadow-2xs transition-all duration-150 cursor-pointer">
-                                        <i class="fa-solid fa-calculator text-[10px]"></i>
-                                        <span>Get Free Quote</span>
-                                    </button>
-                                    <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}" 
-                                       target="_blank" 
-                                       rel="noopener" 
-                                       class="inline-flex items-center gap-1 text-[11px] font-bold text-[#103B30] hover:text-[#25D366] transition-colors py-1">
-                                        <i class="fa-brands fa-whatsapp text-sm text-[#25D366]"></i>
-                                        <span class="hidden sm:inline">WhatsApp</span>
-                                    </a>
-                                </div>
                             </div>
 
                         </div>
@@ -576,33 +552,6 @@
                                     </div>
                                 </div>
 
-                            </div>
-
-                            {{-- Bottom Trust & CTA Strip --}}
-                            <div class="bg-[#F2F7F3] px-5 py-3.5 border-t border-[#DDE7DD] flex items-center justify-between text-xs"
-                                 style="background-color: #F2F7F3 !important;">
-                                <div class="flex items-center gap-2 text-[11px] text-[#405047]">
-                                    <i class="fa-solid fa-shield-check text-[#103B30] text-xs"></i>
-                                    <span class="font-bold text-[#102A20]">Licensed &amp; Insured Across UAE</span>
-                                    <span class="text-gray-400 hidden sm:inline">•</span>
-                                    <span class="text-[10.5px] text-[#55635B] hidden sm:inline">Dubai &amp; All Emirates NOC Compliant</span>
-                                </div>
-                                <div class="flex items-center gap-2.5">
-                                    <button type="button" 
-                                            onclick="openQuoteModal('UAE Inter-Emirate Move', 'Local Moving')" 
-                                            @click="closeAll()"
-                                            class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-[#cbf54a] font-black text-[11px] shadow-2xs transition-all duration-150 cursor-pointer">
-                                        <i class="fa-solid fa-calculator text-[10px]"></i>
-                                        <span>Get Free Quote</span>
-                                    </button>
-                                    <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}" 
-                                       target="_blank" 
-                                       rel="noopener" 
-                                       class="inline-flex items-center gap-1 text-[11px] font-bold text-[#103B30] hover:text-[#25D366] transition-colors py-1">
-                                        <i class="fa-brands fa-whatsapp text-sm text-[#25D366]"></i>
-                                        <span class="hidden sm:inline">WhatsApp</span>
-                                    </a>
-                                </div>
                             </div>
 
                         </div>

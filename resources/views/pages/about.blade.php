@@ -18,7 +18,7 @@
              alt="MOVEXA Professional Relocation and Moving Operations in Dubai" 
              class="w-full h-full object-cover object-center pointer-events-none scale-100" loading="lazy" decoding="async">
         {{-- Clean Neutral Cinematic Tint (No muddy colors, pure high contrast) --}}
-        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/90 pointer-events-none"></div>
     </div>
 
     {{-- Subtle Top Specular Laser Line --}}
@@ -27,60 +27,60 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
         
         {{-- Clean Minimalist Category Pill Badge --}}
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-[#D8F36B] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-4 sm:mb-5 shadow-lg">
-            <span class="w-2 h-2 rounded-full bg-[#D8F36B] shadow-[0_0_8px_#D8F36B] animate-pulse"></span>
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/60 backdrop-blur-md border border-white/25 text-[#D8F36B] text-xs sm:text-sm font-extrabold uppercase tracking-wider mb-5 sm:mb-6 shadow-lg">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#D8F36B] shadow-[0_0_10px_#D8F36B] animate-pulse"></span>
             <span>About MOVEXA &bull; Dubai Relocation Specialists</span>
         </div>
 
         {{-- High-Contrast Headline with Glowing Lime Accent --}}
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white tracking-tight leading-[1.18] drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)]">
+        <h1 class="text-3xl min-[375px]:text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-[1.14] drop-shadow-[0_2px_16px_rgba(0,0,0,0.95)]">
             Moving People Forward.<br>
-            <span class="text-[#D8F36B]">Delivering Calm, Care &amp; Confidence.</span>
+            <span class="text-[#D8F36B] drop-shadow-[0_0_25px_rgba(216,243,107,0.45)]">Delivering Calm, Care &amp; Confidence.</span>
         </h1>
 
         {{-- Supporting Subheadline with High Readability --}}
-        <p class="text-sm sm:text-base md:text-lg text-white/90 mt-4 sm:mt-5 leading-relaxed font-normal max-w-2xl mx-auto drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
+        <p class="text-base sm:text-lg md:text-xl text-white font-medium mt-5 sm:mt-6 leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]">
             Headquartered in Dubai, MOVEXA brings international-grade packing standards, certified in-house crews, and total pricing transparency to every residential, villa, corporate, and global relocation.
         </p>
 
         {{-- Action Buttons Row (Balanced, High-Contrast & Sleek) --}}
-        <div class="mt-7 sm:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <div class="mt-8 sm:mt-9 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <button type="button" 
                     onclick="openQuoteModal()" 
-                    class="btn-lime text-xs sm:text-sm px-7 py-3.5 rounded-full font-black shadow-lg hover:shadow-lime-glow flex items-center gap-2 cursor-pointer transition-all hover:scale-105">
-                <i class="fa-solid fa-calculator text-xs"></i>
+                    class="btn-lime text-sm sm:text-base px-8 py-4 rounded-full font-black shadow-lg hover:shadow-lime-glow flex items-center gap-2 cursor-pointer transition-all hover:scale-105">
+                <i class="fa-solid fa-calculator text-sm"></i>
                 <span>Get a Free Moving Quote</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
             </button>
 
             <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}?text={{ urlencode('Hello MOVEXA, I would like to learn more about your moving services and get an estimate.') }}" 
                target="_blank" 
                rel="noopener" 
-               class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-[#25D366] text-white hover:text-white border border-white/25 hover:border-[#25D366] backdrop-blur-md text-xs sm:text-sm font-bold transition-all duration-200 shadow-md hover:scale-105">
-                <i class="fa-brands fa-whatsapp text-sm text-[#25D366] group-hover:text-white transition-colors"></i>
+               class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white/10 hover:bg-[#25D366] text-white hover:text-white border border-white/30 hover:border-[#25D366] backdrop-blur-md text-sm sm:text-base font-bold transition-all duration-200 shadow-md hover:scale-105">
+                <i class="fa-brands fa-whatsapp text-lg text-[#25D366] group-hover:text-white transition-colors"></i>
                 <span>Chat on WhatsApp</span>
             </a>
 
             <a href="tel:{{ config('movexa.brand.phone_raw') }}" 
-               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-black/50 hover:bg-black/70 border border-white/20 backdrop-blur-md text-white text-xs sm:text-sm font-semibold transition-all shadow-sm">
-                <i class="fa-solid fa-phone text-[#D8F36B] text-xs"></i>
+               class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-black/60 hover:bg-black/80 border border-white/25 backdrop-blur-md text-white text-sm sm:text-base font-bold transition-all shadow-sm">
+                <i class="fa-solid fa-phone text-[#D8F36B] text-sm"></i>
                 <span>{{ config('movexa.brand.phone_display') }}</span>
             </a>
         </div>
 
         {{-- Subtle Integrated Trust Anchors --}}
-        <div class="mt-8 pt-6 border-t border-white/15 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/85 font-semibold">
-            <span class="inline-flex items-center gap-1.5">
-                <i class="fa-solid fa-circle-check text-[#D8F36B] text-[11px]"></i> 100% In-House Crew
+        <div class="mt-9 pt-6 border-t border-white/20 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs sm:text-sm text-white font-bold tracking-wide">
+            <span class="inline-flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-[#D8F36B] text-xs"></i> 100% In-House Crew
             </span>
-            <span class="inline-flex items-center gap-1.5">
-                <i class="fa-solid fa-circle-check text-[#D8F36B] text-[11px]"></i> 12,000+ Completed Moves
+            <span class="inline-flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-[#D8F36B] text-xs"></i> 12,000+ Completed Moves
             </span>
-            <span class="inline-flex items-center gap-1.5">
-                <i class="fa-solid fa-circle-check text-[#D8F36B] text-[11px]"></i> Dubai NOC Permits
+            <span class="inline-flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-[#D8F36B] text-xs"></i> Dubai NOC Permits
             </span>
-            <span class="inline-flex items-center gap-1.5">
-                <i class="fa-solid fa-circle-check text-[#D8F36B] text-[11px]"></i> Zero Hidden Charges
+            <span class="inline-flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-[#D8F36B] text-xs"></i> Zero Hidden Charges
             </span>
         </div>
 
@@ -89,7 +89,7 @@
 {{-- =========================================================================
      OPERATIONAL STANDARDS: ULTRA-PREMIUM FRAMED VISUAL PILLARS
      ========================================================================= --}}
-<section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E2E8E2] relative overflow-hidden">
+<section class="py-12 sm:py-14 lg:py-16 bg-white border-b border-[#E2E8E2] relative overflow-hidden">
     {{-- Glowing Luminous Ambient Light Sheen --}}
     <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[340px] bg-gradient-to-r from-[#D8F36B]/20 via-[#103B30]/10 to-[#D8F36B]/20 rounded-full blur-3xl -z-0 pointer-events-none"></div>
     <div class="absolute -bottom-20 right-1/4 w-[450px] h-[220px] bg-[#D8F36B]/15 rounded-full blur-3xl -z-0 pointer-events-none"></div>
@@ -97,15 +97,15 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {{-- Section Header: High-Impact, Meaningful & Authoritative --}}
-        <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#D5E2D5] shadow-2xs text-[#103B30] text-xs font-bold tracking-wide uppercase">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-3">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EBF4EB] border border-[#CDE3CD] text-[#0B2A22] text-xs sm:text-sm font-extrabold tracking-wide uppercase shadow-2xs">
                 <span class="w-2 h-2 rounded-full bg-[#103B30] shadow-[0_0_8px_#103B30] animate-pulse"></span>
                 <span>Verified Operational Standards</span>
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-black font-heading text-[#103B30] tracking-tight leading-tight">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B2A22] tracking-tight leading-tight">
                 Four Pillars Behind Every MOVEXA Move
             </h2>
-            <p class="text-xs sm:text-sm text-[#5A665E] max-w-xl mx-auto leading-relaxed">
+            <p class="text-base sm:text-lg text-[#1F3027] font-semibold max-w-2xl mx-auto leading-relaxed">
                 See the real operational infrastructure, vetted personnel, and protective craftsmanship that protect your home and budget.
             </p>
         </div>
@@ -130,13 +130,13 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                         
                         {{-- Floating Glass Badge --}}
-                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                        <div class="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-1.5 shadow-md">
                             <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] shadow-[0_0_6px_#D8F36B] animate-pulse"></span>
                             <span>100% In-House Crew</span>
                         </div>
 
                         {{-- Index Number --}}
-                        <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white/90 text-[10px] font-mono font-bold tracking-widest uppercase">
+                        <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white text-xs font-mono font-bold tracking-widest uppercase">
                             01 / Workforce
                         </div>
                     </div>
@@ -144,10 +144,10 @@
 
                 {{-- Card Body: Increased Font Size & Clean Spacing --}}
                 <div class="p-5 sm:p-6 pt-4 sm:pt-5 pb-6 sm:pb-7 space-y-3 flex-1 flex flex-col justify-start">
-                    <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#103B30] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
                         Vetted Full-Time Specialists
                     </h3>
-                    <p class="text-sm sm:text-[15px] text-[#425048] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed">
                         Every technician, packer, and master carpenter is a direct, salaried MOVEXA employee. We strictly never use unverified casual laborers from the street.
                     </p>
                 </div>
@@ -170,13 +170,13 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                         
                         {{-- Floating Glass Badge --}}
-                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                        <div class="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-1.5 shadow-md">
                             <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] shadow-[0_0_6px_#D8F36B] animate-pulse"></span>
                             <span>5-Ply Export Packing</span>
                         </div>
 
                         {{-- Index Number --}}
-                        <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white/90 text-[10px] font-mono font-bold tracking-widest uppercase">
+                        <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white text-xs font-mono font-bold tracking-widest uppercase">
                             02 / Protection
                         </div>
                     </div>
@@ -184,10 +184,10 @@
 
                 {{-- Card Body: Increased Font Size & Clean Spacing --}}
                 <div class="p-5 sm:p-6 pt-4 sm:pt-5 pb-6 sm:pb-7 space-y-3 flex-1 flex flex-col justify-start">
-                    <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#103B30] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
                         Multi-Layer Furniture Care
                     </h3>
-                    <p class="text-sm sm:text-[15px] text-[#425048] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed">
                         Heavy-duty 5-ply cartons, virgin bubble wrap, and bespoke timber crating protect luxury upholstery, fine art, marble, and sensitive electronics.
                     </p>
                 </div>
@@ -210,13 +210,13 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                         
                         {{-- Floating Glass Badge --}}
-                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                        <div class="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-1.5 shadow-md">
                             <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] shadow-[0_0_6px_#D8F36B] animate-pulse"></span>
                             <span>GPS Tracked Fleet</span>
                         </div>
 
                         {{-- Index Number --}}
-                        <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white/90 text-[10px] font-mono font-bold tracking-widest uppercase">
+                        <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white text-xs font-mono font-bold tracking-widest uppercase">
                             03 / Logistics
                         </div>
                     </div>
@@ -224,10 +224,10 @@
 
                 {{-- Card Body: Increased Font Size & Clean Spacing --}}
                 <div class="p-5 sm:p-6 pt-4 sm:pt-5 pb-6 sm:pb-7 space-y-3 flex-1 flex flex-col justify-start">
-                    <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#103B30] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
                         Enclosed Carpet-Padded Fleet
                     </h3>
-                    <p class="text-sm sm:text-[15px] text-[#425048] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed">
                         Fully enclosed, dust-proof box trucks equipped with hydraulic tail-lifts and low-clearance access for basement parking across all Dubai towers.
                     </p>
                 </div>
@@ -250,13 +250,13 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
                         
                         {{-- Floating Glass Badge --}}
-                        <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                        <div class="absolute top-3 left-3 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-1.5 shadow-md">
                             <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] shadow-[0_0_6px_#D8F36B] animate-pulse"></span>
                             <span>100% Gate Approval</span>
                         </div>
 
                         {{-- Index Number --}}
-                        <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white/90 text-[10px] font-mono font-bold tracking-widest uppercase">
+                        <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white text-xs font-mono font-bold tracking-widest uppercase">
                             04 / Compliance
                         </div>
                     </div>
@@ -264,10 +264,10 @@
 
                 {{-- Card Body: Increased Font Size & Clean Spacing --}}
                 <div class="p-5 sm:p-6 pt-4 sm:pt-5 pb-6 sm:pb-7 space-y-3 flex-1 flex flex-col justify-start">
-                    <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#103B30] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
                         Dubai Developer NOC Permits
                     </h3>
-                    <p class="text-sm sm:text-[15px] text-[#425048] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed">
                         Pre-approved documentation for Emaar, Nakheel, DAMAC, and Dubai Holding. Driver Emirates IDs and commercial trade license submitted in advance.
                     </p>
                 </div>
@@ -291,14 +291,14 @@
             <div class="lg:col-span-7 space-y-6">
                 
                 {{-- Clean Luxury Pill Badge --}}
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E7] border border-[#CFE8C7] text-[#073B2E] text-xs font-extrabold uppercase tracking-wider shadow-2xs">
-                    <i class="fa-solid fa-shield-halved text-[11px] text-[#073B2E]"></i>
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EBF5E7] border border-[#CFE8C7] text-[#0B2A22] text-xs sm:text-sm font-black uppercase tracking-wider shadow-2xs">
+                    <i class="fa-solid fa-shield-halved text-xs text-[#0B2A22]"></i>
                     <span>Our Heritage &amp; Purpose</span>
                 </div>
 
                 {{-- Authoritative Headline with Moving Brand Accent --}}
                 <div>
-                    <h2 class="text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[42px] font-black font-heading text-[#073B2E] tracking-tight leading-[1.18]">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B2A22] tracking-tight leading-[1.18]">
                         More Than Moving Belongings:<br>
                         <span class="text-[#103B30]">Caring for Life’s Transitions.</span>
                     </h2>
@@ -308,12 +308,12 @@
                         <svg class="w-20 h-2.5" viewBox="0 0 80 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M2 5C7 1 11 1 16 5C21 9 25 9 30 5C35 1 39 1 44 5C49 9 53 9 58 5C63 1 67 1 72 5C75 7.5 77 7.5 78 5" stroke="#B7E532" stroke-width="3" stroke-linecap="round"/>
                         </svg>
-                        <span class="w-2 h-2 rounded-full bg-[#073B2E]"></span>
+                        <span class="w-2 h-2 rounded-full bg-[#0B2A22]"></span>
                     </div>
                 </div>
 
                 {{-- Lead Story Text --}}
-                <div class="space-y-3.5 text-sm sm:text-[15px] text-[#4E5B54] leading-relaxed font-normal">
+                <div class="space-y-4 text-base sm:text-lg text-[#1E2E25] leading-relaxed font-normal">
                     <p>
                         Relocating your home or business is one of life’s most pivotal moments. In a dynamic global metropolis like Dubai—where families move between luxury marina penthouses, quiet gated villa communities, and international borders daily—the moving experience is too frequently marred by unprofessional contractors, hidden fees on moving day, scratched furniture, and zero accountability.
                     </p>
@@ -324,28 +324,28 @@
 
                 {{-- 3 Elevated Feature Cards with Brand Icons --}}
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1">
-                    <div class="p-4 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm space-y-2 card-hover group/c">
-                        <div class="w-9 h-9 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-sm font-bold shadow-xs group-hover/c:scale-105 transition-transform">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm space-y-2.5 card-hover group/c">
+                        <div class="w-10 h-10 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-base font-bold shadow-xs group-hover/c:scale-105 transition-transform">
                             <i class="fa-solid fa-file-invoice-dollar"></i>
                         </div>
-                        <h4 class="text-sm font-extrabold font-heading text-[#073B2E]">Fixed Pricing</h4>
-                        <p class="text-xs text-[#747C76] leading-snug">Binding written quote. Zero surprise fees on moving day.</p>
+                        <h4 class="text-base sm:text-lg font-black font-heading text-[#0B2A22]">Fixed Pricing</h4>
+                        <p class="text-xs sm:text-sm text-[#203127] font-medium leading-relaxed">Binding written quote. Zero surprise fees on moving day.</p>
                     </div>
 
-                    <div class="p-4 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm space-y-2 card-hover group/c">
-                        <div class="w-9 h-9 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-sm font-bold shadow-xs group-hover/c:scale-105 transition-transform">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm space-y-2.5 card-hover group/c">
+                        <div class="w-10 h-10 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-base font-bold shadow-xs group-hover/c:scale-105 transition-transform">
                             <i class="fa-solid fa-couch"></i>
                         </div>
-                        <h4 class="text-sm font-extrabold font-heading text-[#073B2E]">Master Carpentry</h4>
-                        <p class="text-xs text-[#747C76] leading-snug">Precision disassembly and rebuilding of modular wardrobes.</p>
+                        <h4 class="text-base sm:text-lg font-black font-heading text-[#0B2A22]">Master Carpentry</h4>
+                        <p class="text-xs sm:text-sm text-[#203127] font-medium leading-relaxed">Precision disassembly and rebuilding of modular wardrobes.</p>
                     </div>
 
-                    <div class="p-4 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm space-y-2 card-hover group/c">
-                        <div class="w-9 h-9 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-sm font-bold shadow-xs group-hover/c:scale-105 transition-transform">
+                    <div class="p-4 sm:p-5 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm space-y-2.5 card-hover group/c">
+                        <div class="w-10 h-10 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-base font-bold shadow-xs group-hover/c:scale-105 transition-transform">
                             <i class="fa-solid fa-boxes-packing"></i>
                         </div>
-                        <h4 class="text-sm font-extrabold font-heading text-[#073B2E]">5-Ply Packing</h4>
-                        <p class="text-xs text-[#747C76] leading-snug">Heavy-duty cartons and custom timber crates for fragile art.</p>
+                        <h4 class="text-base sm:text-lg font-black font-heading text-[#0B2A22]">5-Ply Packing</h4>
+                        <p class="text-xs sm:text-sm text-[#203127] font-medium leading-relaxed">Heavy-duty cartons and custom timber crates for fragile art.</p>
                     </div>
                 </div>
 
@@ -362,20 +362,20 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                     
                     {{-- Floating Top-Right Badge --}}
-                    <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-md border border-white/60 text-[#073B2E] flex items-center gap-2 text-xs font-extrabold">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full shadow-md border border-white/60 text-[#0B2A22] flex items-center gap-2 text-xs sm:text-sm font-black">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
                         <span>Verified UAE Operations</span>
                     </div>
 
                     {{-- Bottom Feature Highlight Strip --}}
-                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl text-[#073B2E] shadow-lg border border-white/80">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center font-bold text-base flex-shrink-0">
+                    <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl text-[#0B2A22] shadow-lg border border-white/80">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-11 h-11 rounded-xl bg-[#0B2A22] text-[#B7E532] flex items-center justify-center font-black text-lg flex-shrink-0">
                                 <i class="fa-solid fa-truck-ramp-box"></i>
                             </div>
                             <div>
-                                <span class="font-extrabold block text-sm font-heading text-[#073B2E]">Certified Moving Fleet &amp; Crew</span>
-                                <span class="text-xs text-[#747C76] block">Enclosed GPS Trucks • Master Carpenters</span>
+                                <span class="font-black block text-sm sm:text-base font-heading text-[#0B2A22]">Certified Moving Fleet &amp; Crew</span>
+                                <span class="text-xs sm:text-sm text-[#203127] font-semibold block">Enclosed GPS Trucks • Master Carpenters</span>
                             </div>
                         </div>
                     </div>
@@ -383,37 +383,37 @@
 
                 {{-- Twin Executive Metric Cards (Fills Height, Eliminates Dead Space) --}}
                 <div class="grid grid-cols-2 gap-3.5">
-                    <div class="p-5 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-1.5 card-hover">
+                    <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-1.5 card-hover">
                         <div class="flex items-center justify-between">
-                            <div class="text-3xl font-black font-heading text-[#073B2E]">4.9 ★</div>
+                            <div class="text-3xl sm:text-4xl font-black font-heading text-[#0B2A22]">4.9 ★</div>
                             <span class="w-2.5 h-2.5 rounded-full bg-[#B7E532]"></span>
                         </div>
-                        <div class="text-xs font-extrabold text-[#202824]">Customer Rating</div>
-                        <div class="text-[11px] text-[#747C76]">Based on 4,500+ UAE moves</div>
+                        <div class="text-sm sm:text-base font-black text-[#0B2A22]">Customer Rating</div>
+                        <div class="text-xs sm:text-sm font-medium text-[#26372D]">Based on 4,500+ UAE moves</div>
                     </div>
 
-                    <div class="p-5 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-1.5 card-hover">
+                    <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-1.5 card-hover">
                         <div class="flex items-center justify-between">
-                            <div class="text-3xl font-black font-heading text-[#073B2E]">100%</div>
+                            <div class="text-3xl sm:text-4xl font-black font-heading text-[#0B2A22]">100%</div>
                             <span class="w-2.5 h-2.5 rounded-full bg-[#B7E532]"></span>
                         </div>
-                        <div class="text-xs font-extrabold text-[#202824]">In-House Staff</div>
-                        <div class="text-[11px] text-[#747C76]">Zero casual street labor</div>
+                        <div class="text-sm sm:text-base font-black text-[#0B2A22]">In-House Staff</div>
+                        <div class="text-xs sm:text-sm font-medium text-[#26372D]">Zero casual street labor</div>
                     </div>
                 </div>
 
                 {{-- Clean White Building Permit Coordination Card --}}
                 <div class="p-4 sm:p-5 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm flex items-center justify-between gap-3.5 card-hover">
                     <div class="flex items-center gap-3.5">
-                        <div class="w-11 h-11 rounded-2xl bg-[#EBF5E7] text-[#073B2E] flex items-center justify-center text-base font-bold flex-shrink-0">
+                        <div class="w-12 h-12 rounded-2xl bg-[#EBF5E7] text-[#0B2A22] flex items-center justify-center text-lg font-bold flex-shrink-0">
                             <i class="fa-solid fa-building-circle-check"></i>
                         </div>
                         <div>
-                            <div class="text-xs sm:text-sm font-extrabold text-[#202824]">Developer Gate Permit Support</div>
-                            <div class="text-[11px] text-[#747C76]">Emaar, Nakheel, DAMAC, Dubai Holding</div>
+                            <div class="text-sm sm:text-base font-black text-[#0B2A22]">Developer Gate Permit Support</div>
+                            <div class="text-xs sm:text-sm font-medium text-[#26372D]">Emaar, Nakheel, DAMAC, Dubai Holding</div>
                         </div>
                     </div>
-                    <span class="text-[10px] font-black uppercase tracking-wider text-[#073B2E] bg-[#EBF5E7] border border-[#CFE8C7] px-3 py-1 rounded-full">
+                    <span class="text-xs font-black uppercase tracking-wider text-[#0B2A22] bg-[#EBF5E7] border border-[#CFE8C7] px-3.5 py-1.5 rounded-full">
                         Approved
                     </span>
                 </div>
@@ -433,12 +433,12 @@
         {{-- Section Heading --}}
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
             <span class="forest-badge">
-                <i class="fa-solid fa-bullseye text-[10px]"></i> Guiding Principles
+                <i class="fa-solid fa-bullseye text-xs"></i> Guiding Principles
             </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#103B30] tracking-tight">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B2A22] tracking-tight">
                 Our Mission, Vision &amp; Core Values
             </h2>
-            <p class="text-sm sm:text-base text-[#5A665E] max-w-2xl mx-auto leading-relaxed">
+            <p class="text-base sm:text-lg md:text-xl text-[#1F3027] font-medium max-w-2xl mx-auto leading-relaxed">
                 Every estimate we submit, every box we tape, and every truck we dispatch is governed by a strict code of operational excellence.
             </p>
         </div>
@@ -461,22 +461,22 @@
 
                 {{-- Title & Meta (Increased Font Size) --}}
                 <div class="relative z-10 space-y-2">
-                    <span class="inline-block text-xs sm:text-[13px] font-black uppercase tracking-widest text-[#103B30] bg-[#EBF4EB] px-3.5 py-1 rounded-full border border-[#D5E5D5]">
+                    <span class="inline-block text-xs sm:text-sm font-black uppercase tracking-widest text-[#0B2A22] bg-[#EBF4EB] px-4 py-1.5 rounded-full border border-[#D5E5D5]">
                         Our Daily Purpose
                     </span>
-                    <h3 class="text-3xl sm:text-4xl font-black font-heading text-[#103B30] tracking-tight">
+                    <h3 class="text-3xl sm:text-4xl lg:text-[40px] font-black font-heading text-[#0B2A22] tracking-tight">
                         Our Mission
                     </h3>
                 </div>
 
                 {{-- Body Text (Increased Font Size & High-Contrast Dark Text) --}}
-                <p class="relative z-10 text-base sm:text-lg text-[#2D3B32] leading-relaxed font-normal">
+                <p class="relative z-10 text-base sm:text-lg md:text-xl text-[#1E2E25] leading-relaxed font-normal">
                     To deliver reliable, stress-free moving and relocation services in Dubai and globally by upholding strict handling safety, providing honest communication, employing vetted full-time personnel, and treating every household with the respect it deserves.
                 </p>
 
                 {{-- Bottom Feature Bar (Enlarged) --}}
-                <div class="relative z-10 pt-3.5 border-t border-[#EEF2EE] flex items-center gap-2.5 text-sm sm:text-base font-bold text-[#103B30]">
-                    <i class="fa-solid fa-circle-check text-emerald-600 text-base flex-shrink-0"></i>
+                <div class="relative z-10 pt-4 border-t border-[#EEF2EE] flex items-center gap-3 text-base sm:text-lg font-bold text-[#0B2A22]">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-lg flex-shrink-0"></i>
                     <span>Guaranteed customer satisfaction on every move</span>
                 </div>
             </div>
@@ -496,22 +496,22 @@
 
                 {{-- Title & Meta (Increased Font Size) --}}
                 <div class="relative z-10 space-y-2">
-                    <span class="inline-block text-xs sm:text-[13px] font-black uppercase tracking-widest text-[#103B30] bg-[#EBF4EB] px-3.5 py-1 rounded-full border border-[#D5E5D5]">
+                    <span class="inline-block text-xs sm:text-sm font-black uppercase tracking-widest text-[#0B2A22] bg-[#EBF4EB] px-4 py-1.5 rounded-full border border-[#D5E5D5]">
                         Our Long-Term Horizon
                     </span>
-                    <h3 class="text-3xl sm:text-4xl font-black font-heading text-[#103B30] tracking-tight">
+                    <h3 class="text-3xl sm:text-4xl lg:text-[40px] font-black font-heading text-[#0B2A22] tracking-tight">
                         Our Vision
                     </h3>
                 </div>
 
                 {{-- Body Text (Increased Font Size & High-Contrast Dark Text) --}}
-                <p class="relative z-10 text-base sm:text-lg text-[#2D3B32] leading-relaxed font-normal">
+                <p class="relative z-10 text-base sm:text-lg md:text-xl text-[#1E2E25] leading-relaxed font-normal">
                     To be the Middle East's premier and most trusted moving and global relocation partner, recognized internationally for setting new benchmarks in customer satisfaction, master carpentry, sustainable packing, and seamless border transitions.
                 </p>
 
                 {{-- Bottom Feature Bar (Enlarged) --}}
-                <div class="relative z-10 pt-3.5 border-t border-[#EEF2EE] flex items-center gap-2.5 text-sm sm:text-base font-bold text-[#103B30]">
-                    <i class="fa-solid fa-circle-check text-emerald-600 text-base flex-shrink-0"></i>
+                <div class="relative z-10 pt-4 border-t border-[#EEF2EE] flex items-center gap-3 text-base sm:text-lg font-bold text-[#0B2A22]">
+                    <i class="fa-solid fa-circle-check text-emerald-600 text-lg flex-shrink-0"></i>
                     <span>Expanding reliable global trade routes and local partnerships</span>
                 </div>
             </div>
@@ -524,8 +524,8 @@
                 <span class="w-12 h-12 rounded-2xl bg-[#EBF4EB] text-[#103B30] flex items-center justify-center text-xl shadow-xs">
                     <i class="fa-solid fa-shield-halved"></i>
                 </span>
-                <h4 class="text-lg sm:text-xl font-black font-heading text-[#103B30]">Integrity First</h4>
-                <p class="text-sm text-[#4A574F] leading-relaxed">
+                <h4 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22]">Integrity First</h4>
+                <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-medium">
                     Upfront written contracts, binding proposals, and zero hidden surcharges on moving day. What we quote is what you pay.
                 </p>
             </div>
@@ -534,8 +534,8 @@
                 <span class="w-12 h-12 rounded-2xl bg-[#EBF4EB] text-[#103B30] flex items-center justify-center text-xl shadow-xs">
                     <i class="fa-solid fa-hand-holding-heart"></i>
                 </span>
-                <h4 class="text-lg sm:text-xl font-black font-heading text-[#103B30]">White-Glove Care</h4>
-                <p class="text-sm text-[#4A574F] leading-relaxed">
+                <h4 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22]">White-Glove Care</h4>
+                <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-medium">
                     We treat your furnishings, luxury artwork, electronics, and memories with the exact same reverence as our own belongings.
                 </p>
             </div>
@@ -544,8 +544,8 @@
                 <span class="w-12 h-12 rounded-2xl bg-[#EBF4EB] text-[#103B30] flex items-center justify-center text-xl shadow-xs">
                     <i class="fa-solid fa-user-check"></i>
                 </span>
-                <h4 class="text-lg sm:text-xl font-black font-heading text-[#103B30]">100% In-House Crew</h4>
-                <p class="text-sm text-[#4A574F] leading-relaxed">
+                <h4 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22]">100% In-House Crew</h4>
+                <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-medium">
                     Zero casual labor hired from streets. Uniformed, background-verified specialists and master carpenters dedicated to your move.
                 </p>
             </div>
@@ -554,8 +554,8 @@
                 <span class="w-12 h-12 rounded-2xl bg-[#EBF4EB] text-[#103B30] flex items-center justify-center text-xl shadow-xs">
                     <i class="fa-solid fa-earth-americas"></i>
                 </span>
-                <h4 class="text-lg sm:text-xl font-black font-heading text-[#103B30]">Global Standards</h4>
-                <p class="text-sm text-[#4A574F] leading-relaxed">
+                <h4 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22]">Global Standards</h4>
+                <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-medium">
                     IATA/FIDI-aligned packing methods, heavy-duty 5-ply cartons, export timber crating, and direct customs clearance worldwide.
                 </p>
             </div>
@@ -573,12 +573,12 @@
     {{-- Section Header --}}
     <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
         <span class="forest-badge">
-            <i class="fa-solid fa-truck-ramp-box text-[10px]"></i> Full Service Relocation Capabilities
+            <i class="fa-solid fa-truck-ramp-box text-xs"></i> Full Service Relocation Capabilities
         </span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-[#202824] tracking-tight">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B2A22] tracking-tight">
             Everything MOVEXA Does For You
         </h2>
-        <p class="text-sm sm:text-base text-[#747C76]">
+        <p class="text-base sm:text-lg md:text-xl text-[#1F3027] font-medium max-w-3xl mx-auto leading-relaxed">
             Whether shifting a compact studio in JLT, a luxury mansion on the Palm, a corporate head office, or shipping household goods across oceans, we provide an all-inclusive relocation ecosystem.
         </p>
     </div>
@@ -594,29 +594,29 @@
                          alt="MOVEXA Residential Home Moving in Dubai" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
-                        <i class="fa-solid fa-house-chimney mr-1 text-[#103B30]"></i> Residential
+                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-black text-[#0B2A22] shadow-md">
+                        <i class="fa-solid fa-house-chimney mr-1 text-[#0B2A22]"></i> Residential
                     </span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-heading text-[#202824] group-hover:text-[#103B30] transition-colors">
+                <div class="p-6 sm:p-7 space-y-3.5">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">
                         Home & Residential Shifting
                     </h3>
-                    <p class="text-xs sm:text-sm text-[#747C76] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                         Comprehensive household moving for apartments, townhouses, and residential villas across all Dubai communities and the UAE.
                     </p>
-                    <ul class="text-xs text-[#4E5B54] space-y-1.5 pt-1">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Color-coded box inventory tracking</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Furniture disassembly & reassembly</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Wardrobe hanging garment boxes</li>
+                    <ul class="text-sm sm:text-[15px] font-semibold text-[#14231B] space-y-2 pt-1">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Color-coded box inventory tracking</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Furniture disassembly & reassembly</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Wardrobe hanging garment boxes</li>
                     </ul>
                 </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 sm:p-7 pt-0">
                 <a href="{{ route('services.show', 'home-moving') }}" 
-                   class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full border border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs font-bold transition-colors">
+                   class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs sm:text-sm font-black transition-colors">
                     <span>Learn About Home Moving</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
         </div>
@@ -629,29 +629,29 @@
                          alt="MOVEXA Luxury Villa Relocation Dubai" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
-                        <i class="fa-solid fa-gem mr-1 text-[#103B30]"></i> Luxury Estates
+                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-black text-[#0B2A22] shadow-md">
+                        <i class="fa-solid fa-gem mr-1 text-[#0B2A22]"></i> Luxury Estates
                     </span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-heading text-[#202824] group-hover:text-[#103B30] transition-colors">
+                <div class="p-6 sm:p-7 space-y-3.5">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">
                         Luxury Villa Relocations
                     </h3>
-                    <p class="text-xs sm:text-sm text-[#747C76] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                         Dedicated fleet teams for large-scale residences in Palm Jumeirah, Emirates Hills, Arabian Ranches, and Dubai Hills Estate.
                     </p>
-                    <ul class="text-xs text-[#4E5B54] space-y-1.5 pt-1">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Multi-truck synchronized fleet</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Garden & outdoor furniture protection</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Master carpenters for modular systems</li>
+                    <ul class="text-sm sm:text-[15px] font-semibold text-[#14231B] space-y-2 pt-1">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Multi-truck synchronized fleet</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Garden & outdoor furniture protection</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Master carpenters for modular systems</li>
                     </ul>
                 </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 sm:p-7 pt-0">
                 <a href="{{ route('services.show', 'villa-relocation') }}" 
-                   class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full border border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs font-bold transition-colors">
+                   class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs sm:text-sm font-black transition-colors">
                     <span>Learn About Villa Relocation</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
         </div>
@@ -664,29 +664,29 @@
                          alt="MOVEXA High-Rise Apartment Moving Dubai Marina Downtown" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
-                        <i class="fa-solid fa-building mr-1 text-[#103B30]"></i> High-Rise Towers
+                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-black text-[#0B2A22] shadow-md">
+                        <i class="fa-solid fa-building mr-1 text-[#0B2A22]"></i> High-Rise Towers
                     </span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-heading text-[#202824] group-hover:text-[#103B30] transition-colors">
+                <div class="p-6 sm:p-7 space-y-3.5">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">
                         Apartment & Penthouse Shifting
                     </h3>
-                    <p class="text-xs sm:text-sm text-[#747C76] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                         Precision logistics in Dubai Marina, Downtown, DIFC, and Business Bay towers with strict loading-dock and elevator management.
                     </p>
-                    <ul class="text-xs text-[#4E5B54] space-y-1.5 pt-1">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Developer NOC & gate pass coordination</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Elevator padding & floor runners</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Low-clearance basement truck access</li>
+                    <ul class="text-sm sm:text-[15px] font-semibold text-[#14231B] space-y-2 pt-1">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Developer NOC & gate pass coordination</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Elevator padding & floor runners</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Low-clearance basement truck access</li>
                     </ul>
                 </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 sm:p-7 pt-0">
                 <a href="{{ route('services.show', 'apartment-moving') }}" 
-                   class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full border border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs font-bold transition-colors">
+                   class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs sm:text-sm font-black transition-colors">
                     <span>Learn About Apartment Moving</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
         </div>
@@ -699,29 +699,29 @@
                          alt="MOVEXA Corporate Office Shifting Dubai" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
-                        <i class="fa-solid fa-briefcase mr-1 text-[#103B30]"></i> Corporate
+                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-black text-[#0B2A22] shadow-md">
+                        <i class="fa-solid fa-briefcase mr-1 text-[#0B2A22]"></i> Corporate
                     </span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-heading text-[#202824] group-hover:text-[#103B30] transition-colors">
+                <div class="p-6 sm:p-7 space-y-3.5">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">
                         Corporate & Office Relocation
                     </h3>
-                    <p class="text-xs sm:text-sm text-[#747C76] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                         Zero-business-downtime workplace moves, weekend schedules, workstation reconfiguration, and secure IT equipment relocation.
                     </p>
-                    <ul class="text-xs text-[#4E5B54] space-y-1.5 pt-1">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Overnight & weekend execution</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> IT rack & desktop anti-static wraps</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Numbered workstation tagging</li>
+                    <ul class="text-sm sm:text-[15px] font-semibold text-[#14231B] space-y-2 pt-1">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Overnight & weekend execution</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> IT rack & desktop anti-static wraps</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Numbered workstation tagging</li>
                     </ul>
                 </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 sm:p-7 pt-0">
                 <a href="{{ route('services.show', 'office-relocation') }}" 
-                   class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full border border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs font-bold transition-colors">
+                   class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs sm:text-sm font-black transition-colors">
                     <span>Learn About Office Moving</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
         </div>
@@ -734,29 +734,29 @@
                          alt="MOVEXA International Relocation from Dubai to Worldwide" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
-                        <i class="fa-solid fa-plane-departure mr-1 text-[#103B30]"></i> Worldwide
+                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-black text-[#0B2A22] shadow-md">
+                        <i class="fa-solid fa-plane-departure mr-1 text-[#0B2A22]"></i> Worldwide
                     </span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-heading text-[#202824] group-hover:text-[#103B30] transition-colors">
+                <div class="p-6 sm:p-7 space-y-3.5">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">
                         International Door-to-Door Moving
                     </h3>
-                    <p class="text-xs sm:text-sm text-[#747C76] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                         Seamless sea container (FCL & LCL) and air cargo relocations to the UK, USA, Europe, Canada, Australia, Saudi Arabia, and 120+ nations.
                     </p>
-                    <ul class="text-xs text-[#4E5B54] space-y-1.5 pt-1">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Seaworthy multi-layer export packing</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Complete customs documentation clearance</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Destination delivery & room placement</li>
+                    <ul class="text-sm sm:text-[15px] font-semibold text-[#14231B] space-y-2 pt-1">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Seaworthy multi-layer export packing</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Complete customs documentation clearance</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Destination delivery & room placement</li>
                     </ul>
                 </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 sm:p-7 pt-0">
                 <a href="{{ route('international-moving') }}" 
-                   class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full border border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs font-bold transition-colors">
+                   class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs sm:text-sm font-black transition-colors">
                     <span>Explore International Routes</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
         </div>
@@ -769,29 +769,29 @@
                          alt="MOVEXA Climate-Controlled Storage and Custom Timber Crating Dubai" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-[#103B30] shadow-md">
-                        <i class="fa-solid fa-warehouse mr-1 text-[#103B30]"></i> Storage & Crates
+                    <span class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-black text-[#0B2A22] shadow-md">
+                        <i class="fa-solid fa-warehouse mr-1 text-[#0B2A22]"></i> Storage & Crates
                     </span>
                 </div>
-                <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold font-heading text-[#202824] group-hover:text-[#103B30] transition-colors">
+                <div class="p-6 sm:p-7 space-y-3.5">
+                    <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">
                         Custom Crating & Secure Storage
                     </h3>
-                    <p class="text-xs sm:text-sm text-[#747C76] leading-relaxed">
+                    <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                         Tailored ISPM-15 heat-treated timber crates for fine art, mirrors, and chandeliers, plus 24/7 CCTV climate-controlled Dubai storage.
                     </p>
-                    <ul class="text-xs text-[#4E5B54] space-y-1.5 pt-1">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> 24/7 CCTV & pest-controlled facility</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Flexible monthly or long-term units</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#103B30]"></i> Bespoke wooden crates for marble & fine art</li>
+                    <ul class="text-sm sm:text-[15px] font-semibold text-[#14231B] space-y-2 pt-1">
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> 24/7 CCTV & pest-controlled facility</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Flexible monthly or long-term units</li>
+                        <li class="flex items-center gap-2.5"><i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i> Bespoke wooden crates for marble & fine art</li>
                     </ul>
                 </div>
             </div>
-            <div class="p-6 pt-0">
+            <div class="p-6 sm:p-7 pt-0">
                 <a href="{{ route('services.show', 'storage-solutions') }}" 
-                   class="inline-flex items-center justify-center gap-2 w-full py-2.5 rounded-full border border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs font-bold transition-colors">
+                   class="inline-flex items-center justify-center gap-2 w-full py-3 rounded-full border-2 border-[#103B30] text-[#103B30] hover:bg-[#103B30] hover:text-white text-xs sm:text-sm font-black transition-colors">
                     <span>Learn About Storage Solutions</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
             </div>
         </div>
@@ -800,24 +800,24 @@
 
     {{-- Bottom Interactive Hub Callout --}}
     <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-[#08271F] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-        <div class="space-y-1.5 text-center md:text-left">
-            <span class="text-xs font-bold uppercase tracking-wider text-[#D8F36B]">Need Specialized Moving?</span>
-            <h4 class="text-xl sm:text-2xl font-black font-heading text-white">
+        <div class="space-y-2 text-center md:text-left">
+            <span class="text-xs sm:text-sm font-black uppercase tracking-wider text-[#D8F36B]">Need Specialized Moving?</span>
+            <h4 class="text-2xl sm:text-3xl font-black font-heading text-white">
                 Looking for our full directory of services and moving rates?
             </h4>
-            <p class="text-xs sm:text-sm text-white/80">
+            <p class="text-sm sm:text-base text-white/90 font-medium">
                 Explore our full suite of moving solutions or speak directly with our Senior Move Coordinator for customized logistics.
             </p>
         </div>
         <div class="flex flex-wrap items-center justify-center gap-3 flex-shrink-0">
             <a href="{{ route('services.index') }}" 
-               class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#08271F] hover:bg-[#D8F36B] text-xs font-extrabold transition-all duration-200 shadow-md">
+               class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#08271F] hover:bg-[#D8F36B] text-xs sm:text-sm font-black transition-all duration-200 shadow-md">
                 <span>View All Services</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
             <button type="button" 
                     onclick="openQuoteModal()" 
-                    class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-[#cbf54a] text-xs font-extrabold transition-all duration-200 shadow-md">
+                    class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-[#cbf54a] text-xs sm:text-sm font-black transition-all duration-200 shadow-md">
                 <i class="fa-solid fa-calculator text-xs"></i>
                 <span>Instant Estimate</span>
             </button>
@@ -838,14 +838,14 @@
         
         {{-- Section Header: High-Impact, Meaningful & Authoritative --}}
         <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-3">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#D5E2D5] shadow-2xs text-[#103B30] text-xs font-bold tracking-wide uppercase">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#D5E2D5] shadow-2xs text-[#0B2A22] text-xs sm:text-sm font-black tracking-wide uppercase">
                 <span class="w-2 h-2 rounded-full bg-[#103B30] shadow-[0_0_8px_#103B30] animate-pulse"></span>
                 <span>Simple 4-Step Relocation Journey</span>
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-black font-heading text-[#103B30] tracking-tight leading-tight">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B2A22] tracking-tight leading-tight">
                 Your Move, Made Simple &amp; Stress-Free
             </h2>
-            <p class="text-sm sm:text-base text-[#425048] max-w-xl mx-auto leading-relaxed">
+            <p class="text-base sm:text-lg md:text-xl text-[#1F3027] font-medium max-w-xl mx-auto leading-relaxed">
                 From your first quote until the last box is placed and unpacked, our transparent 4-stage workflow keeps you in full control with zero surprises.
             </p>
         </div>
@@ -868,13 +868,13 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
                             
                             {{-- Floating Glass Badge --}}
-                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-1.5 shadow-md">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] shadow-[0_0_6px_#D8F36B] animate-pulse"></span>
                                 <span>Step 01 &bull; Instant Survey</span>
                             </div>
 
                             {{-- Index Tag --}}
-                            <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white/90 text-[10px] font-mono font-bold tracking-widest uppercase">
+                            <div class="absolute bottom-2.5 right-3 px-2.5 py-0.5 rounded-md bg-black/60 backdrop-blur-md text-white text-xs font-mono font-black tracking-widest uppercase">
                                 01 / ESTIMATE
                             </div>
                         </div>
@@ -882,21 +882,21 @@
 
                     {{-- Card Content Body --}}
                     <div class="p-5 sm:p-6 pt-4 sm:pt-5 space-y-3">
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#103B30] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
+                        <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
                             Request a Quote
                         </h3>
-                        <p class="text-sm sm:text-[15px] text-[#425048] leading-relaxed">
+                        <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                             Tell us where and when you're moving. Connect via WhatsApp or online for an instant 3D video survey or in-person consultation to calculate exact volume.
                         </p>
 
                         {{-- Trust Checkmarks --}}
                         <div class="pt-2 space-y-2 border-t border-[#E2E8E2]/70">
-                            <div class="flex items-center gap-2 text-xs font-bold text-[#18221D]">
-                                <i class="fa-solid fa-circle-check text-[#103B30] text-[11px]"></i>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#102018]">
+                                <i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i>
                                 <span>Fast same-day response</span>
                             </div>
-                            <div class="flex items-center gap-2 text-xs font-bold text-[#18221D]">
-                                <i class="fa-solid fa-circle-check text-[#103B30] text-[11px]"></i>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#102018]">
+                                <i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i>
                                 <span>Zero-obligation survey</span>
                             </div>
                         </div>
@@ -904,12 +904,12 @@
                 </div>
 
                 {{-- Card Bottom Footer --}}
-                <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-[#E2E8E2] flex items-center justify-between text-xs font-bold text-[#103B30] bg-white">
+                <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-[#E2E8E2] flex items-center justify-between text-xs sm:text-sm font-black text-[#0B2A22] bg-white">
                     <span class="flex items-center gap-1.5">
-                        <i class="fa-solid fa-shield-halved text-[11px]"></i>
+                        <i class="fa-solid fa-shield-halved text-xs text-[#103B30]"></i>
                         <span>Fixed Quote Guarantee</span>
                     </span>
-                    <i class="fa-solid fa-arrow-right text-[10px] text-[#747C76] group-hover:text-[#103B30] group-hover:translate-x-1 transition-all"></i>
+                    <i class="fa-solid fa-arrow-right text-xs text-[#103B30] group-hover:translate-x-1 transition-all"></i>
                 </div>
             </div>
 
@@ -928,13 +928,13 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
                             
                             {{-- Floating Glass Badge --}}
-                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-1.5 shadow-md">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] shadow-[0_0_6px_#D8F36B] animate-pulse"></span>
                                 <span>Step 02 &bull; Move Plan</span>
                             </div>
 
                             {{-- Index Tag --}}
-                            <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white/90 text-[10px] font-mono font-bold tracking-widest uppercase">
+                            <div class="absolute bottom-2.5 right-3 px-2.5 py-0.5 rounded-md bg-black/60 backdrop-blur-md text-white text-xs font-mono font-black tracking-widest uppercase">
                                 02 / PLANNING
                             </div>
                         </div>
@@ -942,21 +942,21 @@
 
                     {{-- Card Content Body --}}
                     <div class="p-5 sm:p-6 pt-4 sm:pt-5 space-y-3">
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#103B30] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
+                        <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
                             Plan Your Move
                         </h3>
-                        <p class="text-sm sm:text-[15px] text-[#425048] leading-relaxed">
+                        <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                             Your relocation advisor prepares a binding proposal, reserves service elevators, handles developer NOC permits (Emaar, Nakheel, DAMAC), and plans logistics.
                         </p>
 
                         {{-- Trust Checkmarks --}}
                         <div class="pt-2 space-y-2 border-t border-[#E2E8E2]/70">
-                            <div class="flex items-center gap-2 text-xs font-bold text-[#18221D]">
-                                <i class="fa-solid fa-circle-check text-[#103B30] text-[11px]"></i>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#102018]">
+                                <i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i>
                                 <span>Developer NOC guidance</span>
                             </div>
-                            <div class="flex items-center gap-2 text-xs font-bold text-[#18221D]">
-                                <i class="fa-solid fa-circle-check text-[#103B30] text-[11px]"></i>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#102018]">
+                                <i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i>
                                 <span>No surprise extra costs</span>
                             </div>
                         </div>
@@ -964,12 +964,12 @@
                 </div>
 
                 {{-- Card Bottom Footer --}}
-                <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-[#E2E8E2] flex items-center justify-between text-xs font-bold text-[#103B30] bg-white">
+                <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-[#E2E8E2] flex items-center justify-between text-xs sm:text-sm font-black text-[#0B2A22] bg-white">
                     <span class="flex items-center gap-1.5">
-                        <i class="fa-solid fa-clipboard-check text-[11px]"></i>
+                        <i class="fa-solid fa-clipboard-check text-xs text-[#103B30]"></i>
                         <span>100% Gate Clearance</span>
                     </span>
-                    <i class="fa-solid fa-arrow-right text-[10px] text-[#747C76] group-hover:text-[#103B30] group-hover:translate-x-1 transition-all"></i>
+                    <i class="fa-solid fa-arrow-right text-xs text-[#103B30] group-hover:translate-x-1 transition-all"></i>
                 </div>
             </div>
 
@@ -988,13 +988,13 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
                             
                             {{-- Floating Glass Badge --}}
-                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-1.5 shadow-md">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] shadow-[0_0_6px_#D8F36B] animate-pulse"></span>
                                 <span>Step 03 &bull; Packing &amp; Transit</span>
                             </div>
 
                             {{-- Index Tag --}}
-                            <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white/90 text-[10px] font-mono font-bold tracking-widest uppercase">
+                            <div class="absolute bottom-2.5 right-3 px-2.5 py-0.5 rounded-md bg-black/60 backdrop-blur-md text-white text-xs font-mono font-black tracking-widest uppercase">
                                 03 / TRANSIT
                             </div>
                         </div>
@@ -1002,21 +1002,21 @@
 
                     {{-- Card Content Body --}}
                     <div class="p-5 sm:p-6 pt-4 sm:pt-5 space-y-3">
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#103B30] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
+                        <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
                             Packing &amp; Collection
                         </h3>
-                        <p class="text-sm sm:text-[15px] text-[#425048] leading-relaxed">
+                        <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                             Certified master carpenters dismantle complex furniture while our crew wraps sofas, boxed china, and electronics before loading into GPS-monitored trucks.
                         </p>
 
                         {{-- Trust Checkmarks --}}
                         <div class="pt-2 space-y-2 border-t border-[#E2E8E2]/70">
-                            <div class="flex items-center gap-2 text-xs font-bold text-[#18221D]">
-                                <i class="fa-solid fa-circle-check text-[#103B30] text-[11px]"></i>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#102018]">
+                                <i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i>
                                 <span>Master carpentry included</span>
                             </div>
-                            <div class="flex items-center gap-2 text-xs font-bold text-[#18221D]">
-                                <i class="fa-solid fa-circle-check text-[#103B30] text-[11px]"></i>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#102018]">
+                                <i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i>
                                 <span>5-ply export-grade packing</span>
                             </div>
                         </div>
@@ -1024,12 +1024,12 @@
                 </div>
 
                 {{-- Card Bottom Footer --}}
-                <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-[#E2E8E2] flex items-center justify-between text-xs font-bold text-[#103B30] bg-white">
+                <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-[#E2E8E2] flex items-center justify-between text-xs sm:text-sm font-black text-[#0B2A22] bg-white">
                     <span class="flex items-center gap-1.5">
-                        <i class="fa-solid fa-truck text-[11px]"></i>
+                        <i class="fa-solid fa-truck text-xs text-[#103B30]"></i>
                         <span>Carpet-Lined GPS Fleet</span>
                     </span>
-                    <i class="fa-solid fa-arrow-right text-[10px] text-[#747C76] group-hover:text-[#103B30] group-hover:translate-x-1 transition-all"></i>
+                    <i class="fa-solid fa-arrow-right text-xs text-[#103B30] group-hover:translate-x-1 transition-all"></i>
                 </div>
             </div>
 
@@ -1048,13 +1048,13 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
                             
                             {{-- Floating Glass Badge --}}
-                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-[11px] font-bold flex items-center gap-1.5 shadow-md">
+                            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-1.5 shadow-md">
                                 <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] shadow-[0_0_6px_#D8F36B] animate-pulse"></span>
                                 <span>Step 04 &bull; Final Setup</span>
                             </div>
 
                             {{-- Index Tag --}}
-                            <div class="absolute bottom-2.5 right-3 px-2 py-0.5 rounded-md bg-black/50 backdrop-blur-md text-white/90 text-[10px] font-mono font-bold tracking-widest uppercase">
+                            <div class="absolute bottom-2.5 right-3 px-2.5 py-0.5 rounded-md bg-black/60 backdrop-blur-md text-white text-xs font-mono font-black tracking-widest uppercase">
                                 04 / SETUP
                             </div>
                         </div>
@@ -1062,21 +1062,21 @@
 
                     {{-- Card Content Body --}}
                     <div class="p-5 sm:p-6 pt-4 sm:pt-5 space-y-3">
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#103B30] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
+                        <h3 class="text-xl sm:text-2xl font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-emerald-900 transition-colors leading-snug">
                             Delivery &amp; Setup
                         </h3>
-                        <p class="text-sm sm:text-[15px] text-[#425048] leading-relaxed">
+                        <p class="text-sm sm:text-base text-[#1E2E25] leading-relaxed font-normal">
                             At your new destination, furniture is placed and reassembled in chosen rooms, delicate items unpacked, packing debris hauled away, and full sign-off completed.
                         </p>
 
                         {{-- Trust Checkmarks --}}
                         <div class="pt-2 space-y-2 border-t border-[#E2E8E2]/70">
-                            <div class="flex items-center gap-2 text-xs font-bold text-[#18221D]">
-                                <i class="fa-solid fa-circle-check text-[#103B30] text-[11px]"></i>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#102018]">
+                                <i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i>
                                 <span>Complete bed/wardrobe assembly</span>
                             </div>
-                            <div class="flex items-center gap-2 text-xs font-bold text-[#18221D]">
-                                <i class="fa-solid fa-circle-check text-[#103B30] text-[11px]"></i>
+                            <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#102018]">
+                                <i class="fa-solid fa-circle-check text-[#103B30] text-sm"></i>
                                 <span>100% debris & box haul-away</span>
                             </div>
                         </div>
@@ -1084,12 +1084,12 @@
                 </div>
 
                 {{-- Card Bottom Footer --}}
-                <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-[#E2E8E2] flex items-center justify-between text-xs font-bold text-[#103B30] bg-white">
+                <div class="px-5 sm:px-6 pb-5 pt-3 border-t border-[#E2E8E2] flex items-center justify-between text-xs sm:text-sm font-black text-[#0B2A22] bg-white">
                     <span class="flex items-center gap-1.5">
-                        <i class="fa-solid fa-house-chimney text-[11px]"></i>
+                        <i class="fa-solid fa-house-chimney text-xs text-[#103B30]"></i>
                         <span>Turnkey White-Glove Handover</span>
                     </span>
-                    <i class="fa-solid fa-arrow-right text-[10px] text-[#747C76] group-hover:text-[#103B30] group-hover:translate-x-1 transition-all"></i>
+                    <i class="fa-solid fa-arrow-right text-xs text-[#103B30] group-hover:translate-x-1 transition-all"></i>
                 </div>
             </div>
 
@@ -1098,26 +1098,25 @@
         {{-- Bottom Operational Assurance Banner --}}
         <div class="mt-10 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-[#E2E8E2] shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3.5 text-left">
-                <div class="w-11 h-11 rounded-2xl bg-[#EBF2EB] text-[#103B30] flex items-center justify-center text-lg shrink-0">
+                <div class="w-12 h-12 rounded-2xl bg-[#EBF2EB] text-[#103B30] flex items-center justify-center text-xl shrink-0">
                     <i class="fa-solid fa-phone-volume"></i>
                 </div>
                 <div>
-                    <h4 class="text-sm sm:text-base font-black text-[#103B30]">Need a custom relocation timeline or instant move plan?</h4>
-                    <p class="text-xs sm:text-[13px] text-[#425048]">Our Dubai relocation specialists are on standby 7 days a week to guide you.</p>
+                    <h4 class="text-base sm:text-lg font-black text-[#0B2A22]">Need a custom relocation timeline or instant move plan?</h4>
+                    <p class="text-sm text-[#1E2E25] font-medium">Our Dubai relocation specialists are on standby 7 days a week to guide you.</p>
                 </div>
             </div>
             <div class="flex items-center gap-2.5 shrink-0 w-full sm:w-auto">
                 <button type="button" 
                         onclick="openQuoteModal()" 
-                        class="btn-forest text-xs font-bold px-5 py-3 rounded-full w-full sm:w-auto flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-calculator text-[11px]"></i>
+                        class="btn-forest text-xs sm:text-sm font-black px-6 py-3.5 rounded-full w-full sm:w-auto flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calculator text-xs"></i>
                     <span>Get Moving Quote</span>
                 </button>
             </div>
         </div>
 
     </div>
-</section>
 </section>
 
 {{-- =========================================================================
@@ -1128,12 +1127,12 @@
         
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
             <span class="forest-badge">
-                <i class="fa-solid fa-boxes-packing text-[10px]"></i> Operational Rigor
+                <i class="fa-solid fa-boxes-packing text-xs"></i> Operational Rigor
             </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-[#202824] tracking-tight">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B2A22] tracking-tight">
                 Our Fleet, Equipment & Material Standards
             </h2>
-            <p class="text-sm sm:text-base text-[#747C76]">
+            <p class="text-base sm:text-lg md:text-xl text-[#1F3027] font-medium max-w-3xl mx-auto leading-relaxed">
                 We do not compromise on packaging integrity. Here is a look at the equipment that safeguards your belongings on every trip.
             </p>
         </div>
@@ -1147,10 +1146,10 @@
                          alt="MOVEXA Closed Box Moving Truck in Transit Dubai" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
-                <div class="p-5 space-y-2">
-                    <span class="text-[11px] font-extrabold text-[#103B30] uppercase tracking-wider block">Modern Fleet</span>
-                    <h4 class="font-extrabold text-[#202824] text-base font-heading">Enclosed GPS Trucks</h4>
-                    <p class="text-xs text-[#747C76] leading-relaxed">
+                <div class="p-5 sm:p-6 space-y-2">
+                    <span class="text-xs sm:text-[13px] font-black text-[#103B30] uppercase tracking-wider block">Modern Fleet</span>
+                    <h4 class="font-black text-[#0B2A22] text-lg sm:text-xl font-heading">Enclosed GPS Trucks</h4>
+                    <p class="text-sm sm:text-[15px] text-[#1E2E25] font-medium leading-relaxed">
                         Carpet-lined interior walls, hydraulic lift ramps, and interior ratchet cargo bars to prevent shifting during transit.
                     </p>
                 </div>
@@ -1163,10 +1162,10 @@
                          alt="MOVEXA Fragile China and Glassware Packing" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
-                <div class="p-5 space-y-2">
-                    <span class="text-[11px] font-extrabold text-[#103B30] uppercase tracking-wider block">Specialist Protection</span>
-                    <h4 class="font-extrabold text-[#202824] text-base font-heading">5-Ply Fragile Crating</h4>
-                    <p class="text-xs text-[#747C76] leading-relaxed">
+                <div class="p-5 sm:p-6 space-y-2">
+                    <span class="text-xs sm:text-[13px] font-black text-[#103B30] uppercase tracking-wider block">Specialist Protection</span>
+                    <h4 class="font-black text-[#0B2A22] text-lg sm:text-xl font-heading">5-Ply Fragile Crating</h4>
+                    <p class="text-sm sm:text-[15px] text-[#1E2E25] font-medium leading-relaxed">
                         Multi-layer cellular division boxes, acid-free tissue paper, and bubble wrapping for crystal, porcelain, and china.
                     </p>
                 </div>
@@ -1179,10 +1178,10 @@
                          alt="MOVEXA Mattress and Upholstery Protective Wrapping" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
-                <div class="p-5 space-y-2">
-                    <span class="text-[11px] font-extrabold text-[#103B30] uppercase tracking-wider block">Cleanliness & Hygiene</span>
-                    <h4 class="font-extrabold text-[#202824] text-base font-heading">Mattress & Sofa Armor</h4>
-                    <p class="text-xs text-[#747C76] leading-relaxed">
+                <div class="p-5 sm:p-6 space-y-2">
+                    <span class="text-xs sm:text-[13px] font-black text-[#103B30] uppercase tracking-wider block">Cleanliness & Hygiene</span>
+                    <h4 class="font-black text-[#0B2A22] text-lg sm:text-xl font-heading">Mattress & Sofa Armor</h4>
+                    <p class="text-sm sm:text-[15px] text-[#1E2E25] font-medium leading-relaxed">
                         Heavy-gauge sealed polyethylene mattress wraps and thick quilted furniture blankets to protect fabrics from dust and humidity.
                     </p>
                 </div>
@@ -1195,10 +1194,10 @@
                          alt="MOVEXA White-Glove Villa Moving Loading" 
                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
                 </div>
-                <div class="p-5 space-y-2">
-                    <span class="text-[11px] font-extrabold text-[#103B30] uppercase tracking-wider block">On-Site Logistics</span>
-                    <h4 class="font-extrabold text-[#202824] text-base font-heading">White-Glove Ramp Setup</h4>
-                    <p class="text-xs text-[#747C76] leading-relaxed">
+                <div class="p-5 sm:p-6 space-y-2">
+                    <span class="text-xs sm:text-[13px] font-black text-[#103B30] uppercase tracking-wider block">On-Site Logistics</span>
+                    <h4 class="font-black text-[#0B2A22] text-lg sm:text-xl font-heading">White-Glove Ramp Setup</h4>
+                    <p class="text-sm sm:text-[15px] text-[#1E2E25] font-medium leading-relaxed">
                         Floor neoprene runners, door frame guards, and specialized furniture dollies safeguarding villa marble and hardwood.
                     </p>
                 </div>
@@ -1209,10 +1208,10 @@
         {{-- Action to Gallery --}}
         <div class="mt-10 text-center">
             <a href="{{ route('gallery') }}" 
-               class="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full bg-[#103B30] hover:bg-[#08271F] text-white text-xs sm:text-sm shadow-md transition-all duration-200">
+               class="inline-flex items-center gap-2 font-black px-7 py-3.5 rounded-full bg-[#103B30] hover:bg-[#08271F] text-white text-xs sm:text-sm shadow-md transition-all duration-200">
                 <i class="fa-solid fa-camera text-xs text-[#D8F36B]"></i>
                 <span>Explore Our Full Moving Photo Gallery</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
         </div>
 
@@ -1228,12 +1227,12 @@
         
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
             <span class="forest-badge">
-                <i class="fa-solid fa-star text-[10px]"></i> Client Testimonials
+                <i class="fa-solid fa-star text-xs"></i> Client Testimonials
             </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-[#202824] tracking-tight">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B2A22] tracking-tight">
                 Trusted by Over 4,500 Families & Companies
             </h2>
-            <p class="text-sm sm:text-base text-[#747C76]">
+            <p class="text-base sm:text-lg md:text-xl text-[#1F3027] font-medium max-w-3xl mx-auto leading-relaxed">
                 Here is what homeowners, tenants, and business managers in Dubai have to say about their MOVEXA experience.
             </p>
         </div>
@@ -1241,71 +1240,71 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {{-- Testimonial 1 --}}
-            <div class="p-7 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-4 card-hover flex flex-col justify-between">
-                <div class="space-y-3">
-                    <div class="flex items-center text-[#E5A812] gap-1 text-sm">
+            <div class="p-7 sm:p-8 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-4 card-hover flex flex-col justify-between">
+                <div class="space-y-3.5">
+                    <div class="flex items-center text-[#E5A812] gap-1 text-base">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-xs sm:text-sm text-[#4E5B54] leading-relaxed italic">
+                    <p class="text-sm sm:text-base text-[#18261E] leading-relaxed font-normal italic">
                         "We moved from our 4-bedroom villa in Arabian Ranches to Dubai Hills. MOVEXA's team arrived at 8:00 AM sharp with three trucks and a supervisor. Not a single plate broken, and our master bedroom was completely assembled by the afternoon. Highly recommended!"
                     </p>
                 </div>
                 <div class="pt-4 border-t border-[#E2E8E2] flex items-center justify-between">
                     <div>
-                        <div class="font-extrabold text-[#202824] text-sm">David & Sarah H.</div>
-                        <div class="text-[11px] text-[#747C76]">Arabian Ranches to Dubai Hills</div>
+                        <div class="font-black text-[#0B2A22] text-sm sm:text-base">David & Sarah H.</div>
+                        <div class="text-xs sm:text-sm font-semibold text-[#3C4E44]">Arabian Ranches to Dubai Hills</div>
                     </div>
-                    <span class="px-2.5 py-1 rounded-full bg-[#EBF2EB] text-[10px] font-bold text-[#103B30]">Villa Move</span>
+                    <span class="px-3 py-1 rounded-full bg-[#EBF2EB] text-xs font-black text-[#103B30]">Villa Move</span>
                 </div>
             </div>
 
             {{-- Testimonial 2 --}}
-            <div class="p-7 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-4 card-hover flex flex-col justify-between">
-                <div class="space-y-3">
-                    <div class="flex items-center text-[#E5A812] gap-1 text-sm">
+            <div class="p-7 sm:p-8 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-4 card-hover flex flex-col justify-between">
+                <div class="space-y-3.5">
+                    <div class="flex items-center text-[#E5A812] gap-1 text-base">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-xs sm:text-sm text-[#4E5B54] leading-relaxed italic">
+                    <p class="text-sm sm:text-base text-[#18261E] leading-relaxed font-normal italic">
                         "Moving in a high-rise tower like Dubai Marina can be a nightmare with elevator bookings and building security. MOVEXA took care of all the security permits in advance. Their carpenters disassembled our Italian wardrobe effortlessly and rebuilt it perfectly."
                     </p>
                 </div>
                 <div class="pt-4 border-t border-[#E2E8E2] flex items-center justify-between">
                     <div>
-                        <div class="font-extrabold text-[#202824] text-sm">Mariam Al Mansoori</div>
-                        <div class="text-[11px] text-[#747C76]">Dubai Marina High-Rise</div>
+                        <div class="font-black text-[#0B2A22] text-sm sm:text-base">Mariam Al Mansoori</div>
+                        <div class="text-xs sm:text-sm font-semibold text-[#3C4E44]">Dubai Marina High-Rise</div>
                     </div>
-                    <span class="px-2.5 py-1 rounded-full bg-[#EBF2EB] text-[10px] font-bold text-[#103B30]">Apartment Move</span>
+                    <span class="px-3 py-1 rounded-full bg-[#EBF2EB] text-xs font-black text-[#103B30]">Apartment Move</span>
                 </div>
             </div>
 
             {{-- Testimonial 3 --}}
-            <div class="p-7 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-4 card-hover flex flex-col justify-between">
-                <div class="space-y-3">
-                    <div class="flex items-center text-[#E5A812] gap-1 text-sm">
+            <div class="p-7 sm:p-8 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-4 card-hover flex flex-col justify-between">
+                <div class="space-y-3.5">
+                    <div class="flex items-center text-[#E5A812] gap-1 text-base">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <p class="text-xs sm:text-sm text-[#4E5B54] leading-relaxed italic">
+                    <p class="text-sm sm:text-base text-[#18261E] leading-relaxed font-normal italic">
                         "We relocated our entire 45-person tech consultancy over the weekend in Business Bay. Workstations, dual monitors, server equipment, and files were moved and set up by Sunday evening. Zero lost work time for our Monday morning operations."
                     </p>
                 </div>
                 <div class="pt-4 border-t border-[#E2E8E2] flex items-center justify-between">
                     <div>
-                        <div class="font-extrabold text-[#202824] text-sm">Kareem T., Ops Director</div>
-                        <div class="text-[11px] text-[#747C76]">Business Bay Corporate HQ</div>
+                        <div class="font-black text-[#0B2A22] text-sm sm:text-base">Kareem T., Ops Director</div>
+                        <div class="text-xs sm:text-sm font-semibold text-[#3C4E44]">Business Bay Corporate HQ</div>
                     </div>
-                    <span class="px-2.5 py-1 rounded-full bg-[#EBF2EB] text-[10px] font-bold text-[#103B30]">Office Move</span>
+                    <span class="px-3 py-1 rounded-full bg-[#EBF2EB] text-xs font-black text-[#103B30]">Office Move</span>
                 </div>
             </div>
 
@@ -1313,7 +1312,7 @@
 
         {{-- Verified Google Rating Banner --}}
         <div class="mt-12 text-center">
-            <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white border border-[#E2E8E2] shadow-sm text-xs text-[#202824] font-medium">
+            <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white border border-[#E2E8E2] shadow-sm text-sm text-[#0B2A22] font-semibold">
                 <div class="flex items-center text-[#E5A812] gap-1">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -1321,9 +1320,9 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <span class="font-bold">4.9 / 5.0 Rating</span>
-                <span class="text-[#747C76]">|</span>
-                <span class="text-[#747C76]">Based on verified UAE customer reviews</span>
+                <span class="font-black text-[#0B2A22]">4.9 / 5.0 Rating</span>
+                <span class="text-[#A2B3A8]">|</span>
+                <span class="text-[#203127] font-semibold">Based on verified UAE customer reviews</span>
             </div>
         </div>
 
@@ -1337,12 +1336,12 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-8 sm:mb-10 space-y-3">
         <span class="forest-badge">
-            <i class="fa-solid fa-circle-question text-[10px]"></i> Clarity & Answers
+            <i class="fa-solid fa-circle-question text-xs"></i> Clarity & Answers
         </span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-[#202824] tracking-tight">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0B2A22] tracking-tight">
             Frequently Asked Questions
         </h2>
-        <p class="text-sm sm:text-base text-[#747C76]">
+        <p class="text-base sm:text-lg md:text-xl text-[#1F3027] font-medium max-w-2xl mx-auto leading-relaxed">
             Have questions about how MOVEXA operates, our insurance, licensing, or booking policies? Here are the answers.
         </p>
     </div>
@@ -1353,17 +1352,17 @@
         <div class="rounded-3xl border border-[#E2E8E2] bg-white overflow-hidden transition-all duration-200 shadow-xs">
             <button type="button" 
                     @click="activeFaq = (activeFaq === 1 ? null : 1)" 
-                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-extrabold text-[#202824] font-heading text-sm sm:text-base hover:text-[#103B30] transition-colors">
+                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-black text-[#0B2A22] font-heading text-base sm:text-lg hover:text-[#103B30] transition-colors">
                 <span class="flex items-center gap-3">
-                    <i class="fa-solid fa-circle-question text-[#103B30] text-sm"></i>
+                    <i class="fa-solid fa-circle-question text-[#103B30] text-base sm:text-lg flex-shrink-0"></i>
                     <span>Is MOVEXA a licensed and insured moving company in Dubai?</span>
                 </span>
                 <span class="w-8 h-8 rounded-full bg-[#F0F5F1] flex items-center justify-center flex-shrink-0 text-xs transition-transform duration-200"
-                      :class="activeFaq === 1 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#747C76]'">
+                      :class="activeFaq === 1 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#103B30]'">
                     <i class="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
-            <div x-show="activeFaq === 1" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#747C76] leading-relaxed border-t border-gray-100">
+            <div x-show="activeFaq === 1" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-3 text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed border-t border-gray-100">
                 Yes, MOVEXA is a legally registered and licensed moving and relocations entity under the Dubai Department of Economy and Tourism (DED). We carry comprehensive commercial transport liability, and we offer optional all-risk transit insurance packages covering total replacement value for delicate and high-value belongings.
             </div>
         </div>
@@ -1372,17 +1371,17 @@
         <div class="rounded-3xl border border-[#E2E8E2] bg-white overflow-hidden transition-all duration-200 shadow-xs">
             <button type="button" 
                     @click="activeFaq = (activeFaq === 2 ? null : 2)" 
-                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-extrabold text-[#202824] font-heading text-sm sm:text-base hover:text-[#103B30] transition-colors">
+                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-black text-[#0B2A22] font-heading text-base sm:text-lg hover:text-[#103B30] transition-colors">
                 <span class="flex items-center gap-3">
-                    <i class="fa-solid fa-circle-question text-[#103B30] text-sm"></i>
+                    <i class="fa-solid fa-circle-question text-[#103B30] text-base sm:text-lg flex-shrink-0"></i>
                     <span>Do you assist with Move-In / Move-Out NOC permits in Dubai?</span>
                 </span>
                 <span class="w-8 h-8 rounded-full bg-[#F0F5F1] flex items-center justify-center flex-shrink-0 text-xs transition-transform duration-200"
-                      :class="activeFaq === 2 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#747C76]'">
+                      :class="activeFaq === 2 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#103B30]'">
                     <i class="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
-            <div x-show="activeFaq === 2" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#747C76] leading-relaxed border-t border-gray-100">
+            <div x-show="activeFaq === 2" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-3 text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed border-t border-gray-100">
                 Absolutely. Most master developers in Dubai (such as Emaar, Nakheel, DAMAC, Dubai Holding, and Meraas) require company documents and truck license plates before approving a moving permit. We provide our trade license copy, driver Emirates IDs, and vehicle insurance certificates directly for your portal application to ensure 100% barrier-free entry on moving day.
             </div>
         </div>
@@ -1391,17 +1390,17 @@
         <div class="rounded-3xl border border-[#E2E8E2] bg-white overflow-hidden transition-all duration-200 shadow-xs">
             <button type="button" 
                     @click="activeFaq = (activeFaq === 3 ? null : 3)" 
-                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-extrabold text-[#202824] font-heading text-sm sm:text-base hover:text-[#103B30] transition-colors">
+                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-black text-[#0B2A22] font-heading text-base sm:text-lg hover:text-[#103B30] transition-colors">
                 <span class="flex items-center gap-3">
-                    <i class="fa-solid fa-circle-question text-[#103B30] text-sm"></i>
+                    <i class="fa-solid fa-circle-question text-[#103B30] text-base sm:text-lg flex-shrink-0"></i>
                     <span>Are your movers full-time employees or outsourced daily workers?</span>
                 </span>
                 <span class="w-8 h-8 rounded-full bg-[#F0F5F1] flex items-center justify-center flex-shrink-0 text-xs transition-transform duration-200"
-                      :class="activeFaq === 3 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#747C76]'">
+                      :class="activeFaq === 3 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#103B30]'">
                     <i class="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
-            <div x-show="activeFaq === 3" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#747C76] leading-relaxed border-t border-gray-100">
+            <div x-show="activeFaq === 3" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-3 text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed border-t border-gray-100">
                 100% of our moving crew, packers, and master carpenters are direct, salaried employees of MOVEXA. We do not use day laborers or casual street recruits. Every crew member is thoroughly background-checked, insured, uniformed, and rigorously trained in modern handling standards, customer courtesy, and delicate furniture protection.
             </div>
         </div>
@@ -1410,17 +1409,17 @@
         <div class="rounded-3xl border border-[#E2E8E2] bg-white overflow-hidden transition-all duration-200 shadow-xs">
             <button type="button" 
                     @click="activeFaq = (activeFaq === 4 ? null : 4)" 
-                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-extrabold text-[#202824] font-heading text-sm sm:text-base hover:text-[#103B30] transition-colors">
+                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-black text-[#0B2A22] font-heading text-base sm:text-lg hover:text-[#103B30] transition-colors">
                 <span class="flex items-center gap-3">
-                    <i class="fa-solid fa-circle-question text-[#103B30] text-sm"></i>
+                    <i class="fa-solid fa-circle-question text-[#103B30] text-base sm:text-lg flex-shrink-0"></i>
                     <span>How does MOVEXA calculate moving quotations? Are there hidden fees?</span>
                 </span>
                 <span class="w-8 h-8 rounded-full bg-[#F0F5F1] flex items-center justify-center flex-shrink-0 text-xs transition-transform duration-200"
-                      :class="activeFaq === 4 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#747C76]'">
+                      :class="activeFaq === 4 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#103B30]'">
                     <i class="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
-            <div x-show="activeFaq === 4" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#747C76] leading-relaxed border-t border-gray-100">
+            <div x-show="activeFaq === 4" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-3 text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed border-t border-gray-100">
                 Our quotations are based strictly on cubic volume (CBM), access parameters (floors, elevators, parking walking distance), required packing materials, and handyman requirements. We deliver a clear, written, binding quotation before you commit. There are zero hidden fees for fuel, stairs, or tape on moving day.
             </div>
         </div>
@@ -1429,17 +1428,17 @@
         <div class="rounded-3xl border border-[#E2E8E2] bg-white overflow-hidden transition-all duration-200 shadow-xs">
             <button type="button" 
                     @click="activeFaq = (activeFaq === 5 ? null : 5)" 
-                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-extrabold text-[#202824] font-heading text-sm sm:text-base hover:text-[#103B30] transition-colors">
+                    class="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-black text-[#0B2A22] font-heading text-base sm:text-lg hover:text-[#103B30] transition-colors">
                 <span class="flex items-center gap-3">
-                    <i class="fa-solid fa-circle-question text-[#103B30] text-sm"></i>
+                    <i class="fa-solid fa-circle-question text-[#103B30] text-base sm:text-lg flex-shrink-0"></i>
                     <span>How do you handle delicate artwork, grand pianos, and marble furniture?</span>
                 </span>
                 <span class="w-8 h-8 rounded-full bg-[#F0F5F1] flex items-center justify-center flex-shrink-0 text-xs transition-transform duration-200"
-                      :class="activeFaq === 5 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#747C76]'">
+                      :class="activeFaq === 5 ? 'rotate-180 bg-[#103B30] text-white' : 'text-[#103B30]'">
                     <i class="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
-            <div x-show="activeFaq === 5" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-[#747C76] leading-relaxed border-t border-gray-100">
+            <div x-show="activeFaq === 5" x-collapse x-cloak class="px-5 sm:px-6 pb-6 pt-3 text-sm sm:text-base text-[#1E2E25] font-normal leading-relaxed border-t border-gray-100">
                 We operate a custom wooden carpentry workshop where we construct bespoke heat-treated timber crates measured specifically to your fine art paintings, heavy marble dining tables, ornate mirrors, and fragile sculptures. Pianos and gym machinery are transported using heavy-duty skids, lifting straps, and specialized hydraulic equipment.
             </div>
         </div>

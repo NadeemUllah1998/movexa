@@ -1777,147 +1777,125 @@ $localDubaiSlides = [
 </section>
 
 {{-- ==========================================
-     SECTIONS 10 & 12: TESTIMONIALS & FINAL CALL TO ACTION (WITH RELOCATION CREW BACKDROP)
+     SECTION 10: CUSTOMER TESTIMONIALS (PREMIUM 2-COLUMN LUXURY SHOWCASE)
      ========================================== --}}
-<div class="relative overflow-hidden bg-white">
-    {{-- Authentic Real Moving Operations Photographic Backdrop (Ultra-Sharp Definition, Zero-Blur, WebP) --}}
-    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
-        <picture>
-            <source srcset="{{ asset('images/testimonials/movexa-movers-packing-boxes.webp') }}" type="image/webp">
-            <img src="{{ asset('images/testimonials/movexa-movers-packing-boxes.jpg') }}" 
-                 alt="MOVEXA Certified Moving & Packing Crew" 
-                 class="w-full h-full object-cover object-[center_30%] opacity-90 sm:opacity-95 scale-100"
-                 loading="lazy"
-                 decoding="async">
-        </picture>
-        {{-- Clean, Non-Blur Pure Scrim & Edge Vignettes for Pristine Sharpness & Contrast --}}
-        <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
-        <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-white via-white/85 to-transparent pointer-events-none"></div>
-        <div class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none"></div>
-        <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-70 pointer-events-none"></div>
-    </div>
+<section class="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden border-t border-[#E8F0E8]"
+     x-data="{
+         currentIndex: 0,
+         total: {{ count($testimonials) }},
+         timer: null,
+         duration: 6000,
+         progress: 0,
+         isPaused: false,
+         touchStartX: 0,
+         touchEndX: 0,
 
-    {{-- SECTION 10: CUSTOMER TESTIMONIALS (AUTO-SLIDING SINGLE-CARD SHOWCASE) --}}
-    <section class="pt-8 sm:pt-10 pb-8 sm:pb-10 relative z-10 overflow-hidden"
-         x-data="{
-             currentIndex: 0,
-             total: {{ count($testimonials) }},
-             timer: null,
-             duration: 6000,
-             progress: 0,
-             isPaused: false,
-             touchStartX: 0,
-             touchEndX: 0,
-
-             init() {
-                 this.startAutoPlay();
-             },
-             startAutoPlay() {
-                 this.stopAutoPlay();
-                 this.progress = 0;
-                 const step = 50;
-                 this.timer = setInterval(() => {
-                     if (!this.isPaused) {
-                         this.progress += (step / this.duration) * 100;
-                         if (this.progress >= 100) {
-                             this.next();
-                         }
+         init() {
+             this.startAutoPlay();
+         },
+         startAutoPlay() {
+             this.stopAutoPlay();
+             this.progress = 0;
+             const step = 50;
+             this.timer = setInterval(() => {
+                 if (!this.isPaused) {
+                     this.progress += (step / this.duration) * 100;
+                     if (this.progress >= 100) {
+                         this.next();
                      }
-                 }, step);
-             },
-             stopAutoPlay() {
-                 if (this.timer) {
-                     clearInterval(this.timer);
-                     this.timer = null;
                  }
-             },
-             restartAutoPlay() {
-                 this.progress = 0;
-                 this.startAutoPlay();
-             },
-             pause() {
-                 this.isPaused = true;
-             },
-             resume() {
-                 this.isPaused = false;
-             },
-             next() {
-                 this.currentIndex = (this.currentIndex + 1) % this.total;
-                 this.progress = 0;
-             },
-             prev() {
-                 this.currentIndex = (this.currentIndex - 1 + this.total) % this.total;
-                 this.progress = 0;
-             },
-             goTo(idx) {
-                 this.currentIndex = idx;
-                 this.progress = 0;
-             },
-             touchStart(e) {
-                 this.touchStartX = e.changedTouches[0].screenX;
-             },
-             touchEnd(e) {
-                 this.touchEndX = e.changedTouches[0].screenX;
-                 const diff = this.touchEndX - this.touchStartX;
-                 if (diff < -50) {
-                     this.next();
-                 } else if (diff > 50) {
-                     this.prev();
-                 }
+             }, step);
+         },
+         stopAutoPlay() {
+             if (this.timer) {
+                 clearInterval(this.timer);
+                 this.timer = null;
              }
-         }"
-         @mouseenter="pause()"
-         @mouseleave="resume()"
-         @touchstart.passive="touchStart($event)"
-         @touchend.passive="touchEnd($event)">
+         },
+         restartAutoPlay() {
+             this.progress = 0;
+             this.startAutoPlay();
+         },
+         pause() {
+             this.isPaused = true;
+         },
+         resume() {
+             this.isPaused = false;
+         },
+         next() {
+             this.currentIndex = (this.currentIndex + 1) % this.total;
+             this.progress = 0;
+         },
+         prev() {
+             this.currentIndex = (this.currentIndex - 1 + this.total) % this.total;
+             this.progress = 0;
+         },
+         goTo(idx) {
+             this.currentIndex = idx;
+             this.progress = 0;
+         },
+         touchStart(e) {
+             this.touchStartX = e.changedTouches[0].screenX;
+         },
+         touchEnd(e) {
+             this.touchEndX = e.changedTouches[0].screenX;
+             const diff = this.touchEndX - this.touchStartX;
+             if (diff < -50) {
+                 this.next();
+             } else if (diff > 50) {
+                 this.prev();
+             }
+         }
+     }"
+     @mouseenter="pause()"
+     @mouseleave="resume()"
+     @touchstart.passive="touchStart($event)"
+     @touchend.passive="touchEnd($event)">
 
-    {{-- Decorative subtle accents (Crisp, Zero Blurring) --}}
+    {{-- Subtle Architectural Grid Micro-pattern (Crisp Luxury Feel, Zero Blur) --}}
+    <div class="absolute inset-0 bg-[radial-gradient(#073B2E_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.03] pointer-events-none"></div>
     <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-70 pointer-events-none"></div>
 
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {{-- Section Heading with Crisp Solid Premium Card for Flawless Readability & Modern Luxury Contrast --}}
-        <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <div class="inline-block w-full px-6 py-5 sm:px-8 sm:py-6 rounded-3xl bg-white/95 border border-[#E2E8E2] shadow-[0_10px_30px_-8px_rgba(7,59,46,0.08)] space-y-2.5">
-                <span class="forest-badge shadow-xs">
-                    <i class="fa-solid fa-star text-[#D8F36B]"></i>
-                    Verified Client Experiences
-                </span>
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black font-heading text-[#073B2E] tracking-tight">
-                    What Our Customers Say.
-                </h2>
-                <p class="text-xs sm:text-sm text-[#4E5B54] max-w-xl mx-auto leading-relaxed">
-                    Real feedback from clients who trusted MOVEXA with their home moves, villa relocations, and international shipments across Dubai and worldwide.
-                </p>
-            </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {{-- Section Heading --}}
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-3">
+            <span class="forest-badge shadow-2xs">
+                <i class="fa-solid fa-star text-[#D8F36B]"></i>
+                <span>Verified Client Experiences</span>
+            </span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-[42px] font-black font-heading text-[#073B2E] tracking-tight">
+                What Our Customers Say.
+            </h2>
+            <p class="text-xs sm:text-sm md:text-base text-[#4E5B54] max-w-2xl mx-auto leading-relaxed">
+                Real feedback from clients who trusted MOVEXA with their home moves, villa relocations, and international shipments across Dubai and worldwide.
+            </p>
         </div>
 
-        {{-- Single-Card Carousel Spotlight Card --}}
-        <div class="relative max-w-4xl mx-auto">
-            <div class="relative bg-white rounded-3xl sm:rounded-[32px] border-2 border-[#DCE4DC] shadow-[0_16px_45px_-10px_rgba(16,59,48,0.14)] hover:shadow-[0_22px_55px_-10px_rgba(16,59,48,0.2)] overflow-hidden transition-all duration-300 group">
+                {{-- Single-Card Testimonial Showcase (Centered, Clean & Premium) --}}
+        <div class="max-w-4xl mx-auto space-y-4">
+            {{-- Main Sliding Card --}}
+            <div class="relative bg-white rounded-3xl border-2 border-[#DCE4DC] shadow-[0_16px_45px_-10px_rgba(16,59,48,0.12)] hover:shadow-[0_22px_55px_-10px_rgba(16,59,48,0.18)] overflow-hidden transition-all duration-300 group">
                 {{-- Permanent Top Shining Laser Line & Glow --}}
                 <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_15px_#D8F36B] z-30 pointer-events-none"></div>
 
-                {{-- Diagonal Light Sweep Sheen --}}
-                <div class="absolute -inset-full top-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100 group-hover:translate-x-[200%] transition-all duration-1000 ease-out pointer-events-none z-20"></div>
-
-                {{-- Dynamic Top Auto-slide Progress Bar with Shining Accent --}}
+                {{-- Dynamic Auto-slide Progress Bar --}}
                 <div class="h-1 w-full bg-[#EBF2EB] relative overflow-hidden" title="Slide timer progress">
                     <div class="h-full bg-gradient-to-r from-[#103B30] via-[#D8F36B] to-[#103B30] transition-all duration-75 ease-linear shadow-[0_0_8px_#D8F36B]"
                          :style="'width: ' + progress + '%'"></div>
                 </div>
 
-                {{-- Horizontal Slide Track (Only 1 Slide Visible in Viewport at a Time) --}}
+                {{-- Horizontal Slide Track --}}
                 <div class="flex transition-transform duration-700 ease-out"
                      :style="'transform: translateX(-' + (currentIndex * 100) + '%)'">
                     @foreach ($testimonials as $index => $t)
-                    <div class="w-full flex-shrink-0 p-5 sm:p-7 lg:p-8 relative flex flex-col justify-between">
+                    <div class="w-full flex-shrink-0 p-6 sm:p-8 lg:p-9 relative flex flex-col justify-between">
                         {{-- Large Decorative Quotation Watermark --}}
-                        <div class="absolute right-5 sm:right-8 top-4 sm:top-6 text-[#103B30]/[0.04] pointer-events-none select-none text-6xl sm:text-7xl lg:text-8xl font-serif leading-none">
+                        <div class="absolute right-6 top-6 text-[#103B30]/[0.04] pointer-events-none select-none text-7xl lg:text-8xl font-serif leading-none">
                             <i class="fa-solid fa-quote-right"></i>
                         </div>
 
                         {{-- Card Header: Rating, Badges & Relocation Details --}}
-                        <div class="space-y-2.5 sm:space-y-3 relative z-10">
+                        <div class="space-y-3 relative z-10">
                             <div class="flex flex-wrap items-center justify-between gap-2.5">
                                 <div class="flex items-center gap-2">
                                     {{-- Star Rating --}}
@@ -1936,86 +1914,74 @@ $localDubaiSlides = [
                                 </div>
 
                                 {{-- Move Date --}}
-                                <div class="flex items-center gap-2 text-[11px] text-[#5A645E]">
-                                    <span class="inline-flex items-center gap-1.5 bg-white border border-[#E2E8E2] px-2.5 py-1 rounded-full font-semibold shadow-2xs">
-                                        <i class="fa-regular fa-calendar-check text-[#103B30]"></i>
-                                        <span>{{ $t['date'] ?? 'Recent Relocation' }}</span>
-                                    </span>
-                                </div>
+                                <span class="inline-flex items-center gap-1.5 bg-white border border-[#E2E8E2] px-2.5 py-1 rounded-full text-[11px] font-semibold text-[#5A645E] shadow-2xs">
+                                    <i class="fa-regular fa-calendar-check text-[#103B30]"></i>
+                                    <span>{{ $t['date'] ?? 'Recent Relocation' }}</span>
+                                </span>
                             </div>
 
                             {{-- Highlight Quote Title --}}
                             @if (!empty($t['highlight']))
-                            <h3 class="text-base sm:text-lg lg:text-xl font-black font-heading text-[#103B30] tracking-tight leading-snug pt-0.5">
+                            <h3 class="text-lg sm:text-xl lg:text-[22px] font-black font-heading text-[#103B30] tracking-tight leading-snug pt-1">
                                 “{{ $t['highlight'] }}”
                             </h3>
                             @endif
 
-                            {{-- Review Comment Body --}}
-                            <p class="text-xs sm:text-sm lg:text-[15px] text-[#425048] leading-relaxed font-normal italic">
-                                “{{ $t['comment'] }}”
+                            {{-- Full Review Content --}}
+                            <p class="text-xs sm:text-sm md:text-[15px] text-[#3D4742] leading-relaxed font-normal">
+                                {{ $t['comment'] }}
                             </p>
 
-                            {{-- Route and Service Info Badges --}}
-                            <div class="flex flex-wrap items-center gap-2 pt-0.5">
-                                @if(!empty($t['route']))
-                                <div class="inline-flex items-center gap-1.5 bg-white border border-[#E2E8E2] px-3 py-1 rounded-lg text-xs font-bold text-[#103B30] shadow-2xs">
-                                    <i class="fa-solid fa-location-arrow text-[#103B30] text-[10px]"></i>
-                                    <span>Route: {{ $t['route'] }}</span>
-                                </div>
-                                @endif
-                                @if(!empty($t['type']))
-                                <div class="inline-flex items-center gap-1.5 bg-[#EBF5EF] border border-[#BCE3C8] px-3 py-1 rounded-lg text-xs font-bold text-[#0A5C36] shadow-2xs">
-                                    <i class="fa-solid fa-boxes-packing text-[#0A5C36] text-[10px]"></i>
+                            {{-- Route Pill & Logistics Tag --}}
+                            <div class="pt-1 flex flex-wrap items-center gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#F4F8F4] border border-[#D8E6D8] text-xs font-bold text-[#103B30]">
+                                    <i class="fa-solid fa-route text-[#059669]"></i>
+                                    <span>Route: {{ $t['route'] ?? 'Dubai, UAE' }}</span>
+                                </span>
+                                @if (!empty($t['type']))
+                                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-[#EBF5EF] border border-[#BCE3C8] text-[11px] font-semibold text-[#073B2E]">
+                                    <i class="fa-solid fa-truck-fast text-[#059669]"></i>
                                     <span>{{ $t['type'] }}</span>
-                                </div>
+                                </span>
                                 @endif
                             </div>
                         </div>
 
-                        {{-- Card Footer: Client Profile Avatar, Proper Name & Slider Controls --}}
-                        <div class="pt-3.5 sm:pt-4 border-t border-[#EAEFEA] mt-3.5 sm:mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 relative z-10">
-                            {{-- Client Identity --}}
-                            <div class="flex items-center gap-3">
-                                <div class="relative w-11 h-11 sm:w-12 sm:h-12 flex-shrink-0">
-                                    @if(!empty($t['avatar']))
-                                    <img src="{{ $t['avatar'] }}" 
-                                         alt="{{ $t['name'] }}" 
-                                         loading="lazy"
-                                         decoding="async"
-                                         class="w-full h-full rounded-full object-cover border-2 border-white ring-2 ring-[#D8F36B] shadow-sm"
-                                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name={{ urlencode($t['name']) }}&background=103B30&color=D8F36B&bold=true';" />
-                                    @else
-                                    <div class="w-full h-full rounded-full bg-[#103B30] text-[#D8F36B] font-extrabold text-sm flex items-center justify-center border-2 border-white ring-2 ring-[#D8F36B] shadow-sm">
-                                        {{ $t['initials'] ?? 'MC' }}
-                                    </div>
-                                    @endif
-                                    <span class="absolute -bottom-0.5 -right-0.5 w-4 h-4 rounded-full bg-[#103B30] text-[#D8F36B] text-[8px] flex items-center justify-center border border-white shadow-xs" title="Verified Moving Client">
-                                        <i class="fa-solid fa-check"></i>
-                                    </span>
+                        {{-- Card Footer: Client Bio & Nav Buttons --}}
+                        <div class="mt-6 pt-5 border-t border-[#EAEFEA] flex flex-wrap items-center justify-between gap-4 relative z-10">
+                            <div class="flex items-center gap-3.5">
+                                @if (!empty($t['avatar']))
+                                <img src="{{ $t['avatar'] }}" 
+                                     alt="{{ $t['name'] }}" 
+                                     class="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-[#D8F36B] shadow-2xs"
+                                     loading="lazy">
+                                @else
+                                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#103B30] text-[#D8F36B] font-bold text-sm flex items-center justify-center border-2 border-[#D8F36B]">
+                                    {{ $t['initials'] ?? 'MC' }}
                                 </div>
+                                @endif
                                 <div>
-                                    <h4 class="font-heading font-black text-sm sm:text-base text-[#103B30] leading-tight">
+                                    <h4 class="text-sm sm:text-base font-bold text-[#073B2E] leading-tight">
                                         {{ $t['name'] }}
                                     </h4>
-                                    <p class="text-[11px] sm:text-xs text-[#5A645E] flex items-center gap-1.5 mt-0.5 font-medium">
-                                        <i class="fa-solid fa-shield-check text-[#059669] text-[10px]"></i>
-                                        <span>Verified Customer &bull; Authenticated Experience</span>
+                                    <p class="text-[11px] sm:text-xs text-[#059669] font-semibold flex items-center gap-1 mt-0.5">
+                                        <i class="fa-solid fa-circle-check text-[10px]"></i>
+                                        <span>Verified Customer • Authenticated Experience</span>
                                     </p>
                                 </div>
                             </div>
 
-                            {{-- Navigation Buttons on the Card --}}
-                            <div class="flex items-center gap-2 self-end sm:self-center">
+                            {{-- Navigation Buttons --}}
+                            <div class="flex items-center gap-2">
                                 <button type="button" 
                                         @click="prev(); restartAutoPlay();" 
-                                        class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#E2E8E2] bg-white text-[#103B30] hover:bg-[#103B30] hover:text-[#D8F36B] hover:border-[#103B30] shadow-2xs flex items-center justify-center transition-all duration-200 active:scale-95 focus:outline-none group cursor-pointer"
+                                        class="w-10 h-10 rounded-full border border-[#D5E2D5] bg-white text-[#103B30] hover:bg-[#103B30] hover:text-[#D8F36B] hover:border-[#103B30] shadow-2xs flex items-center justify-center transition-all duration-200 active:scale-95 focus:outline-none group cursor-pointer"
                                         aria-label="Previous Review">
                                     <i class="fa-solid fa-arrow-left text-xs group-hover:-translate-x-0.5 transition-transform"></i>
                                 </button>
                                 <button type="button" 
                                         @click="next(); restartAutoPlay();" 
-                                        class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#E2E8E2] bg-white text-[#103B30] hover:bg-[#103B30] hover:text-[#D8F36B] hover:border-[#103B30] shadow-2xs flex items-center justify-center transition-all duration-200 active:scale-95 focus:outline-none group cursor-pointer"
+                                        class="w-10 h-10 rounded-full border border-[#D5E2D5] bg-white text-[#103B30] hover:bg-[#103B30] hover:text-[#D8F36B] hover:border-[#103B30] shadow-2xs flex items-center justify-center transition-all duration-200 active:scale-95 focus:outline-none group cursor-pointer"
                                         aria-label="Next Review">
                                     <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-0.5 transition-transform"></i>
                                 </button>
@@ -2026,15 +1992,13 @@ $localDubaiSlides = [
                 </div>
             </div>
 
-            {{-- Slider Controls & Pagination Bar Below Card (Crisp Solid Pod, Zero Blur) --}}
-            <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 px-5 py-3 rounded-2xl bg-white/95 border border-[#E2E8E2] shadow-xs max-w-4xl mx-auto">
-                {{-- Live Counter Indicator --}}
+            {{-- Slider Controls Bar Below Card --}}
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-3 px-5 py-3 rounded-2xl bg-[#F7FAF7] border border-[#E2E8E2] shadow-2xs">
                 <div class="text-xs font-semibold text-[#5A645E] flex items-center gap-2">
                     <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#103B30] animate-pulse"></span>
                     <span>Displaying Review <strong class="text-[#103B30] font-bold" x-text="currentIndex + 1"></strong> of <strong class="text-[#103B30] font-bold" x-text="total"></strong> verified clients</span>
                 </div>
 
-                {{-- Interactive Pagination Dots --}}
                 <div class="flex items-center gap-2">
                     @foreach ($testimonials as $index => $t)
                     <button type="button" 
@@ -2046,32 +2010,29 @@ $localDubaiSlides = [
                     @endforeach
                 </div>
 
-                {{-- Hover / Pause Status --}}
                 <div class="text-xs text-[#747C76] flex items-center gap-1.5 cursor-pointer select-none"
                      @click="isPaused = !isPaused"
                      title="Click to toggle auto-sliding">
                     <i class="fa-solid" :class="isPaused ? 'fa-circle-play text-[#103B30]' : 'fa-circle-pause text-[#747C76]'"></i>
-                    <span x-text="isPaused ? 'Auto-slide paused (Click to play)' : 'Auto-sliding active (Hover to pause)'"></span>
+                    <span x-text="isPaused ? 'Paused' : 'Auto-sliding'"></span>
                 </div>
             </div>
-
-
         </div>
     </div>
 </section>
 
-    {{-- ==========================================
-         SECTION 12: FINAL CALL TO ACTION
-         ========================================== --}}
-    <div class="relative z-10 pb-8 sm:pb-12">
+{{-- ==========================================
+     SECTION 12: FINAL CALL TO ACTION (CONVERSION BANNER)
+     ========================================== --}}
+<section class="py-10 sm:py-14 bg-gradient-to-b from-white via-[#F7FAF7] to-white relative overflow-hidden border-t border-[#E8F0E8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <x-cta-banner 
             headline="Ready to Make Your Next Move?"
             subheadline="Let MOVEXA help you plan a smoother relocation, wherever your next destination may be."
             buttonText="Get a Free Quote"
         />
     </div>
-</div>
-
+</section>
 @endsection
 
 @push('scripts')
