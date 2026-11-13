@@ -347,209 +347,142 @@
                                 </a>
                             </div>
 
-                            {{-- 2-Column Grid: METROPOLITAN & NORTHERN/COASTAL EMIRATES --}}
-                            <div class="p-5 grid grid-cols-2 gap-4">
+                            {{-- 2-Column Grid: UAE Emirates & Inter-City Moving --}}
+                            <div class="p-4 sm:p-5 grid grid-cols-2 gap-3 sm:gap-4"
+                                 style="background-color: #ffffff !important;">
                                 
-                                {{-- Column 1: METROPOLITAN HUBS --}}
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between pb-2 mb-1.5 border-b border-[#EAEFEA]">
-                                        <div class="flex items-center gap-2">
-                                            <span class="w-5 h-5 rounded-md bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-[10px]">
-                                                <i class="fa-solid fa-city"></i>
-                                            </span>
-                                            <span class="text-[11px] font-black uppercase tracking-wider text-[#103B30]">
-                                                Metropolitan Hubs
-                                            </span>
+                                {{-- Column 1: Dubai, Abu Dhabi, Sharjah, Ajman --}}
+                                <div class="space-y-2">
+                                    {{-- 1. Dubai --}}
+                                    <a href="{{ route('local-moving') }}" 
+                                       @click="closeAll()"
+                                       class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                        <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                            <i class="fa-solid fa-building-user"></i>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <span class="truncate">Dubai Relocations</span>
+                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
+                                            </div>
+                                            <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Marina, Downtown, Palm &amp; Hills</div>
                                         </div>
-                                        <span class="text-[10px] font-bold text-[#55635B] uppercase tracking-wide">4 Hubs</span>
-                                    </div>
+                                    </a>
 
-                                    <div class="space-y-1.5 pt-0.5">
-                                        {{-- 1. Dubai --}}
-                                        <a href="{{ route('local-moving') }}" 
-                                           @click="closeAll()"
-                                           class="group/item flex items-center justify-between gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                                                <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
-                                                    <i class="fa-solid fa-building-user"></i>
-                                                </span>
-                                                <div class="min-w-0 flex-1">
-                                                    <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
-                                                        <span class="truncate">Dubai Relocations</span>
-                                                    </div>
-                                                    <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Marina, Downtown, Palm &amp; Hills</div>
-                                                </div>
+                                    {{-- 2. Abu Dhabi --}}
+                                    <a href="{{ route('local-moving') }}" 
+                                       @click="closeAll()"
+                                       class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                        <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                            <i class="fa-solid fa-landmark"></i>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <span class="truncate">Abu Dhabi Relocations</span>
+                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                             </div>
-                                            <div class="flex items-center gap-1.5 shrink-0 pl-1">
-                                                <span class="text-[9px] font-black px-2 py-0.5 rounded-md bg-[#EBF2EB] text-[#103B30] group-hover/item:bg-[#103B30] group-hover/item:text-[#D8F36B] transition-colors">HQ Hub</span>
-                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
-                                            </div>
-                                        </a>
+                                            <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Capital residential &amp; corporate</div>
+                                        </div>
+                                    </a>
 
-                                        {{-- 2. Abu Dhabi --}}
-                                        <a href="{{ route('local-moving') }}" 
-                                           @click="closeAll()"
-                                           class="group/item flex items-center justify-between gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                                                <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
-                                                    <i class="fa-solid fa-landmark"></i>
-                                                </span>
-                                                <div class="min-w-0 flex-1">
-                                                    <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
-                                                        <span class="truncate">Abu Dhabi Relocations</span>
-                                                    </div>
-                                                    <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Capital residential &amp; corporate</div>
-                                                </div>
+                                    {{-- 3. Sharjah --}}
+                                    <a href="{{ route('local-moving') }}" 
+                                       @click="closeAll()"
+                                       class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                        <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                            <i class="fa-solid fa-truck-ramp-box"></i>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <span class="truncate">Sharjah Express</span>
+                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                             </div>
-                                            <div class="flex items-center gap-1.5 shrink-0 pl-1">
-                                                <span class="text-[9px] font-bold px-2 py-0.5 rounded-md bg-[#EBF2EB] text-[#103B30] group-hover/item:bg-[#103B30] group-hover/item:text-[#D8F36B] transition-colors">Daily</span>
-                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
-                                            </div>
-                                        </a>
+                                            <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Fast inter-city &amp; family shifting</div>
+                                        </div>
+                                    </a>
 
-                                        {{-- 3. Sharjah --}}
-                                        <a href="{{ route('local-moving') }}" 
-                                           @click="closeAll()"
-                                           class="group/item flex items-center justify-between gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                                                <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
-                                                    <i class="fa-solid fa-truck-ramp-box"></i>
-                                                </span>
-                                                <div class="min-w-0 flex-1">
-                                                    <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
-                                                        <span class="truncate">Sharjah Express</span>
-                                                    </div>
-                                                    <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Fast inter-city &amp; family shifting</div>
-                                                </div>
+                                    {{-- 4. Ajman --}}
+                                    <a href="{{ route('local-moving') }}" 
+                                       @click="closeAll()"
+                                       class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                        <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                            <i class="fa-solid fa-boxes-packing"></i>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <span class="truncate">Ajman Relocations</span>
+                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                             </div>
-                                            <div class="flex items-center gap-1.5 shrink-0 pl-1">
-                                                <span class="text-[9px] font-bold px-2 py-0.5 rounded-md bg-[#EBF2EB] text-[#103B30] group-hover/item:bg-[#103B30] group-hover/item:text-[#D8F36B] transition-colors">Direct</span>
-                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
-                                            </div>
-                                        </a>
-
-                                        {{-- 4. Ajman --}}
-                                        <a href="{{ route('local-moving') }}" 
-                                           @click="closeAll()"
-                                           class="group/item flex items-center justify-between gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                                                <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
-                                                    <i class="fa-solid fa-boxes-packing"></i>
-                                                </span>
-                                                <div class="min-w-0 flex-1">
-                                                    <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
-                                                        <span class="truncate">Ajman Relocations</span>
-                                                    </div>
-                                                    <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Family &amp; household shifting</div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-1.5 shrink-0 pl-1">
-                                                <span class="text-[9px] font-bold px-2 py-0.5 rounded-md bg-[#EBF2EB] text-[#103B30] group-hover/item:bg-[#103B30] group-hover/item:text-[#D8F36B] transition-colors">Direct</span>
-                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
-                                            </div>
-                                        </a>
-                                    </div>
+                                            <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Family &amp; household shifting</div>
+                                        </div>
+                                    </a>
                                 </div>
 
-                                {{-- Column 2: NORTHERN & COASTAL EMIRATES --}}
-                                <div class="space-y-1">
-                                    <div class="flex items-center justify-between pb-2 mb-1.5 border-b border-[#EAEFEA]">
-                                        <div class="flex items-center gap-2">
-                                            <span class="w-5 h-5 rounded-md bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-[10px]">
-                                                <i class="fa-solid fa-compass"></i>
-                                            </span>
-                                            <span class="text-[11px] font-black uppercase tracking-wider text-[#103B30]">
-                                                Northern &amp; Coastal
-                                            </span>
+                                {{-- Column 2: RAK, Fujairah, UAQ, Inter-Emirate Transit --}}
+                                <div class="space-y-2">
+                                    {{-- 5. Ras Al Khaimah --}}
+                                    <a href="{{ route('local-moving') }}" 
+                                       @click="closeAll()"
+                                       class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                        <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                            <i class="fa-solid fa-mountain-sun"></i>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <span class="truncate">Ras Al Khaimah (RAK)</span>
+                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
+                                            </div>
+                                            <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Coastal &amp; gated communities</div>
                                         </div>
-                                        <span class="text-[10px] font-bold text-[#55635B] uppercase tracking-wide">3 Emirates + Transit</span>
-                                    </div>
+                                    </a>
 
-                                    <div class="space-y-1.5 pt-0.5">
-                                        {{-- 5. Ras Al Khaimah --}}
-                                        <a href="{{ route('local-moving') }}" 
-                                           @click="closeAll()"
-                                           class="group/item flex items-center justify-between gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                                                <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
-                                                    <i class="fa-solid fa-mountain-sun"></i>
-                                                </span>
-                                                <div class="min-w-0 flex-1">
-                                                    <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
-                                                        <span class="truncate">Ras Al Khaimah (RAK)</span>
-                                                    </div>
-                                                    <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Coastal &amp; gated communities</div>
-                                                </div>
+                                    {{-- 6. Fujairah --}}
+                                    <a href="{{ route('local-moving') }}" 
+                                       @click="closeAll()"
+                                       class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                        <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                            <i class="fa-solid fa-water"></i>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <span class="truncate">Fujairah Relocations</span>
+                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                             </div>
-                                            <div class="flex items-center gap-1.5 shrink-0 pl-1">
-                                                <span class="text-[9px] font-bold px-2 py-0.5 rounded-md bg-[#EBF2EB] text-[#103B30] group-hover/item:bg-[#103B30] group-hover/item:text-[#D8F36B] transition-colors">Scheduled</span>
-                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
-                                            </div>
-                                        </a>
+                                            <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">East Coast mountain transit</div>
+                                        </div>
+                                    </a>
 
-                                        {{-- 6. Fujairah --}}
-                                        <a href="{{ route('local-moving') }}" 
-                                           @click="closeAll()"
-                                           class="group/item flex items-center justify-between gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                                                <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
-                                                    <i class="fa-solid fa-water"></i>
-                                                </span>
-                                                <div class="min-w-0 flex-1">
-                                                    <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
-                                                        <span class="truncate">Fujairah Relocations</span>
-                                                    </div>
-                                                    <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">East Coast mountain transit</div>
-                                                </div>
+                                    {{-- 7. Umm Al Quwain --}}
+                                    <a href="{{ route('local-moving') }}" 
+                                       @click="closeAll()"
+                                       class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                        <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                            <i class="fa-solid fa-anchor"></i>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <span class="truncate">Umm Al Quwain (UAQ)</span>
+                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                             </div>
-                                            <div class="flex items-center gap-1.5 shrink-0 pl-1">
-                                                <span class="text-[9px] font-bold px-2 py-0.5 rounded-md bg-[#EBF2EB] text-[#103B30] group-hover/item:bg-[#103B30] group-hover/item:text-[#D8F36B] transition-colors">Scheduled</span>
-                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
-                                            </div>
-                                        </a>
+                                            <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Turnkey estate relocation</div>
+                                        </div>
+                                    </a>
 
-                                        {{-- 7. Umm Al Quwain --}}
-                                        <a href="{{ route('local-moving') }}" 
-                                           @click="closeAll()"
-                                           class="group/item flex items-center justify-between gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                                                <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
-                                                    <i class="fa-solid fa-anchor"></i>
-                                                </span>
-                                                <div class="min-w-0 flex-1">
-                                                    <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
-                                                        <span class="truncate">Umm Al Quwain (UAQ)</span>
-                                                    </div>
-                                                    <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Turnkey estate relocation</div>
-                                                </div>
+                                    {{-- 8. Inter-Emirate Express Transit --}}
+                                    <a href="{{ route('local-moving') }}" 
+                                       @click="closeAll()"
+                                       class="group/item flex items-center gap-3 p-2.5 rounded-xl bg-white hover:bg-[#F2F8F2] border border-[#E2EBE2] hover:border-[#B7E532] shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-xs transition-all duration-150">
+                                        <span class="w-8.5 h-8.5 rounded-xl bg-[#F0F5F1] group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
+                                            <i class="fa-solid fa-route"></i>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <div class="font-extrabold text-[13px] sm:text-[13.5px] text-[#102A20] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
+                                                <span class="truncate">Inter-Emirate Transit</span>
+                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#103B30] opacity-40 group-hover/item:opacity-100 group-hover/item:translate-x-0.5 transition-all"></i>
                                             </div>
-                                            <div class="flex items-center gap-1.5 shrink-0 pl-1">
-                                                <span class="text-[9px] font-bold px-2 py-0.5 rounded-md bg-[#EBF2EB] text-[#103B30] group-hover/item:bg-[#103B30] group-hover/item:text-[#D8F36B] transition-colors">Scheduled</span>
-                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
-                                            </div>
-                                        </a>
-
-                                        {{-- 8. Inter-Emirate Express Transit --}}
-                                        <a href="{{ route('local-moving') }}" 
-                                           @click="closeAll()"
-                                           class="group/item flex items-center justify-between gap-2.5 p-2 rounded-xl bg-white hover:bg-[#EBF5E7] border border-[#E0E8E0] hover:border-[#B7E532] shadow-2xs hover:shadow-xs transition-all duration-150">
-                                            <div class="flex items-center gap-2.5 min-w-0 flex-1">
-                                                <span class="w-8 h-8 rounded-xl bg-white group-hover/item:bg-[#103B30] text-[#103B30] group-hover/item:text-[#D8F36B] border border-[#DCE6DC] group-hover/item:border-[#103B30] flex items-center justify-center text-xs transition-colors shrink-0 shadow-2xs">
-                                                    <i class="fa-solid fa-route"></i>
-                                                </span>
-                                                <div class="min-w-0 flex-1">
-                                                    <div class="font-black text-[13px] text-[#103B30] group-hover/item:text-[#073B2E] transition-colors leading-snug flex items-center justify-between">
-                                                        <span class="truncate">Inter-Emirate Transit</span>
-                                                    </div>
-                                                    <div class="text-[11px] text-[#405047] font-medium leading-tight truncate">Cross-emirate NOCs &amp; GPS fleet</div>
-                                                </div>
-                                            </div>
-                                            <div class="flex items-center gap-1.5 shrink-0 pl-1">
-                                                <span class="text-[9px] font-black px-2 py-0.5 rounded-md bg-[#B7E532] text-[#073B2E] group-hover/item:bg-[#103B30] group-hover/item:text-[#D8F36B] transition-colors">All 7 UAE</span>
-                                                <i class="fa-solid fa-chevron-right text-[8px] text-[#073B2E] opacity-0 -translate-x-1 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all"></i>
-                                            </div>
-                                        </a>
-                                    </div>
+                                            <div class="text-[11px] sm:text-[11.5px] text-[#55655D] font-medium leading-tight truncate mt-0.5">Cross-emirate NOCs &amp; GPS fleet</div>
+                                        </div>
+                                    </a>
                                 </div>
 
                             </div>

@@ -5,7 +5,7 @@
     'destination' => ''
 ])
 
-<section class="relative my-8 sm:my-12 lg:my-14 mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-5xl">
+<section {{ $attributes->merge(['class' => 'relative my-8 sm:my-12 lg:my-14 mx-4 sm:mx-6 lg:mx-8 xl:mx-auto max-w-5xl']) }}>
     {{-- Clean, Minimal Luxury Card (High-Contrast Typography & Actions, Crisp Zero-Blur Design) --}}
     <div class="relative rounded-3xl bg-white border-2 border-[#D8E6D8] shadow-[0_20px_55px_-10px_rgba(7,59,46,0.14)] p-6 sm:p-9 md:p-11 text-center overflow-hidden">
         {{-- Permanent Top Shining Laser Line & Glow --}}

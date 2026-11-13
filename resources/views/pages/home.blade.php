@@ -1777,9 +1777,9 @@ $localDubaiSlides = [
 </section>
 
 {{-- ==========================================
-     SECTION 10: CUSTOMER TESTIMONIALS (PREMIUM 2-COLUMN LUXURY SHOWCASE)
+     SECTION 10: CUSTOMER TESTIMONIALS (CENTERED LUXURY SHOWCASE)
      ========================================== --}}
-<section class="py-12 sm:py-16 lg:py-20 bg-white relative overflow-hidden border-t border-[#E8F0E8]"
+<section class="pt-10 sm:pt-14 lg:pt-16 pb-6 sm:pb-8 bg-white relative overflow-hidden border-t border-[#E8F0E8]"
      x-data="{
          currentIndex: 0,
          total: {{ count($testimonials) }},
@@ -2024,9 +2024,10 @@ $localDubaiSlides = [
 {{-- ==========================================
      SECTION 12: FINAL CALL TO ACTION (CONVERSION BANNER)
      ========================================== --}}
-<section class="py-10 sm:py-14 bg-gradient-to-b from-white via-[#F7FAF7] to-white relative overflow-hidden border-t border-[#E8F0E8]">
+<section class="pt-2 sm:pt-4 pb-8 sm:pb-12 bg-gradient-to-b from-white via-[#F7FAF7] to-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <x-cta-banner 
+            class="!mt-3 sm:!mt-5 !mb-4 sm:!mb-6"
             headline="Ready to Make Your Next Move?"
             subheadline="Let MOVEXA help you plan a smoother relocation, wherever your next destination may be."
             buttonText="Get a Free Quote"
