@@ -111,22 +111,25 @@
                             <div class="h-[3px] w-full bg-gradient-to-r from-[#103B30] via-[#B7E532] to-[#103B30]"></div>
 
                             {{-- Dropdown Header Strip --}}
-                            <div class="bg-[#F2F7F3] px-5 py-3 border-b border-[#DDE7DD] flex items-center justify-between"
-                                 style="background-color: #F2F7F3 !important;">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-[#103B30] shadow-[0_0_6px_#103B30] animate-pulse"></span>
-                                    <span class="text-xs font-black uppercase tracking-wider text-[#103B30]">
+                            <div class="bg-gradient-to-r from-[#F5FAF6] via-[#EEF6F0] to-[#F5FAF6] px-5 sm:px-6 py-3 border-b border-[#DDE7DE] flex items-center justify-between"
+                                 style="background: linear-gradient(to right, #F5FAF6, #EEF6F0, #F5FAF6) !important;">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="relative flex h-2 w-2">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B7E532] opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#103B30]"></span>
+                                    </span>
+                                    <span class="text-[11.5px] font-black uppercase tracking-wider text-[#103B30]">
                                         Relocation Services Directory
                                     </span>
-                                    <span class="hidden sm:inline-block text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-[#103B30] border border-[#CFE8C7] shadow-2xs">
+                                    <span class="hidden sm:inline-flex items-center px-2.5 py-0.5 rounded-full bg-white text-[#103B30] text-[10px] font-extrabold border border-[#D0E2D1] shadow-2xs">
                                         8 Specializations
                                     </span>
                                 </div>
                                 <a href="{{ route('services.index') }}" 
                                    @click="closeAll()"
-                                   class="group/all text-xs font-extrabold text-[#103B30] hover:text-[#073B2E] inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white hover:bg-[#EBF5E7] border border-[#DCE9DC] transition-all shadow-2xs">
+                                   class="group/all inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white hover:bg-[#103B30] text-[#103B30] hover:text-[#D8F36B] border border-[#D5E3D5] hover:border-[#103B30] text-[11px] font-extrabold transition-all duration-200 shadow-2xs">
                                     <span>All Services</span>
-                                    <i class="fa-solid fa-arrow-right text-[9px] text-[#103B30] group-hover/all:translate-x-0.5 transition-transform"></i>
+                                    <i class="fa-solid fa-arrow-right text-[9px] group-hover/all:translate-x-0.5 transition-transform"></i>
                                 </a>
                             </div>
 
@@ -331,17 +334,23 @@
                         
                         <div class="bg-white rounded-3xl shadow-[0_25px_60px_-10px_rgba(0,0,0,0.28),0_0_0_1px_rgba(7,59,46,0.1)] border-2 border-[#D8E6D8] overflow-hidden"
                              style="background-color: #ffffff !important;">
+                            {{-- Top Specular Brand Accent Line --}}
+                            <div class="h-[3px] w-full bg-gradient-to-r from-[#103B30] via-[#B7E532] to-[#103B30]"></div>
+
                             {{-- Header Top Bar --}}
-                            <div class="bg-[#F2F7F3] px-6 py-3 border-b border-[#DDE7DD] flex items-center justify-between"
-                                 style="background-color: #F2F7F3 !important;">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-[#103B30] shadow-[0_0_6px_#103B30] animate-pulse"></span>
-                                    <span class="text-[11px] font-black uppercase tracking-wider text-[#103B30]">UAE Relocation Network</span>
-                                    <span class="px-2 py-0.5 rounded-full bg-white text-[#103B30] text-[9.5px] font-bold border border-[#DCE6DC] shadow-2xs">All 7 Emirates Covered</span>
+                            <div class="bg-gradient-to-r from-[#F5FAF6] via-[#EEF6F0] to-[#F5FAF6] px-5 sm:px-6 py-3 border-b border-[#DDE7DE] flex items-center justify-between"
+                                 style="background: linear-gradient(to right, #F5FAF6, #EEF6F0, #F5FAF6) !important;">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="relative flex h-2 w-2">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B7E532] opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#103B30]"></span>
+                                    </span>
+                                    <span class="text-[11.5px] font-black uppercase tracking-wider text-[#103B30]">UAE Relocation Network</span>
+                                    <span class="hidden sm:inline-flex items-center px-2.5 py-0.5 rounded-full bg-white text-[#103B30] text-[10px] font-extrabold border border-[#D0E2D1] shadow-2xs">All 7 Emirates Covered</span>
                                 </div>
                                 <a href="{{ route('local-moving') }}" 
                                    @click="closeAll()"
-                                   class="group/all inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white hover:bg-[#103B30] text-[#103B30] hover:text-[#D8F36B] border border-[#DDE7DD] text-[11px] font-bold transition-all shadow-2xs">
+                                   class="group/all inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white hover:bg-[#103B30] text-[#103B30] hover:text-[#D8F36B] border border-[#D5E3D5] hover:border-[#103B30] text-[11px] font-extrabold transition-all duration-200 shadow-2xs">
                                     <span>Local Moving Guide</span>
                                     <i class="fa-solid fa-arrow-right text-[9px] group-hover/all:translate-x-0.5 transition-transform"></i>
                                 </a>

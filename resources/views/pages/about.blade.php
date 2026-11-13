@@ -425,16 +425,20 @@
 </section>
 
 {{-- =========================================================================
-     3. MISSION, VISION & GUIDING VALUES (PURE WHITE CARDS WITH BALANCED TYPOGRAPHY)
+     3. MISSION, VISION & GUIDING VALUES (ULTRA-PREMIUM ARCHITECTURAL CARDS)
      ========================================================================= --}}
-<section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E2E8E2]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E2E8E2] relative overflow-hidden">
+    {{-- Ambient Light Sheen --}}
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[300px] bg-gradient-to-r from-[#D8F36B]/10 via-[#103B30]/5 to-[#D8F36B]/10 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {{-- Section Heading --}}
         <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2.5">
-            <span class="forest-badge">
-                <i class="fa-solid fa-bullseye text-[11px]"></i> Guiding Principles
-            </span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#D5E2D5] shadow-2xs text-[#0B2A22] text-[11px] sm:text-xs font-bold tracking-wide uppercase">
+                <span class="w-2 h-2 rounded-full bg-[#103B30] shadow-[0_0_8px_#103B30] animate-pulse"></span>
+                <span>Guiding Principles</span>
+            </div>
             <h2 class="text-2xl sm:text-3xl lg:text-[34px] font-black font-heading text-[#0B2A22] tracking-tight">
                 Our Mission, Vision &amp; Core Values
             </h2>
@@ -444,120 +448,241 @@
         </div>
 
         {{-- Mission & Vision Twin Cards --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch mb-8">
             
             {{-- Mission Card --}}
-            <div class="p-6 sm:p-8 rounded-3xl bg-white border border-[#E2E8E2] space-y-4 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-[#103B30]/30 transition-all duration-300 card-hover relative overflow-hidden group">
-                {{-- Top Shining Hover Line --}}
-                <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-transparent via-[#D8F36B] to-[#103B30] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative rounded-3xl bg-white border border-[#DCE6DC] shadow-[0_4px_24px_rgba(16,59,48,0.06)] hover:shadow-[0_20px_45px_-12px_rgba(16,59,48,0.14)] hover:border-[#103B30]/35 transition-all duration-300 card-hover overflow-hidden flex flex-col justify-between group p-6 sm:p-8">
+                {{-- Top Shining Laser Line --}}
+                <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_10px_#D8F36B] z-20"></div>
 
-                {{-- Soft Ambient Radial Corner Light --}}
-                <div class="absolute top-0 right-0 w-44 h-44 bg-gradient-to-bl from-[#EBF5E7]/70 to-transparent rounded-bl-full pointer-events-none -z-0 transition-all duration-300 group-hover:scale-110"></div>
-                
-                {{-- Icon --}}
-                <div class="relative z-10 w-13 h-13 rounded-2xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-xl shadow-md group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-bullseye"></i>
+                {{-- Subtle Architectural Watermark --}}
+                <div class="absolute -bottom-8 -right-8 w-44 h-44 text-[#103B30]/[0.03] pointer-events-none select-none z-0">
+                    <i class="fa-solid fa-bullseye text-[180px]"></i>
                 </div>
 
-                {{-- Title & Meta --}}
-                <div class="relative z-10 space-y-1.5">
-                    <span class="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#0B2A22] bg-[#EBF4EB] px-3 py-1 rounded-full border border-[#D5E5D5]">
-                        Our Daily Purpose
-                    </span>
-                    <h3 class="text-2xl sm:text-3xl font-black font-heading text-[#0B2A22] tracking-tight">
+                {{-- Card Content Body --}}
+                <div class="relative z-10">
+                    {{-- Top Header Row: Icon & Pill Tag --}}
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#103B30] to-[#0A261F] text-[#D8F36B] flex items-center justify-center text-xl shadow-md border border-[#103B30]/20 shrink-0 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EBF5E7] border border-[#CFE4CC] text-[11px] font-black uppercase tracking-wider text-[#0B2A22]">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#103B30] animate-pulse"></span>
+                            <span>Our Daily Purpose</span>
+                        </span>
+                    </div>
+
+                    {{-- Title --}}
+                    <h3 class="text-2xl sm:text-[26px] font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-[#103B30] transition-colors mt-4">
                         Our Mission
                     </h3>
+
+                    {{-- Statement --}}
+                    <p class="text-xs sm:text-sm text-[#1E2E25] font-normal leading-relaxed mt-2.5">
+                        To deliver reliable, stress-free moving and relocation services in Dubai and globally by upholding strict handling safety, providing honest communication, employing vetted full-time personnel, and treating every household with the respect it deserves.
+                    </p>
+
+                    {{-- 3 Key Mission Commitments --}}
+                    <div class="mt-5 pt-4 border-t border-[#E8EFE8] space-y-2.5">
+                        <div class="flex items-start gap-2.5 text-xs text-[#1E2E25]">
+                            <span class="w-5 h-5 rounded-full bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-[10px] shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong class="text-[#0B2A22] font-bold">100% Salaried In-House Crews:</strong> Zero casual street labor; vetted background-checked specialists.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-[#1E2E25]">
+                            <span class="w-5 h-5 rounded-full bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-[10px] shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong class="text-[#0B2A22] font-bold">Zero-Surprise Pricing:</strong> Written binding proposals with no surprise surcharges on moving day.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-[#1E2E25]">
+                            <span class="w-5 h-5 rounded-full bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-[10px] shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong class="text-[#0B2A22] font-bold">Dedicated Move Coordinator:</strong> Single point of contact guiding building permits, elevator NOCs, and packing.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                {{-- Body Text --}}
-                <p class="relative z-10 text-sm sm:text-[15px] text-[#1E2E25] leading-relaxed font-normal">
-                    To deliver reliable, stress-free moving and relocation services in Dubai and globally by upholding strict handling safety, providing honest communication, employing vetted full-time personnel, and treating every household with the respect it deserves.
-                </p>
-
-                {{-- Bottom Feature Bar --}}
-                <div class="relative z-10 pt-3 border-t border-[#EEF2EE] flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#0B2A22]">
-                    <i class="fa-solid fa-circle-check text-emerald-600 text-sm flex-shrink-0"></i>
-                    <span>Guaranteed customer satisfaction on every move</span>
+                {{-- Bottom Assurance Bar --}}
+                <div class="relative z-10 mt-6 pt-3.5 border-t border-[#E8EFE8] flex items-center justify-between text-xs font-bold text-[#0B2A22]">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-[#103B30]"></i>
+                        <span>Guaranteed Customer Satisfaction on Every Move</span>
+                    </span>
+                    <span class="text-[10px] font-mono font-bold text-[#103B30] bg-[#EBF5E7] px-2.5 py-0.5 rounded-md">01 / PURPOSE</span>
                 </div>
             </div>
 
             {{-- Vision Card --}}
-            <div class="p-6 sm:p-8 rounded-3xl bg-white border border-[#E2E8E2] space-y-4 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-[#103B30]/30 transition-all duration-300 card-hover relative overflow-hidden group">
-                {{-- Top Shining Hover Line --}}
-                <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-transparent via-[#D8F36B] to-[#103B30] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="relative rounded-3xl bg-white border border-[#DCE6DC] shadow-[0_4px_24px_rgba(16,59,48,0.06)] hover:shadow-[0_20px_45px_-12px_rgba(16,59,48,0.14)] hover:border-[#103B30]/35 transition-all duration-300 card-hover overflow-hidden flex flex-col justify-between group p-6 sm:p-8">
+                {{-- Top Shining Laser Line --}}
+                <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_10px_#D8F36B] z-20"></div>
 
-                {{-- Soft Ambient Radial Corner Light --}}
-                <div class="absolute top-0 right-0 w-44 h-44 bg-gradient-to-bl from-[#EBF5E7]/70 to-transparent rounded-bl-full pointer-events-none -z-0 transition-all duration-300 group-hover:scale-110"></div>
-                
-                {{-- Icon --}}
-                <div class="relative z-10 w-13 h-13 rounded-2xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-xl shadow-md group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-eye"></i>
+                {{-- Subtle Architectural Watermark --}}
+                <div class="absolute -bottom-8 -right-8 w-44 h-44 text-[#103B30]/[0.03] pointer-events-none select-none z-0">
+                    <i class="fa-solid fa-compass text-[180px]"></i>
                 </div>
 
-                {{-- Title & Meta --}}
-                <div class="relative z-10 space-y-1.5">
-                    <span class="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#0B2A22] bg-[#EBF4EB] px-3 py-1 rounded-full border border-[#D5E5D5]">
-                        Our Long-Term Horizon
-                    </span>
-                    <h3 class="text-2xl sm:text-3xl font-black font-heading text-[#0B2A22] tracking-tight">
+                {{-- Card Content Body --}}
+                <div class="relative z-10">
+                    {{-- Top Header Row: Icon & Pill Tag --}}
+                    <div class="flex items-center justify-between gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#103B30] to-[#0A261F] text-[#D8F36B] flex items-center justify-center text-xl shadow-md border border-[#103B30]/20 shrink-0 group-hover:scale-105 transition-transform">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EBF5E7] border border-[#CFE4CC] text-[11px] font-black uppercase tracking-wider text-[#0B2A22]">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#103B30] animate-pulse"></span>
+                            <span>Our Long-Term Horizon</span>
+                        </span>
+                    </div>
+
+                    {{-- Title --}}
+                    <h3 class="text-2xl sm:text-[26px] font-black font-heading text-[#0B2A22] tracking-tight group-hover:text-[#103B30] transition-colors mt-4">
                         Our Vision
                     </h3>
+
+                    {{-- Statement --}}
+                    <p class="text-xs sm:text-sm text-[#1E2E25] font-normal leading-relaxed mt-2.5">
+                        To be the Middle East's premier and most trusted moving and global relocation partner, recognized internationally for setting new benchmarks in customer satisfaction, master carpentry, sustainable packing, and seamless border transitions.
+                    </p>
+
+                    {{-- 3 Key Vision Pillars --}}
+                    <div class="mt-5 pt-4 border-t border-[#E8EFE8] space-y-2.5">
+                        <div class="flex items-start gap-2.5 text-xs text-[#1E2E25]">
+                            <span class="w-5 h-5 rounded-full bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-[10px] shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong class="text-[#0B2A22] font-bold">Regional Moving Benchmark:</strong> Setting standard-setting quality across Dubai, Abu Dhabi, and the GCC.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-[#1E2E25]">
+                            <span class="w-5 h-5 rounded-full bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-[10px] shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong class="text-[#0B2A22] font-bold">Global Relocation Hub:</strong> Door-to-door transit corridors connecting UAE families to 120+ countries.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-2.5 text-xs text-[#1E2E25]">
+                            <span class="w-5 h-5 rounded-full bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-[10px] shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <div>
+                                <strong class="text-[#0B2A22] font-bold">Eco-Conscious Packaging:</strong> 100% recyclable cartons, reusable timber crates, and modern fleet efficiency.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                {{-- Body Text --}}
-                <p class="relative z-10 text-sm sm:text-[15px] text-[#1E2E25] leading-relaxed font-normal">
-                    To be the Middle East's premier and most trusted moving and global relocation partner, recognized internationally for setting new benchmarks in customer satisfaction, master carpentry, sustainable packing, and seamless border transitions.
-                </p>
-
-                {{-- Bottom Feature Bar --}}
-                <div class="relative z-10 pt-3 border-t border-[#EEF2EE] flex items-center gap-2.5 text-xs sm:text-sm font-bold text-[#0B2A22]">
-                    <i class="fa-solid fa-circle-check text-emerald-600 text-sm flex-shrink-0"></i>
-                    <span>Expanding reliable global trade routes and local partnerships</span>
+                {{-- Bottom Assurance Bar --}}
+                <div class="relative z-10 mt-6 pt-3.5 border-t border-[#E8EFE8] flex items-center justify-between text-xs font-bold text-[#0B2A22]">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-solid fa-earth-americas text-[#103B30]"></i>
+                        <span>Expanding Reliable Global Corridors &amp; Local Reach</span>
+                    </span>
+                    <span class="text-[10px] font-mono font-bold text-[#103B30] bg-[#EBF5E7] px-2.5 py-0.5 rounded-md">02 / HORIZON</span>
                 </div>
             </div>
 
         </div>
 
+        {{-- Divider Banner Above Core Values --}}
+        <div class="relative flex items-center justify-center my-8 sm:my-10">
+            <div class="border-t border-[#E2EBE2] w-full"></div>
+            <span class="bg-white px-4 text-xs font-bold uppercase tracking-wider text-[#103B30] shrink-0 flex items-center gap-2 border border-[#E2EBE2] rounded-full py-1.5 shadow-2xs">
+                <i class="fa-solid fa-gem text-xs text-[#103B30]"></i>
+                <span>The 4 Core Values That Guide Every Move</span>
+            </span>
+            <div class="border-t border-[#E2EBE2] w-full"></div>
+        </div>
+
         {{-- 4 Core Values Grid --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-            <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#E2E8E2] space-y-2.5 shadow-sm hover:shadow-xl hover:border-[#103B30]/30 transition-all duration-300 card-hover">
-                <span class="w-11 h-11 rounded-2xl bg-[#EBF4EB] text-[#103B30] flex items-center justify-center text-lg shadow-xs">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </span>
-                <h4 class="text-base sm:text-lg font-bold font-heading text-[#0B2A22]">Integrity First</h4>
+            
+            {{-- Value 1 --}}
+            <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#DCE6DC] space-y-3 shadow-sm hover:shadow-xl hover:border-[#103B30]/35 transition-all duration-300 card-hover relative overflow-hidden group">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#D8F36B] to-[#103B30] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="flex items-center justify-between">
+                    <span class="w-11 h-11 rounded-2xl bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-lg shadow-2xs border border-[#D5E5D5] group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </span>
+                    <span class="text-[10px] font-mono font-bold text-[#55665D] bg-[#F4F7F4] px-2 py-0.5 rounded">VALUE 01</span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">Integrity First</h4>
                 <p class="text-xs sm:text-sm text-[#1E2E25] leading-relaxed font-normal">
                     Upfront written contracts, binding proposals, and zero hidden surcharges on moving day. What we quote is what you pay.
                 </p>
+                <div class="border-t border-[#EEF2EE] pt-2.5 flex items-center gap-1.5 text-[11px] font-semibold text-[#103B30]">
+                    <i class="fa-solid fa-circle-check text-[10px]"></i>
+                    <span>Fixed binding pricing</span>
+                </div>
             </div>
 
-            <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#E2E8E2] space-y-2.5 shadow-sm hover:shadow-xl hover:border-[#103B30]/30 transition-all duration-300 card-hover">
-                <span class="w-11 h-11 rounded-2xl bg-[#EBF4EB] text-[#103B30] flex items-center justify-center text-lg shadow-xs">
-                    <i class="fa-solid fa-hand-holding-heart"></i>
-                </span>
-                <h4 class="text-base sm:text-lg font-bold font-heading text-[#0B2A22]">White-Glove Care</h4>
+            {{-- Value 2 --}}
+            <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#DCE6DC] space-y-3 shadow-sm hover:shadow-xl hover:border-[#103B30]/35 transition-all duration-300 card-hover relative overflow-hidden group">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#D8F36B] to-[#103B30] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="flex items-center justify-between">
+                    <span class="w-11 h-11 rounded-2xl bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-lg shadow-2xs border border-[#D5E5D5] group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </span>
+                    <span class="text-[10px] font-mono font-bold text-[#55665D] bg-[#F4F7F4] px-2 py-0.5 rounded">VALUE 02</span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">White-Glove Care</h4>
                 <p class="text-xs sm:text-sm text-[#1E2E25] leading-relaxed font-normal">
                     We treat your furnishings, luxury artwork, electronics, and memories with the exact same reverence as our own belongings.
                 </p>
+                <div class="border-t border-[#EEF2EE] pt-2.5 flex items-center gap-1.5 text-[11px] font-semibold text-[#103B30]">
+                    <i class="fa-solid fa-circle-check text-[10px]"></i>
+                    <span>Multi-layer protection</span>
+                </div>
             </div>
 
-            <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#E2E8E2] space-y-2.5 shadow-sm hover:shadow-xl hover:border-[#103B30]/30 transition-all duration-300 card-hover">
-                <span class="w-11 h-11 rounded-2xl bg-[#EBF4EB] text-[#103B30] flex items-center justify-center text-lg shadow-xs">
-                    <i class="fa-solid fa-user-check"></i>
-                </span>
-                <h4 class="text-base sm:text-lg font-bold font-heading text-[#0B2A22]">100% In-House Crew</h4>
+            {{-- Value 3 --}}
+            <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#DCE6DC] space-y-3 shadow-sm hover:shadow-xl hover:border-[#103B30]/35 transition-all duration-300 card-hover relative overflow-hidden group">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#D8F36B] to-[#103B30] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="flex items-center justify-between">
+                    <span class="w-11 h-11 rounded-2xl bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-lg shadow-2xs border border-[#D5E5D5] group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-user-check"></i>
+                    </span>
+                    <span class="text-[10px] font-mono font-bold text-[#55665D] bg-[#F4F7F4] px-2 py-0.5 rounded">VALUE 03</span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">100% In-House Crew</h4>
                 <p class="text-xs sm:text-sm text-[#1E2E25] leading-relaxed font-normal">
                     Zero casual labor hired from streets. Uniformed, background-verified specialists and master carpenters dedicated to your move.
                 </p>
+                <div class="border-t border-[#EEF2EE] pt-2.5 flex items-center gap-1.5 text-[11px] font-semibold text-[#103B30]">
+                    <i class="fa-solid fa-circle-check text-[10px]"></i>
+                    <span>Vetted &amp; full-time staff</span>
+                </div>
             </div>
 
-            <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#E2E8E2] space-y-2.5 shadow-sm hover:shadow-xl hover:border-[#103B30]/30 transition-all duration-300 card-hover">
-                <span class="w-11 h-11 rounded-2xl bg-[#EBF4EB] text-[#103B30] flex items-center justify-center text-lg shadow-xs">
-                    <i class="fa-solid fa-earth-americas"></i>
-                </span>
-                <h4 class="text-base sm:text-lg font-bold font-heading text-[#0B2A22]">Global Standards</h4>
+            {{-- Value 4 --}}
+            <div class="p-5 sm:p-6 rounded-3xl bg-white border border-[#DCE6DC] space-y-3 shadow-sm hover:shadow-xl hover:border-[#103B30]/35 transition-all duration-300 card-hover relative overflow-hidden group">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#D8F36B] to-[#103B30] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="flex items-center justify-between">
+                    <span class="w-11 h-11 rounded-2xl bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-lg shadow-2xs border border-[#D5E5D5] group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </span>
+                    <span class="text-[10px] font-mono font-bold text-[#55665D] bg-[#F4F7F4] px-2 py-0.5 rounded">VALUE 04</span>
+                </div>
+                <h4 class="text-base sm:text-lg font-bold font-heading text-[#0B2A22] group-hover:text-[#103B30] transition-colors">Global Standards</h4>
                 <p class="text-xs sm:text-sm text-[#1E2E25] leading-relaxed font-normal">
                     IATA/FIDI-aligned packing methods, heavy-duty 5-ply cartons, export timber crating, and direct customs clearance worldwide.
                 </p>
+                <div class="border-t border-[#EEF2EE] pt-2.5 flex items-center gap-1.5 text-[11px] font-semibold text-[#103B30]">
+                    <i class="fa-solid fa-circle-check text-[10px]"></i>
+                    <span>Export crating &amp; customs</span>
+                </div>
             </div>
         </div>
 

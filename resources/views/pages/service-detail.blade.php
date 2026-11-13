@@ -670,105 +670,189 @@ $narrativeSections = [
 
 {{-- In-Depth Service Breakdown & White-Glove Standard Section --}}
 @if (isset($narrativeSections[$slug]))
-<section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E2E8E2] w-full">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-14 sm:py-18 lg:py-24 bg-[#F8FAF8] border-b border-[#E0EBE0] relative overflow-hidden w-full">
+    {{-- Ambient Luxury Glow Effects --}}
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[1100px] h-[500px] bg-gradient-to-b from-[#D8F36B]/15 via-[#103B30]/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-t from-[#EBF5E7]/40 to-transparent rounded-full blur-2xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
         {{-- Section Header --}}
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E7] text-[#073B2E] border border-[#D5E8D0] text-xs font-bold uppercase tracking-wider">
-                <i class="fa-solid fa-medal text-[#073B2E]"></i>
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-3.5">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white text-[#103B30] border border-[#CFE0D1] shadow-2xs text-xs font-black uppercase tracking-wider">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B7E532] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-[#103B30]"></span>
+                </span>
+                <i class="fa-solid fa-shield-halved text-[#103B30] text-[11px]"></i>
                 <span>White-Glove Relocation Standard</span>
-            </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-black font-heading text-[#103B30] tracking-tight leading-tight">
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-[42px] font-black font-heading text-[#073B2E] tracking-tight leading-tight">
                 {{ $narrativeSectionTitles[$slug]['title'] ?? 'The MOVEXA Standard for ' . $service['title'] }}
             </h2>
-            <p class="text-sm sm:text-base text-[#425048] leading-relaxed max-w-2xl mx-auto">
+            
+            <p class="text-sm sm:text-base text-[#46574D] leading-relaxed max-w-2xl mx-auto font-medium">
                 {{ $narrativeSectionTitles[$slug]['subtitle'] ?? 'Discover how our certified in-house teams, high-grade materials, and Dubai-compliant logistics make every transition effortless.' }}
             </p>
         </div>
 
-        {{-- Narrative Blocks List --}}
-        <div class="space-y-10 sm:space-y-14">
+        {{-- Interactive / Visual Process Milestone Bar (Advanced Operational Flow) --}}
+        @php $phaseCount = count($narrativeSections[$slug]); @endphp
+        <div class="hidden lg:block mb-12 max-w-5xl mx-auto">
+            <div class="bg-white/95 backdrop-blur-md p-3 rounded-2xl border border-[#DFE7DF] shadow-[0_4px_16px_rgba(7,59,46,0.04)]">
+                <div class="grid gap-2.5" style="grid-template-columns: repeat({{ $phaseCount }}, minmax(0, 1fr));">
+                    @foreach ($narrativeSections[$slug] as $pIndex => $pBlock)
+                    @php
+                        $rawTag = $pBlock['tag'] ?? '';
+                        $tagParts = explode('•', $rawTag);
+                        $phaseNum = trim($tagParts[0] ?? ('Phase ' . ($pIndex + 1)));
+                        $phaseName = trim($tagParts[1] ?? ($pBlock['title']));
+                    @endphp
+                    <div class="p-2.5 rounded-xl bg-[#F8FAF8] border border-[#E2EBE2] hover:border-[#103B30] hover:bg-[#F2F7F2] transition-all group/step">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-[10px] font-black uppercase tracking-wider text-[#103B30] flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#103B30]"></span>
+                                <span>{{ $phaseNum }}</span>
+                            </span>
+                            <span class="text-[9.5px] font-black text-[#6C7E72] bg-white px-1.5 py-0.5 rounded-md border border-[#DCE6DC]">
+                                Step {{ $pIndex + 1 }}
+                            </span>
+                        </div>
+                        <div class="text-[11px] font-extrabold text-[#0D2E24] truncate group-hover/step:text-[#073B2E]">
+                            {{ $phaseName }}
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        {{-- Narrative Process Cards List --}}
+        <div class="space-y-8 sm:space-y-12">
             @foreach ($narrativeSections[$slug] as $index => $block)
-            @php $isEven = $index % 2 === 0; @endphp
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            @php 
+                $isEven = $index % 2 === 0;
+                $cleanTitle = preg_replace('/^\d+\.\s*/', '', $block['title']);
+            @endphp
+            
+            <div class="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#DEE7DF] shadow-[0_20px_55px_-15px_rgba(7,59,46,0.07),0_1px_3px_rgba(0,0,0,0.02)] group hover:border-[#CFDEC7] hover:shadow-[0_25px_65px_-15px_rgba(7,59,46,0.12)] transition-all duration-300 overflow-hidden">
+                {{-- Top Specular Laser Highlight Line --}}
+                <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
                 
-                {{-- Media Column --}}
-                <div class="lg:col-span-6 {{ $isEven ? 'lg:order-1' : 'lg:order-2' }}">
-                    <div class="relative rounded-3xl overflow-hidden shadow-xl border border-[#DCE6DC] bg-[#08271F] group aspect-[4/3]">
-                        <img src="{{ $block['image'] }}" 
-                             alt="{{ $block['title'] }} - MOVEXA Dubai" 
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    {{-- Media Column --}}
+                    <div class="lg:col-span-6 {{ $isEven ? 'lg:order-1' : 'lg:order-2' }}">
+                        <div class="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(7,59,46,0.22)] border-2 border-white ring-1 ring-[#DEE8DE] group/img aspect-[4/3] bg-[#07241C]">
+                            <img src="{{ $block['image'] }}" 
+                                 alt="{{ $block['title'] }} - MOVEXA Dubai" 
+                                 class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700 ease-out" 
+                                 loading="lazy" 
+                                 decoding="async">
+                            
+                            {{-- Dark Ambient Gradient for Captions & Badges --}}
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10 pointer-events-none"></div>
+
+                            {{-- Top Left Floating Phase Tag --}}
+                            <div class="absolute top-4 left-4 z-10 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md text-[#D8F36B] text-[11px] font-black uppercase tracking-wider border border-white/20 shadow-md">
+                                <span class="w-2 h-2 rounded-full bg-[#B7E532] animate-pulse"></span>
+                                <span>{{ $block['tag'] }}</span>
+                            </div>
+
+                            {{-- Top Right Verified Protocol Tag --}}
+                            <div class="absolute top-4 right-4 z-10 hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#073B2E] text-[10.5px] font-black border border-white/40 shadow-xs">
+                                <i class="fa-solid fa-shield-halved text-[#103B30] text-[10px]"></i>
+                                <span>Dubai Standard Verified</span>
+                            </div>
+
+                            {{-- Bottom Glassmorphic Photo Caption --}}
+                            <div class="absolute bottom-4 left-4 right-4 text-white z-10 flex items-center gap-3 bg-[#07241C]/85 backdrop-blur-md p-3.5 rounded-2xl border border-white/20 shadow-lg">
+                                <div class="w-7 h-7 rounded-lg bg-[#103B30] text-[#D8F36B] border border-[#205545] flex items-center justify-center text-xs shrink-0">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+                                <span class="text-[11.5px] text-white/95 font-semibold leading-snug">{{ $block['caption'] }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Content Column --}}
+                    <div class="lg:col-span-6 {{ $isEven ? 'lg:order-2' : 'lg:order-1' }} space-y-4 sm:space-y-5">
                         
-                        {{-- Dark Gradient Vignette for bottom caption --}}
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent pointer-events-none"></div>
-
-                        {{-- Top Phase Tag --}}
-                        <div class="absolute top-4 left-4 z-10 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/70 backdrop-blur-md text-[#D8F36B] text-[11px] font-extrabold uppercase tracking-wider border border-white/20">
-                            <span class="w-2 h-2 rounded-full bg-[#B7E532] animate-pulse"></span>
-                            <span>{{ $block['tag'] }}</span>
+                        {{-- Header Row: Category Badge + Milestone Counter --}}
+                        <div class="flex items-center justify-between gap-3 flex-wrap">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#103B30] text-[#D8F36B] text-[11px] font-black uppercase tracking-wider shadow-2xs">
+                                <span class="w-1.5 h-1.5 rounded-full bg-[#D8F36B] animate-pulse"></span>
+                                <span>{{ $block['tag'] }}</span>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-widest text-[#4B6053] bg-[#F2F7F2] px-3 py-1 rounded-full border border-[#DCE7DC]">
+                                Phase {{ sprintf('%02d', $index + 1) }} of {{ sprintf('%02d', $phaseCount) }}
+                            </span>
                         </div>
 
-                        {{-- Bottom Authentic Caption --}}
-                        <div class="absolute bottom-4 left-4 right-4 text-white z-10 flex items-center gap-2.5 bg-black/40 backdrop-blur-md p-3 rounded-2xl border border-white/15">
-                            <i class="fa-solid fa-camera text-xs text-[#B7E532] shrink-0"></i>
-                            <span class="text-[11.5px] text-white/90 font-medium leading-snug">{{ $block['caption'] }}</span>
+                        {{-- Step Heading --}}
+                        <h3 class="text-2xl sm:text-[28px] font-black font-heading text-[#073B2E] tracking-tight leading-snug">
+                            {{ $cleanTitle }}
+                        </h3>
+
+                        {{-- Key Takeaway Callout Box (Subtitle) --}}
+                        <div class="flex items-start gap-3 p-3.5 rounded-xl bg-gradient-to-r from-[#F0F6F1] to-[#F7FAF7] border-l-4 border-[#103B30] border-y border-r border-[#E0ECE0]">
+                            <i class="fa-solid fa-clipboard-check text-[#103B30] text-sm mt-0.5 shrink-0"></i>
+                            <div class="text-xs sm:text-[13px] font-bold text-[#143B2E] leading-relaxed">
+                                {{ $block['subtitle'] }}
+                            </div>
                         </div>
+
+                        {{-- Structured Narrative Paragraphs --}}
+                        <div class="space-y-3 text-xs sm:text-[13.5px] text-[#344439] leading-relaxed font-normal">
+                            <p class="pl-3.5 border-l-2 border-[#DCE6DC]">{{ $block['p1'] }}</p>
+                            <p class="pl-3.5 border-l-2 border-[#DCE6DC]">{{ $block['p2'] }}</p>
+                        </div>
+
+                        {{-- Feature Checklist (Assurance Grid) --}}
+                        @if (!empty($block['pills']))
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                            @foreach ($block['pills'] as $pill)
+                            <div class="flex items-center gap-2.5 p-2.5 sm:p-3 rounded-xl bg-[#F7FAF7] hover:bg-[#EEF6EF] border border-[#DEE8DF] hover:border-[#B7E532] transition-all shadow-2xs group/pill">
+                                <span class="w-6 h-6 rounded-lg bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-[10px] shrink-0 shadow-2xs group-hover/pill:bg-[#B7E532] group-hover/pill:text-[#073B2E] transition-colors">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <span class="text-xs font-black text-[#102A20] leading-tight">{{ $pill }}</span>
+                            </div>
+                            @endforeach
+                        </div>
+                        @endif
+
                     </div>
+
                 </div>
-
-                {{-- Content Column --}}
-                <div class="lg:col-span-6 {{ $isEven ? 'lg:order-2' : 'lg:order-1' }} space-y-4 sm:space-y-5">
-                    <div class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#073B2E]">
-                        <span class="w-2 h-2 rounded-full bg-[#B7E532]"></span>
-                        <span>{{ $block['tag'] }}</span>
-                    </div>
-
-                    <h3 class="text-2xl sm:text-3xl font-black font-heading text-[#103B30] tracking-tight leading-snug">
-                        {{ $block['title'] }}
-                    </h3>
-
-                    <p class="text-sm sm:text-[15px] font-bold text-[#073B2E]">
-                        {{ $block['subtitle'] }}
-                    </p>
-
-                    <div class="space-y-3 text-sm sm:text-[15px] text-[#344038] leading-relaxed font-normal">
-                        <p>{{ $block['p1'] }}</p>
-                        <p>{{ $block['p2'] }}</p>
-                    </div>
-
-                    {{-- Feature Pills Checklist --}}
-                    @if (!empty($block['pills']))
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
-                        @foreach ($block['pills'] as $pill)
-                        <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-[#E0EBE0] shadow-2xs">
-                            <i class="fa-solid fa-circle-check text-xs text-[#073B2E] shrink-0"></i>
-                            <span class="text-xs font-bold text-[#102A20]">{{ $pill }}</span>
-                        </div>
-                        @endforeach
-                    </div>
-                    @endif
-                </div>
-
             </div>
             @endforeach
         </div>
 
         {{-- Interactive Section Footer CTA --}}
-        <div class="mt-16 sm:mt-20 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#072F25] to-[#041913] text-white border border-white/10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="space-y-1 text-center md:text-left">
-                <span class="text-xs font-bold uppercase tracking-wider text-[#D8F36B]">Tailored Moving Solutions</span>
-                <h4 class="text-xl sm:text-2xl font-black font-heading">Have Unique Furniture or Tight Moving Deadlines?</h4>
-                <p class="text-xs sm:text-sm text-white/80 max-w-xl">Our Dubai relocation coordinators can craft a custom move-day workflow around your family's exact schedule.</p>
+        <div class="mt-14 sm:mt-18 p-6 sm:p-8 lg:p-9 rounded-3xl bg-gradient-to-r from-[#072F25] via-[#0A3D30] to-[#041913] text-white border border-white/10 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
+            {{-- Top Accent Line --}}
+            <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent"></div>
+            
+            <div class="space-y-1.5 text-center md:text-left">
+                <span class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 text-[#D8F36B] border border-white/15 text-[11px] font-black uppercase tracking-wider">
+                    <i class="fa-solid fa-star text-[10px] text-[#D8F36B]"></i>
+                    <span>Tailored Relocation Architecture</span>
+                </span>
+                <h4 class="text-xl sm:text-2xl font-black font-heading tracking-tight">Have Unique Furniture or Tight Moving Deadlines?</h4>
+                <p class="text-xs sm:text-sm text-white/80 max-w-xl font-medium">Our Dubai relocation coordinators can craft a custom move-day workflow around your family's exact schedule.</p>
             </div>
-            <div class="flex items-center gap-3 shrink-0 w-full md:w-auto justify-center">
-                <button type="button" onclick="openQuoteModal('', '{{ $service['title'] }}')" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-[#cbf54a] text-xs font-black shadow-md hover:shadow-lg transition-all cursor-pointer">
+            
+            <div class="flex items-center gap-3 shrink-0 w-full md:w-auto justify-center flex-wrap sm:flex-nowrap">
+                <button type="button" onclick="openQuoteModal('', '{{ $service['title'] }}')" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#B7E532] text-[#073B2E] hover:bg-[#cbf54a] text-xs font-black shadow-[0_4px_16px_rgba(183,229,50,0.35)] hover:shadow-[0_6px_22px_rgba(183,229,50,0.5)] transition-all cursor-pointer">
                     <i class="fa-solid fa-calculator"></i>
                     <span>Get Moving Quote</span>
                 </button>
                 <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}?text={{ urlencode('Hello MOVEXA, I would like to consult about ' . $service['title'] . ' in Dubai.') }}" 
                    target="_blank" 
                    rel="noopener" 
-                   class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white/10 hover:bg-[#25D366] text-white border border-white/20 text-xs font-bold backdrop-blur-md transition-all">
+                   class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-[#25D366] text-white hover:text-white border border-white/20 text-xs font-black backdrop-blur-md transition-all shadow-sm">
                     <i class="fa-brands fa-whatsapp text-sm text-[#25D366]"></i>
                     <span>WhatsApp</span>
                 </a>

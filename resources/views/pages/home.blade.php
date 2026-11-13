@@ -232,75 +232,123 @@ $heroSlides = [
      SECTION 2: QUICK MOVING QUOTE
      ========================================== --}}
 <section class="relative -mt-6 sm:-mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="relative bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 lg:p-8 shadow-[0_20px_55px_-12px_rgba(7,59,46,0.12),0_0_25px_rgba(216,243,107,0.18)] border-2 border-[#D8E6D8] overflow-hidden">
-        {{-- Permanent Top Shining Laser Line & Glow --}}
-        <div class="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_15px_#D8F36B] z-20 pointer-events-none"></div>
+    <div class="relative bg-white/98 backdrop-blur-md rounded-3xl p-6 sm:p-8 lg:p-9 shadow-[0_25px_65px_-15px_rgba(7,59,46,0.14),0_0_0_1px_rgba(16,59,48,0.06)] border border-[#DFE7E0] overflow-hidden">
+        {{-- Top Specular Brand Accent Line --}}
+        <div class="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#103B30] via-[#B7E532] to-[#103B30] shadow-[0_0_12px_#B7E532] z-20 pointer-events-none"></div>
         
-        <div class="flex flex-col md:flex-row md:items-center justify-between pb-4 sm:pb-6 mb-5 sm:mb-6 border-b border-[#E2E8E2] gap-2">
+        {{-- Section Header --}}
+        <div class="flex flex-col md:flex-row md:items-center justify-between pb-5 sm:pb-6 mb-6 border-b border-[#EAEFEA] gap-4">
             <div>
-                <span class="forest-badge mb-1.5">
-                    <i class="fa-solid fa-calculator text-[#D8F36B]"></i>
-                    Instant Moving Estimation
-                </span>
-                <h2 class="text-xl sm:text-2xl md:text-3xl font-black font-heading text-[#073B2E] tracking-tight mt-1">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-[#103B30] text-[#D8F36B] shadow-2xs">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D8F36B] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#D8F36B]"></span>
+                    </span>
+                    <i class="fa-solid fa-calculator text-[10px]"></i>
+                    <span>Instant Moving Estimation</span>
+                </div>
+                <h2 class="text-2xl sm:text-3xl lg:text-[32px] font-black font-heading text-[#073B2E] tracking-tight mt-2.5">
                     Where Are You Moving?
                 </h2>
             </div>
-            <p class="text-xs text-[#4F5D54] max-w-md">
-                Enter your locations to generate an instant quote. Opens directly with our moving advisors on WhatsApp or email.
-            </p>
+            
+            {{-- Trust Points Strip --}}
+            <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-semibold text-[#4F5D54]">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F4F8F4] border border-[#DCE7DC] text-[#203D2E] shadow-2xs font-bold text-[11.5px]">
+                    <i class="fa-solid fa-circle-check text-[#103B30] text-xs"></i>
+                    <span>100% Free Survey</span>
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F4F8F4] border border-[#DCE7DC] text-[#203D2E] shadow-2xs font-bold text-[11.5px]">
+                    <i class="fa-solid fa-circle-check text-[#103B30] text-xs"></i>
+                    <span>Fixed Price Guarantee</span>
+                </span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#F4F8F4] border border-[#DCE7DC] text-[#203D2E] shadow-2xs font-bold text-[11.5px]">
+                    <i class="fa-brands fa-whatsapp text-[#25D366] text-sm"></i>
+                    <span>Instant Dispatch</span>
+                </span>
+            </div>
         </div>
 
-        {{-- Quick Quote Form (Optimized for Mobile, Tablet & Laptop Grid) --}}
+        {{-- Quick Quote Form --}}
         <form id="quickQuoteForm" onsubmit="handleQuickQuote(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4 items-end">
+            {{-- 1. Moving From --}}
             <div>
-                <label for="qqFrom" class="block text-xs font-bold text-[#202824] mb-1.5">
-                    Moving From
+                <label for="qqFrom" class="block text-[11px] font-black uppercase tracking-wider text-[#2D4537] mb-2 flex items-center gap-1.5">
+                    <span>Moving From</span>
                 </label>
                 <div class="relative">
-                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#747C76]">
-                        <i class="fa-solid fa-location-dot text-xs text-[#103B30]"></i>
+                    <span class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none">
+                        <span class="w-7 h-7 rounded-lg bg-[#EBF5E7] text-[#103B30] border border-[#D5E6D5] flex items-center justify-center text-[11px]">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
                     </span>
-                    <input type="text" id="qqFrom" required placeholder="Dubai Marina, Downtown..." class="w-full text-base sm:text-xs rounded-xl pl-9 pr-3 py-3 border border-gray-300 focus:border-[#103B30] focus:ring-[#103B30]">
+                    <input type="text" id="qqFrom" required placeholder="Dubai Marina, Downtown..." 
+                           class="w-full text-xs sm:text-[13px] font-semibold text-[#102A20] rounded-xl pl-11 pr-3.5 py-3.5 bg-[#F9FBF9] hover:bg-white focus:bg-white border-2 border-[#E1EAE1] hover:border-[#CFDEC7] focus:border-[#103B30] focus:ring-4 focus:ring-[#103B30]/10 transition-all placeholder:text-[#8FA094] placeholder:font-normal shadow-2xs">
                 </div>
             </div>
 
+            {{-- 2. Moving To --}}
             <div>
-                <label for="qqTo" class="block text-xs font-bold text-[#202824] mb-1.5">
-                    Moving To
+                <label for="qqTo" class="block text-[11px] font-black uppercase tracking-wider text-[#2D4537] mb-2 flex items-center gap-1.5">
+                    <span>Moving To</span>
                 </label>
                 <div class="relative">
-                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#747C76]">
-                        <i class="fa-solid fa-flag-checkered text-xs text-[#103B30]"></i>
+                    <span class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none">
+                        <span class="w-7 h-7 rounded-lg bg-[#EBF5E7] text-[#103B30] border border-[#D5E6D5] flex items-center justify-center text-[11px]">
+                            <i class="fa-solid fa-flag-checkered"></i>
+                        </span>
                     </span>
-                    <input type="text" id="qqTo" required placeholder="Palm Jumeirah, London UK..." class="w-full text-base sm:text-xs rounded-xl pl-9 pr-3 py-3 border border-gray-300 focus:border-[#103B30] focus:ring-[#103B30]">
+                    <input type="text" id="qqTo" required placeholder="Palm Jumeirah, London UK..." 
+                           class="w-full text-xs sm:text-[13px] font-semibold text-[#102A20] rounded-xl pl-11 pr-3.5 py-3.5 bg-[#F9FBF9] hover:bg-white focus:bg-white border-2 border-[#E1EAE1] hover:border-[#CFDEC7] focus:border-[#103B30] focus:ring-4 focus:ring-[#103B30]/10 transition-all placeholder:text-[#8FA094] placeholder:font-normal shadow-2xs">
                 </div>
             </div>
 
+            {{-- 3. Moving Date --}}
             <div>
-                <label for="qqDate" class="block text-xs font-bold text-[#202824] mb-1.5">
-                    Moving Date
+                <label for="qqDate" class="block text-[11px] font-black uppercase tracking-wider text-[#2D4537] mb-2 flex items-center gap-1.5">
+                    <span>Moving Date</span>
                 </label>
-                <input type="date" id="qqDate" required class="w-full text-base sm:text-xs rounded-xl px-3 py-3 border border-gray-300 focus:border-[#103B30] focus:ring-[#103B30]">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none">
+                        <span class="w-7 h-7 rounded-lg bg-[#EBF5E7] text-[#103B30] border border-[#D5E6D5] flex items-center justify-center text-[11px]">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </span>
+                    </span>
+                    <input type="date" id="qqDate" required 
+                           class="w-full text-xs sm:text-[13px] font-semibold text-[#102A20] rounded-xl pl-11 pr-3.5 py-3.5 bg-[#F9FBF9] hover:bg-white focus:bg-white border-2 border-[#E1EAE1] hover:border-[#CFDEC7] focus:border-[#103B30] focus:ring-4 focus:ring-[#103B30]/10 transition-all shadow-2xs cursor-pointer">
+                </div>
             </div>
 
+            {{-- 4. Moving Type --}}
             <div>
-                <label for="qqType" class="block text-xs font-bold text-[#202824] mb-1.5">
-                    Moving Type
+                <label for="qqType" class="block text-[11px] font-black uppercase tracking-wider text-[#2D4537] mb-2 flex items-center gap-1.5">
+                    <span>Moving Type</span>
                 </label>
-                <select id="qqType" required class="w-full text-base sm:text-xs rounded-xl px-3 py-3 border border-gray-300 focus:border-[#103B30] focus:ring-[#103B30]">
-                    <option value="Home Moving">Home Moving</option>
-                    <option value="Villa Moving">Villa Moving</option>
-                    <option value="Apartment Moving">Apartment Moving</option>
-                    <option value="Office Relocation">Office Relocation</option>
-                    <option value="International Moving">International Moving</option>
-                </select>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none">
+                        <span class="w-7 h-7 rounded-lg bg-[#EBF5E7] text-[#103B30] border border-[#D5E6D5] flex items-center justify-center text-[11px]">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </span>
+                    </span>
+                    <select id="qqType" required 
+                            class="w-full text-xs sm:text-[13px] font-semibold text-[#102A20] rounded-xl pl-11 pr-8 py-3.5 bg-[#F9FBF9] hover:bg-white focus:bg-white border-2 border-[#E1EAE1] hover:border-[#CFDEC7] focus:border-[#103B30] focus:ring-4 focus:ring-[#103B30]/10 transition-all shadow-2xs cursor-pointer appearance-none">
+                        <option value="Home Moving">Home Moving (Apartment/Villa)</option>
+                        <option value="Villa Moving">Luxury Villa Relocation</option>
+                        <option value="Apartment Moving">High-Rise Apartment Move</option>
+                        <option value="Office Relocation">Corporate Office Shifting</option>
+                        <option value="International Moving">International Moving (Global)</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down text-[#103B30] text-[10px] absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none opacity-60"></i>
+                </div>
             </div>
 
+            {{-- 5. Submit CTA Button --}}
             <div class="sm:col-span-2 lg:col-span-1">
-                <button type="submit" class="btn-lime w-full text-xs font-bold py-3.5 px-3 shadow-sm flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                <button type="submit" 
+                        class="w-full inline-flex items-center justify-center gap-2 font-black text-xs sm:text-sm py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#B7E532] to-[#cbf54a] hover:from-[#c2f235] hover:to-[#d2f748] text-[#073B2E] shadow-[0_6px_20px_rgba(183,229,50,0.4)] hover:shadow-[0_8px_26px_rgba(183,229,50,0.55)] transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer group">
+                    <i class="fa-brands fa-whatsapp text-base text-[#073B2E]"></i>
                     <span class="truncate">Get Free Quote</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-0.5 transition-transform"></i>
                 </button>
             </div>
         </form>
@@ -576,16 +624,16 @@ $heroSlides = [
                 </div>
 
                 {{-- Card Body (Clean Typography & SEO Optimized) --}}
-                <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+                <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between flex-grow">
                     <div>
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#073B2E] mb-2.5 tracking-tight group-hover:text-[#107050] transition-colors">
+                        <h3 class="text-xl sm:text-2xl lg:text-[26px] font-bold font-heading text-[#073B2E] mb-3 tracking-tight group-hover:text-[#107050] transition-colors">
                             1. Home Moving
                         </h3>
-                        <p class="text-sm sm:text-[14.5px] text-[#2D3D34] leading-[1.65] font-normal">
+                        <p class="text-[15px] md:text-[16px] lg:text-[17px] text-[#37473E] leading-[1.6] font-normal flex-1">
                             Trusted <span class="font-bold text-[#073B2E]">movers and packers in Dubai</span> delivering complete home relocations across all 7 UAE Emirates. We provide protective furniture wrapping, master carpentry assembly, and seamless move-in coordination for townhouses and residential properties.
                         </p>
                     </div>
-                    <div class="pt-4 mt-5 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                    <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
                         <a href="{{ route('services.show', 'home-moving') }}" class="inline-flex items-center gap-2 text-xs sm:text-[13px] font-extrabold text-[#073B2E] hover:text-[#107050] group-hover:translate-x-0.5 transition-all">
                             <span>Explore Service</span>
                             <i class="fa-solid fa-arrow-right text-[11px] transform group-hover:translate-x-1 transition-transform"></i>
@@ -617,16 +665,16 @@ $heroSlides = [
                 </div>
 
                 {{-- Card Body (Clean Typography & SEO Optimized) --}}
-                <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+                <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between flex-grow">
                     <div>
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#073B2E] mb-2.5 tracking-tight group-hover:text-[#107050] transition-colors">
+                        <h3 class="text-xl sm:text-2xl lg:text-[26px] font-bold font-heading text-[#073B2E] mb-3 tracking-tight group-hover:text-[#107050] transition-colors">
                             2. Apartment Moving
                         </h3>
-                        <p class="text-sm sm:text-[14.5px] text-[#2D3D34] leading-[1.65] font-normal">
+                        <p class="text-[15px] md:text-[16px] lg:text-[17px] text-[#37473E] leading-[1.6] font-normal flex-1">
                             Specialized <span class="font-bold text-[#073B2E]">high-rise apartment moving in Dubai</span> across Dubai Marina, Downtown, and Business Bay. Our certified crews manage building <span class="font-semibold text-[#073B2E]">NOC permits</span>, service elevator slots, and dispatch low-clearance basement parking trucks.
                         </p>
                     </div>
-                    <div class="pt-4 mt-5 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                    <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
                         <a href="{{ route('services.show', 'apartment-moving') }}" class="inline-flex items-center gap-2 text-xs sm:text-[13px] font-extrabold text-[#073B2E] hover:text-[#107050] group-hover:translate-x-0.5 transition-all">
                             <span>Explore Service</span>
                             <i class="fa-solid fa-arrow-right text-[11px] transform group-hover:translate-x-1 transition-transform"></i>
@@ -658,16 +706,16 @@ $heroSlides = [
                 </div>
 
                 {{-- Card Body (Clean Typography & SEO Optimized) --}}
-                <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+                <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between flex-grow">
                     <div>
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#073B2E] mb-2.5 tracking-tight group-hover:text-[#107050] transition-colors">
+                        <h3 class="text-xl sm:text-2xl lg:text-[26px] font-bold font-heading text-[#073B2E] mb-3 tracking-tight group-hover:text-[#107050] transition-colors">
                             3. Villa Relocation
                         </h3>
-                        <p class="text-sm sm:text-[14.5px] text-[#2D3D34] leading-[1.65] font-normal">
+                        <p class="text-[15px] md:text-[16px] lg:text-[17px] text-[#37473E] leading-[1.6] font-normal flex-1">
                             Turnkey <span class="font-bold text-[#073B2E]">luxury villa movers in Dubai</span> serving Palm Jumeirah, Arabian Ranches, and Dubai Hills. Featuring dedicated move supervisors, custom timber crating for chandeliers and fine art, and large GPS-monitored fleet allocations.
                         </p>
                     </div>
-                    <div class="pt-4 mt-5 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                    <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
                         <a href="{{ route('services.show', 'villa-moving') }}" class="inline-flex items-center gap-2 text-xs sm:text-[13px] font-extrabold text-[#073B2E] hover:text-[#107050] group-hover:translate-x-0.5 transition-all">
                             <span>Explore Service</span>
                             <i class="fa-solid fa-arrow-right text-[11px] transform group-hover:translate-x-1 transition-transform"></i>
@@ -699,16 +747,16 @@ $heroSlides = [
                 </div>
 
                 {{-- Card Body (Clean Typography & SEO Optimized) --}}
-                <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+                <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between flex-grow">
                     <div>
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#073B2E] mb-2.5 tracking-tight group-hover:text-[#107050] transition-colors">
+                        <h3 class="text-xl sm:text-2xl lg:text-[26px] font-bold font-heading text-[#073B2E] mb-3 tracking-tight group-hover:text-[#107050] transition-colors">
                             4. Office Relocation
                         </h3>
-                        <p class="text-sm sm:text-[14.5px] text-[#2D3D34] leading-[1.65] font-normal">
+                        <p class="text-[15px] md:text-[16px] lg:text-[17px] text-[#37473E] leading-[1.6] font-normal flex-1">
                             Structured <span class="font-bold text-[#073B2E]">corporate office relocation in Dubai</span> scheduled after-hours and weekends to guarantee zero business downtime. We handle anti-static IT server packing, workstation dismantling, and secure confidential document transit.
                         </p>
                     </div>
-                    <div class="pt-4 mt-5 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                    <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
                         <a href="{{ route('services.show', 'office-relocation') }}" class="inline-flex items-center gap-2 text-xs sm:text-[13px] font-extrabold text-[#073B2E] hover:text-[#107050] group-hover:translate-x-0.5 transition-all">
                             <span>Explore Service</span>
                             <i class="fa-solid fa-arrow-right text-[11px] transform group-hover:translate-x-1 transition-transform"></i>
@@ -740,16 +788,16 @@ $heroSlides = [
                 </div>
 
                 {{-- Card Body (Clean Typography & SEO Optimized) --}}
-                <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+                <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between flex-grow">
                     <div>
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#073B2E] mb-2.5 tracking-tight group-hover:text-[#107050] transition-colors">
+                        <h3 class="text-xl sm:text-2xl lg:text-[26px] font-bold font-heading text-[#073B2E] mb-3 tracking-tight group-hover:text-[#107050] transition-colors">
                             5. International Moving
                         </h3>
-                        <p class="text-sm sm:text-[14.5px] text-[#2D3D34] leading-[1.65] font-normal">
+                        <p class="text-[15px] md:text-[16px] lg:text-[17px] text-[#37473E] leading-[1.6] font-normal flex-1">
                             Door-to-door <span class="font-bold text-[#073B2E]">international moving from Dubai</span> to the UK, Europe, USA, Canada, and the GCC. Full export-grade seaworthy packing, bilingual customs clearance, and dedicated container (FCL/LCL) ocean and air freight.
                         </p>
                     </div>
-                    <div class="pt-4 mt-5 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                    <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
                         <a href="{{ route('services.show', 'international-moving') }}" class="inline-flex items-center gap-2 text-xs sm:text-[13px] font-extrabold text-[#073B2E] hover:text-[#107050] group-hover:translate-x-0.5 transition-all">
                             <span>Explore Service</span>
                             <i class="fa-solid fa-arrow-right text-[11px] transform group-hover:translate-x-1 transition-transform"></i>
@@ -781,16 +829,16 @@ $heroSlides = [
                 </div>
 
                 {{-- Card Body (Clean Typography & SEO Optimized) --}}
-                <div class="p-6 sm:p-7 flex flex-col justify-between flex-grow">
+                <div class="p-6 sm:p-7 xl:p-8 flex flex-col justify-between flex-grow">
                     <div>
-                        <h3 class="text-xl sm:text-[22px] font-black font-heading text-[#073B2E] mb-2.5 tracking-tight group-hover:text-[#107050] transition-colors">
+                        <h3 class="text-xl sm:text-2xl lg:text-[26px] font-bold font-heading text-[#073B2E] mb-3 tracking-tight group-hover:text-[#107050] transition-colors">
                             6. Storage Solutions
                         </h3>
-                        <p class="text-sm sm:text-[14.5px] text-[#2D3D34] leading-[1.65] font-normal">
+                        <p class="text-[15px] md:text-[16px] lg:text-[17px] text-[#37473E] leading-[1.6] font-normal flex-1">
                             Secure, <span class="font-bold text-[#073B2E]">climate-controlled storage in Dubai</span> for furniture and commercial inventory. Monitored with 24/7 CCTV surveillance, dust-free protective vaults, flexible monthly contracts, and scheduled door-to-door pickup.
                         </p>
                     </div>
-                    <div class="pt-4 mt-5 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                    <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
                         <a href="{{ route('services.show', 'storage-solutions') }}" class="inline-flex items-center gap-2 text-xs sm:text-[13px] font-extrabold text-[#073B2E] hover:text-[#107050] group-hover:translate-x-0.5 transition-all">
                             <span>Explore Service</span>
                             <i class="fa-solid fa-arrow-right text-[11px] transform group-hover:translate-x-1 transition-transform"></i>
