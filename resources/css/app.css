@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        color: #202824;
+        background-color: #FFFFFF;
+        overflow-x: clip;
+    }
+
+    body {
+        overflow-x: clip;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
+        font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    }
+}
+
+@layer components {
+    /* Custom organic curved masks and transitions */
+    .hero-organic-curve {
+        border-radius: 2.5rem 0.75rem 2.5rem 0.75rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    @media (min-width: 1024px) {
+        .hero-curve-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%, 0 92%);
+        }
+        .hero-curved-boundary {
+            border-top-left-radius: 4rem;
+            border-bottom-left-radius: 4rem;
+        }
+    }
+
+    .lime-badge {
+        @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black tracking-wider uppercase transition-all duration-300;
+        background: linear-gradient(135deg, #E2FF66 0%, #B7E532 100%);
+        color: #072B22;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 2px 12px -2px rgba(183, 229, 50, 0.45);
+    }
+
+    .forest-badge {
+        @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold tracking-wider uppercase transition-all duration-300;
+        background: linear-gradient(135deg, #073B2E 0%, #0C382D 100%);
+        color: #D8F36B;
+        border: 1px solid rgba(216, 243, 107, 0.35);
+        box-shadow: 0 2px 10px -1px rgba(7, 59, 46, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-lime {
+        @apply inline-flex items-center justify-center gap-2 font-black px-6 py-3.5 rounded-full transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#D8F36B] focus:ring-offset-2;
+        background: linear-gradient(135deg, #D8F36B 0%, #B7E532 50%, #9DD618 100%);
+        color: #072B22;
+        box-shadow: 0 4px 20px -2px rgba(183, 229, 50, 0.5), 0 2px 6px 0 rgba(7, 59, 46, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+    .btn-lime:hover {
+        background: linear-gradient(135deg, #E2FF66 0%, #C7F53E 50%, #B0E81E 100%);
+        box-shadow: 0 8px 30px -4px rgba(183, 229, 50, 0.65), 0 0 20px rgba(216, 243, 107, 0.45), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+        color: #041F18;
+    }
+
+    .btn-forest {
+        @apply inline-flex items-center justify-center gap-2 font-bold px-6 py-3.5 rounded-full transition-all duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#103B30] focus:ring-offset-2;
+        background: linear-gradient(135deg, #103B30 0%, #07261E 100%);
+        color: #FFFFFF;
+        box-shadow: 0 4px 18px -2px rgba(7, 59, 46, 0.35), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(216, 243, 107, 0.25);
+    }
+    .btn-forest:hover {
+        background: linear-gradient(135deg, #07261E 0%, #041712 100%);
+        box-shadow: 0 8px 25px -4px rgba(7, 59, 46, 0.5), inset 0 1px 1px 0 rgba(216, 243, 107, 0.4);
+        color: #D8F36B;
+        border-color: rgba(216, 243, 107, 0.5);
+    }
+
+    .btn-outline-forest {
+        @apply inline-flex items-center justify-center gap-2 font-bold px-6 py-3 rounded-full border-2 border-[#073B2E] text-[#073B2E] transition-all duration-300 hover:bg-[#073B2E] hover:text-[#D8F36B] hover:shadow-md focus:outline-none;
+    }
+
+    .btn-outline-white {
+        @apply inline-flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-full border-2 border-white/80 text-white transition-all duration-300 hover:bg-white hover:text-[#08271F] focus:outline-none;
+    }
+
+    .card-hover {
+        @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-premium;
+    }
+
+    .laser-line-accent {
+        position: relative;
+    }
+    .laser-line-accent::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2.5px;
+        background: linear-gradient(90deg, transparent 0%, #D8F36B 50%, transparent 100%);
+        box-shadow: 0 0 12px #D8F36B;
+        z-index: 20;
+        pointer-events: none;
+    }
+
+    /* Premium Subtle Smoked Glassmorphism Content Panel (Subdued Color, Clean Neutral Transparency & Soft White Reflections) */
+    .hero-glass-shining {
+        position: relative;
+        background: 
+            /* Very subtle soft ambient light catch at top */
+            radial-gradient(ellipse at 15% 0%, rgba(255, 255, 255, 0.08) 0%, transparent 45%),
+            /* Clean, elegant, desaturated smoked dark glass base with subtle depth */
+            linear-gradient(135deg, rgba(14, 22, 18, 0.62) 0%, rgba(10, 16, 13, 0.48) 50%, rgba(12, 19, 16, 0.58) 100%);
+        backdrop-filter: blur(16px) saturate(105%) brightness(1.02);
+        -webkit-backdrop-filter: blur(16px) saturate(105%) brightness(1.02);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-top-color: rgba(255, 255, 255, 0.30);
+        border-left-color: rgba(255, 255, 255, 0.20);
+        border-bottom-color: rgba(255, 255, 255, 0.10);
+        border-right-color: rgba(255, 255, 255, 0.10);
+        box-shadow: 
+            /* Soft neutral drop elevation shadow */
+            0 25px 60px -15px rgba(0, 0, 0, 0.52),
+            0 10px 25px -5px rgba(0, 0, 0, 0.32),
+            /* Specular glass edge reflections */
+            inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.35),
+            inset 1px 0 1px 0 rgba(255, 255, 255, 0.15),
+            inset 0 -1px 2px 0 rgba(0, 0, 0, 0.30);
+        overflow: hidden;
+    }
+
+    .hero-glass-shining::before {
+        content: '';
+        position: absolute;
+        top: -60%;
+        left: -60%;
+        width: 220%;
+        height: 220%;
+        background: linear-gradient(
+            110deg, 
+            transparent 30%, 
+            rgba(255, 255, 255, 0.02) 42%, 
+            rgba(255, 255, 255, 0.12) 50%, 
+            rgba(255, 255, 255, 0.03) 56%, 
+            transparent 65%
+        );
+        animation: glassShineSweep 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .hero-glass-shining > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Animated Luxury Text Shimmer / Shine */
+    .text-shine-white {
+        background: linear-gradient(
+            105deg, 
+            #FFFFFF 0%, 
+            #F1F5F9 25%, 
+            #D8F36B 48%, 
+            #FFFFFF 56%, 
+            #FFFFFF 100%
+        );
+        background-size: 250% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textShimmerWave 4s ease-in-out infinite;
+        display: inline-block;
+        filter: drop-shadow(0 3px 14px rgba(0, 0, 0, 0.95));
+    }
+
+    .text-shine-lime {
+        background: linear-gradient(
+            105deg, 
+            #D8F36B 0%, 
+            #BEF243 25%, 
+            #FFFFFF 50%, 
+            #D8F36B 60%, 
+            #A6D818 100%
+        );
+        background-size: 250% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textShimmerWave 3.5s ease-in-out infinite;
+        display: inline-block;
+        filter: drop-shadow(0 0 25px rgba(216, 243, 107, 0.65)) drop-shadow(0 3px 12px rgba(0, 0, 0, 0.95));
+    }
+
+    .text-shine-forest {
+        background: linear-gradient(
+            105deg, 
+            #073B2E 0%, 
+            #0E5C48 25%, 
+            #198767 45%, 
+            #B7E532 50%, 
+            #198767 55%, 
+            #0E5C48 75%, 
+            #073B2E 100%
+        );
+        background-size: 250% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textShimmerWave 4.5s ease-in-out infinite;
+        display: inline-block;
+    }
+}
+
+@keyframes textShimmerWave {
+    0% {
+        background-position: 150% center;
+    }
+    100% {
+        background-position: -150% center;
+    }
+}
+
+@keyframes glassShineSweep {
+    0% {
+        transform: translateX(-160%) rotate(25deg);
+        opacity: 0;
+    }
+    12% {
+        opacity: 0.9;
+    }
+    30% {
+        transform: translateX(200%) rotate(25deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(200%) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+}
+::-webkit-scrollbar-track {
+    background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+    background: #103B30;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #08271F;
+}
+
+/* Lightbox Modal */
+.lightbox-overlay {
+    backdrop-filter: blur(8px);
+}
