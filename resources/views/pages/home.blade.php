@@ -599,8 +599,8 @@ $heroSlides = [
             </p>
         </div>
 
-        {{-- 6 Primary Services Grid --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+        {{-- Desktop & Tablet Services Grid (Maintains Current Three-Image Card Layout) --}}
+        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
             
             {{-- Service 1: Home Moving --}}
             <div class="relative rounded-3xl bg-white border border-[#DFE7E1] hover:border-[#107050]/40 transition-all duration-300 card-hover flex flex-col justify-between overflow-hidden group shadow-[0_4px_24px_rgba(7,59,46,0.05)] hover:shadow-[0_22px_50px_-10px_rgba(7,59,46,0.15),0_0_22px_rgba(216,243,107,0.22)] h-full">
@@ -845,6 +845,228 @@ $heroSlides = [
                         </a>
                         <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#EBF5E7] text-[#073B2E] text-[10.5px] font-bold uppercase tracking-wider border border-[#CFE8C7]">Climate Controlled</span>
                     </div>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- Mobile Single-Image Horizontal Carousel (3 Image Cards Slider with Smooth Swipe & Progress Dots) --}}
+        <div class="block md:hidden relative"
+             x-data="{
+                 current: 0,
+                 total: 3,
+                 startX: 0,
+                 startY: 0,
+                 currentX: 0,
+                 currentY: 0,
+                 isSwiping: false,
+                 next() {
+                     this.current = (this.current + 1) % this.total;
+                 },
+                 prev() {
+                     this.current = (this.current - 1 + this.total) % this.total;
+                 },
+                 goTo(idx) {
+                     this.current = idx;
+                 },
+                 touchStart(e) {
+                     this.startX = e.touches[0].clientX;
+                     this.startY = e.touches[0].clientY;
+                     this.currentX = this.startX;
+                     this.currentY = this.startY;
+                     this.isSwiping = true;
+                 },
+                 touchMove(e) {
+                     if (!this.isSwiping) return;
+                     this.currentX = e.touches[0].clientX;
+                     this.currentY = e.touches[0].clientY;
+                 },
+                 touchEnd() {
+                     if (!this.isSwiping) return;
+                     const diffX = this.startX - this.currentX;
+                     const diffY = this.startY - this.currentY;
+                     const threshold = 35;
+                     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > threshold) {
+                         if (diffX > 0) {
+                             this.next();
+                         } else {
+                             this.prev();
+                         }
+                     }
+                     this.isSwiping = false;
+                 }
+             }">
+
+            {{-- Slider Clipping Track Window (Shows 1 card at a time occupying available mobile width) --}}
+            <div class="overflow-hidden py-3 -my-3"
+                 @touchstart.passive="touchStart($event)"
+                 @touchmove.passive="touchMove($event)"
+                 @touchend="touchEnd()">
+                
+                {{-- Track that slides 100% per active card --}}
+                <div class="flex transition-transform duration-500 ease-out"
+                     :style="'transform: translateX(-' + (current * 100) + '%)'">
+                    
+                    {{-- Slide 1: Home Moving --}}
+                    <div class="w-full shrink-0 px-1">
+                        <div class="relative rounded-3xl bg-white border border-[#DFE7E1] flex flex-col justify-between overflow-hidden shadow-[0_4px_24px_rgba(7,59,46,0.06)] h-full">
+                            {{-- Top Laser Accent --}}
+                            <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_12px_#D8F36B] z-20 pointer-events-none"></div>
+                            {{-- Image with 16/10 aspect ratio --}}
+                            <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                                <img src="{{ asset('images/services/movexa-service-home-moving.webp') }}" 
+                                     alt="Home Moving and Relocation Services in Dubai - MOVEXA" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy"
+                                     decoding="async">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-60"></div>
+                                <div class="absolute top-4 left-4">
+                                    <div class="w-10 h-10 rounded-2xl bg-[#073B2E]/90 backdrop-blur-md text-[#D8F36B] flex items-center justify-center text-base shadow-md border border-white/20">
+                                        <i class="fa-solid fa-house-chimney"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h3 class="text-xl font-bold font-heading text-[#073B2E] mb-2.5 tracking-tight">
+                                        1. Home Moving
+                                    </h3>
+                                    <p class="text-[15px] text-[#37473E] leading-[1.6] font-normal">
+                                        Trusted <span class="font-bold text-[#073B2E]">movers and packers in Dubai</span> delivering complete home relocations across all 7 UAE Emirates. We provide protective furniture wrapping, master carpentry assembly, and seamless move-in coordination for townhouses and residential properties.
+                                    </p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                                    <a href="{{ route('services.show', 'home-moving') }}" class="inline-flex items-center gap-2 text-xs font-extrabold text-[#073B2E] hover:text-[#107050]">
+                                        <span>Explore Service</span>
+                                        <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                    </a>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#EBF5E7] text-[#073B2E] text-[10.5px] font-bold uppercase tracking-wider border border-[#CFE8C7]">Dubai &amp; UAE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Slide 2: Apartment Moving --}}
+                    <div class="w-full shrink-0 px-1">
+                        <div class="relative rounded-3xl bg-white border border-[#DFE7E1] flex flex-col justify-between overflow-hidden shadow-[0_4px_24px_rgba(7,59,46,0.06)] h-full">
+                            {{-- Top Laser Accent --}}
+                            <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_12px_#D8F36B] z-20 pointer-events-none"></div>
+                            {{-- Image with 16/10 aspect ratio --}}
+                            <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                                <img src="{{ asset('images/services/movexa-service-apartment-moving.webp') }}" 
+                                     alt="Apartment Moving and Tower Relocations in Dubai - MOVEXA" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy"
+                                     decoding="async">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-60"></div>
+                                <div class="absolute top-4 left-4">
+                                    <div class="w-10 h-10 rounded-2xl bg-[#073B2E]/90 backdrop-blur-md text-[#D8F36B] flex items-center justify-center text-base shadow-md border border-white/20">
+                                        <i class="fa-solid fa-building"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h3 class="text-xl font-bold font-heading text-[#073B2E] mb-2.5 tracking-tight">
+                                        2. Apartment Moving
+                                    </h3>
+                                    <p class="text-[15px] text-[#37473E] leading-[1.6] font-normal">
+                                        Specialized <span class="font-bold text-[#073B2E]">high-rise apartment moving in Dubai</span> across Dubai Marina, Downtown, and Business Bay. Our certified crews manage building <span class="font-semibold text-[#073B2E]">NOC permits</span>, service elevator slots, and dispatch low-clearance basement parking trucks.
+                                    </p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                                    <a href="{{ route('services.show', 'apartment-moving') }}" class="inline-flex items-center gap-2 text-xs font-extrabold text-[#073B2E] hover:text-[#107050]">
+                                        <span>Explore Service</span>
+                                        <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                    </a>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#EBF5E7] text-[#073B2E] text-[10.5px] font-bold uppercase tracking-wider border border-[#CFE8C7]">High-Rise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Slide 3: Villa Relocation --}}
+                    <div class="w-full shrink-0 px-1">
+                        <div class="relative rounded-3xl bg-white border border-[#DFE7E1] flex flex-col justify-between overflow-hidden shadow-[0_4px_24px_rgba(7,59,46,0.06)] h-full">
+                            {{-- Top Laser Accent --}}
+                            <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_12px_#D8F36B] z-20 pointer-events-none"></div>
+                            {{-- Image with 16/10 aspect ratio --}}
+                            <div class="relative w-full aspect-[16/10] overflow-hidden bg-gray-100 shrink-0">
+                                <img src="{{ asset('images/services/movexa-service-villa-relocation.webp') }}" 
+                                     alt="Luxury Villa Moving and Estate Shifting in Dubai - MOVEXA" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy"
+                                     decoding="async">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent opacity-60"></div>
+                                <div class="absolute top-4 left-4">
+                                    <div class="w-10 h-10 rounded-2xl bg-[#073B2E]/90 backdrop-blur-md text-[#D8F36B] flex items-center justify-center text-base shadow-md border border-white/20">
+                                        <i class="fa-solid fa-landmark-dome"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 flex flex-col justify-between flex-grow">
+                                <div>
+                                    <h3 class="text-xl font-bold font-heading text-[#073B2E] mb-2.5 tracking-tight">
+                                        3. Villa Relocation
+                                    </h3>
+                                    <p class="text-[15px] text-[#37473E] leading-[1.6] font-normal">
+                                        Turnkey <span class="font-bold text-[#073B2E]">luxury villa movers in Dubai</span> serving Palm Jumeirah, Arabian Ranches, and Dubai Hills. Featuring dedicated move supervisors, custom timber crating for chandeliers and fine art, and large GPS-monitored fleet allocations.
+                                    </p>
+                                </div>
+                                <div class="mt-6 pt-4 border-t border-[#E2E8E2]/80 flex items-center justify-between">
+                                    <a href="{{ route('services.show', 'villa-moving') }}" class="inline-flex items-center gap-2 text-xs font-extrabold text-[#073B2E] hover:text-[#107050]">
+                                        <span>Explore Service</span>
+                                        <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                    </a>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#EBF5E7] text-[#073B2E] text-[10.5px] font-bold uppercase tracking-wider border border-[#CFE8C7]">Luxury Estates</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {{-- Slim Slider Progress Bar & Interactive Navigation Dots --}}
+            <div class="mt-5 flex flex-col items-center gap-2.5">
+                {{-- Slim Progress Bar --}}
+                <div class="w-32 h-1 bg-[#E2E8E2] rounded-full overflow-hidden relative" role="progressbar" :aria-valuenow="current + 1" aria-valuemin="1" aria-valuemax="3" aria-label="Services carousel progress">
+                    <div class="h-full bg-[#073B2E] rounded-full transition-all duration-300 ease-out"
+                         :style="'width: ' + (((current + 1) / total) * 100) + '%'"></div>
+                </div>
+
+                {{-- Interactive Navigation Dots with Prev/Next Controls --}}
+                <div class="flex items-center justify-center gap-2">
+                    <button type="button" 
+                            @click="prev()" 
+                            class="w-7 h-7 rounded-full bg-white border border-[#D8E2D9] text-[#073B2E] flex items-center justify-center text-xs shadow-2xs hover:bg-[#073B2E] hover:text-[#B7E532] transition-colors focus:outline-none"
+                            aria-label="Previous image card">
+                        <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                    </button>
+
+                    <div class="flex items-center gap-1.5 px-2">
+                        <template x-for="idx in [0, 1, 2]" :key="idx">
+                            <button type="button"
+                                    @click="goTo(idx)"
+                                    class="h-2 rounded-full transition-all duration-300 focus:outline-none"
+                                    :class="current === idx ? 'w-7 bg-[#073B2E]' : 'w-2 bg-[#CBD5E1] hover:bg-[#073B2E]/40'"
+                                    :aria-label="'Go to image card ' + (idx + 1)">
+                            </button>
+                        </template>
+                    </div>
+
+                    <button type="button" 
+                            @click="next()" 
+                            class="w-7 h-7 rounded-full bg-white border border-[#D8E2D9] text-[#073B2E] flex items-center justify-center text-xs shadow-2xs hover:bg-[#073B2E] hover:text-[#B7E532] transition-colors focus:outline-none"
+                            aria-label="Next image card">
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <div class="text-[11px] font-bold text-[#4E5B54] uppercase tracking-wider">
+                    <span>Card <span x-text="current + 1"></span> of 3</span>
+                    <span class="text-[#8B9D93] mx-1.5">&bull;</span>
+                    <span class="normal-case font-medium text-[#6B7D73]">Swipe to explore</span>
                 </div>
             </div>
 
