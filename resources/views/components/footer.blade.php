@@ -1,11 +1,11 @@
 <footer class="bg-[#08271F] text-white pt-16 pb-10 border-t-4 border-[#D8F36B]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {{-- Top Footer Grid --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-white/10">
+        {{-- Top Footer Grid (Responsive 1-col on mobile, 2-col on large mobile/tablet, 5-col on desktop) --}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 lg:gap-8 pb-12 border-b border-white/10">
 
             {{-- Column 1: Brand Info & Story --}}
-            <div class="lg:col-span-2 space-y-4">
+            <div class="sm:col-span-2 lg:col-span-2 space-y-4">
                 <div>
                     <a href="{{ route('home') }}" class="inline-block bg-white py-2 px-3.5 rounded-2xl shadow-md hover:scale-102 transition-all">
                         <img src="{{ asset('images/logo/movexa-logo.webp') }}" 
@@ -101,7 +101,7 @@
             </div>
 
             {{-- Column 4: Contact & Dubai Presence --}}
-            <div>
+            <div class="sm:col-span-2 lg:col-span-1">
                 <h4 class="text-xs font-bold tracking-wider uppercase text-[#D8F36B] mb-4">
                     Get in Touch
                 </h4>
@@ -147,7 +147,7 @@
                     Operated in Dubai, United Arab Emirates. International relocation routes are subject to destination import customs, route availability, and verification.
                 </p>
             </div>
-            <div class="flex items-center gap-6 text-xs">
+            <div class="flex flex-wrap items-center justify-center md:justify-end gap-3.5 sm:gap-6 text-xs">
                 <a href="{{ route('legal.privacy') }}" class="hover:text-[#D8F36B] transition-colors">Privacy Policy</a>
                 <a href="{{ route('legal.terms') }}" class="hover:text-[#D8F36B] transition-colors">Terms & Conditions</a>
                 <a href="{{ route('sitemap') }}" class="hover:text-[#D8F36B] transition-colors">Sitemap</a>

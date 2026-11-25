@@ -12,7 +12,7 @@
 ]" />
 
 {{-- Article Header Section --}}
-<section class="bg-[#103B30] text-white py-16 sm:py-20 relative overflow-hidden">
+<section class="bg-[#103B30] text-white py-10 sm:py-14 lg:py-18 relative overflow-hidden">
     <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#08271F] opacity-70 blur-3xl pointer-events-none"></div>
 
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
@@ -23,7 +23,7 @@
             <span class="text-xs text-white/70">{{ $post['date'] }}</span>
         </div>
 
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight leading-tight">
+        <h1 class="text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-white tracking-tight leading-tight">
             {{ $post['title'] }}
         </h1>
 
@@ -34,11 +34,11 @@
 </section>
 
 {{-- Article Main Content & Sidebar Layout --}}
-<section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<section class="py-10 sm:py-14 lg:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         
         {{-- Main Article Column --}}
-        <div class="lg:col-span-8 space-y-8">
+        <div class="lg:col-span-8 space-y-6 sm:space-y-8">
             
             {{-- Featured Image --}}
             <div class="rounded-3xl overflow-hidden shadow-md aspect-[16/9] bg-gray-100 border border-[#E2E8E2]">
@@ -46,12 +46,12 @@
             </div>
 
             {{-- Lead Introduction --}}
-            <div class="p-6 rounded-3xl bg-[#EBF2EB] border border-[#103B30]/20 text-[#08271F] text-sm leading-relaxed font-medium">
+            <div class="p-4 sm:p-6 rounded-3xl bg-[#EBF2EB] border border-[#103B30]/20 text-[#08271F] text-xs sm:text-sm leading-relaxed font-medium">
                 {{ $post['intro'] }}
             </div>
 
             {{-- Table of Contents --}}
-            <div class="p-6 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-3">
+            <div class="p-4 sm:p-6 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-3">
                 <span class="text-xs font-bold text-[#103B30] uppercase tracking-wider flex items-center gap-2">
                     <i class="fa-solid fa-list-ul"></i> Table of Contents
                 </span>

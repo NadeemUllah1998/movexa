@@ -34,15 +34,18 @@
     {{-- Critical Inline Styles to Prevent FOUC & Layout Shifts --}}
     <style>
         [x-cloak] { display: none !important; }
-        /* Guarantee header logo never expands beyond fixed bounds on initial HTML render */
+        /* Guarantee header logo never expands beyond fixed bounds on initial HTML render across all viewports */
         .movexa-header-logo {
-            height: 46px;
+            height: 38px;
             width: auto;
-            max-width: 220px;
+            max-width: 140px;
             aspect-ratio: 1024 / 341;
         }
+        @media (min-width: 375px) {
+            .movexa-header-logo { height: 42px; max-width: 165px; }
+        }
         @media (min-width: 640px) {
-            .movexa-header-logo { height: 50px; }
+            .movexa-header-logo { height: 50px; max-width: 220px; }
         }
         @media (min-width: 1536px) {
             .movexa-header-logo { height: 54px; }
@@ -126,7 +129,7 @@
 
     @stack('head')
 </head>
-<body class="bg-white text-[#202824] font-sans antialiased selection:bg-[#D8F36B] selection:text-[#08271F] min-h-screen flex flex-col justify-between w-full">
+<body class="bg-white text-[#202824] font-sans antialiased selection:bg-[#D8F36B] selection:text-[#08271F] min-h-screen flex flex-col justify-between w-full overflow-x-hidden">
 
     {{-- Top Announcement Bar --}}
     <div class="bg-[#073B2E] text-[11px] sm:text-xs text-white/90 border-b border-white/10 py-1.5 px-3 sm:px-4 w-full overflow-hidden leading-tight">
@@ -177,21 +180,21 @@
         </div>
     </div>
 
-    {{-- Floating Action Controls: WhatsApp Round Button & Back-To-Top --}}
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
+    {{-- Floating Action Controls: WhatsApp Round Button & Back-To-Top (Responsive Touch Positions) --}}
+    <div class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-center gap-2.5 sm:gap-3">
         {{-- Back to top button --}}
-        <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#103B30] text-white shadow-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#08271F] hover:shadow-xl hover:scale-105 focus:outline-none" aria-label="Scroll to top">
-            <i class="fa-solid fa-chevron-up text-sm"></i>
+        <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-[#103B30] text-white shadow-md flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#08271F] hover:shadow-xl hover:scale-105 focus:outline-none" aria-label="Scroll to top">
+            <i class="fa-solid fa-chevron-up text-xs sm:text-sm"></i>
         </button>
 
         {{-- WhatsApp Round (Goal) Button with Tooltip --}}
         <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}?text={{ urlencode('Hello MOVEXA, I would like to get a moving quote.') }}" 
            target="_blank" 
            rel="noopener" 
-           class="group relative w-14 h-14 sm:w-15 sm:h-15 rounded-full bg-gradient-to-br from-[#2fe872] to-[#20BA5A] text-white flex items-center justify-center shadow-[0_10px_28px_rgba(37,211,102,0.5),inset_0_1.5px_1.5px_rgba(255,255,255,0.65)] hover:shadow-[0_14px_35px_rgba(37,211,102,0.7),inset_0_1.5px_1.5px_rgba(255,255,255,0.9)] hover:scale-110 active:scale-95 border border-white/30 transition-all duration-300 focus:outline-none" 
+           class="group relative w-12 h-12 sm:w-14 sm:h-14 md:w-15 md:h-15 rounded-full bg-gradient-to-br from-[#2fe872] to-[#20BA5A] text-white flex items-center justify-center shadow-[0_8px_22px_rgba(37,211,102,0.45),inset_0_1.5px_1.5px_rgba(255,255,255,0.65)] hover:shadow-[0_14px_35px_rgba(37,211,102,0.7),inset_0_1.5px_1.5px_rgba(255,255,255,0.9)] hover:scale-110 active:scale-95 border border-white/30 transition-all duration-300 focus:outline-none" 
            aria-label="Chat on WhatsApp">
             {{-- WhatsApp Icon --}}
-            <i class="fa-brands fa-whatsapp text-3xl sm:text-[34px] text-white transition-transform duration-300 group-hover:scale-105"></i>
+            <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl md:text-[34px] text-white transition-transform duration-300 group-hover:scale-105"></i>
 
             {{-- Hover Tooltip (Desktop) --}}
             <span class="absolute right-full mr-3.5 px-3.5 py-1.5 rounded-xl bg-[#103B30] text-white text-xs font-bold whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 pointer-events-none transition-all duration-300 -translate-x-2 group-hover:translate-x-0 hidden sm:flex items-center gap-1.5 border border-white/10">

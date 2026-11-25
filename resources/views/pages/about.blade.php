@@ -44,10 +44,10 @@
         </p>
 
         {{-- Action Buttons Row (Balanced, High-Contrast & Sleek) --}}
-        <div class="mt-7 sm:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <div class="mt-7 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto">
             <button type="button" 
                     onclick="openQuoteModal()" 
-                    class="btn-lime text-xs sm:text-sm px-6 py-3.5 rounded-full font-bold shadow-lg hover:shadow-lime-glow flex items-center gap-2 cursor-pointer transition-all hover:scale-105">
+                    class="btn-lime text-xs sm:text-sm px-6 py-3.5 rounded-full font-bold shadow-lg hover:shadow-lime-glow flex items-center justify-center gap-2 cursor-pointer transition-all hover:scale-105 w-full sm:w-auto">
                 <i class="fa-solid fa-calculator text-xs"></i>
                 <span>Get a Free Moving Quote</span>
                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -56,13 +56,13 @@
             <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}?text={{ urlencode('Hello MOVEXA, I would like to learn more about your moving services and get an estimate.') }}" 
                target="_blank" 
                rel="noopener" 
-               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white/10 hover:bg-[#25D366] text-white hover:text-white border border-white/30 hover:border-[#25D366] backdrop-blur-md text-xs sm:text-sm font-bold transition-all duration-200 shadow-md hover:scale-105">
+               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-white/10 hover:bg-[#25D366] text-white hover:text-white border border-white/30 hover:border-[#25D366] backdrop-blur-md text-xs sm:text-sm font-bold transition-all duration-200 shadow-md hover:scale-105 w-full sm:w-auto">
                 <i class="fa-brands fa-whatsapp text-base text-[#25D366] group-hover:text-white transition-colors"></i>
                 <span>Chat on WhatsApp</span>
             </a>
 
             <a href="tel:{{ config('movexa.brand.phone_raw') }}" 
-               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-black/60 hover:bg-black/80 border border-white/25 backdrop-blur-md text-white text-xs sm:text-sm font-bold transition-all shadow-sm">
+               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-black/60 hover:bg-black/80 border border-white/25 backdrop-blur-md text-white text-xs sm:text-sm font-bold transition-all shadow-sm w-full sm:w-auto">
                 <i class="fa-solid fa-phone text-[#D8F36B] text-xs"></i>
                 <span>{{ config('movexa.brand.phone_display') }}</span>
             </a>

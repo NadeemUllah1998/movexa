@@ -232,7 +232,7 @@ $heroSlides = [
      SECTION 2: QUICK MOVING QUOTE
      ========================================== --}}
 <section class="relative -mt-6 sm:-mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="relative bg-white/98 backdrop-blur-md rounded-3xl p-6 sm:p-8 lg:p-9 shadow-[0_25px_65px_-15px_rgba(7,59,46,0.14),0_0_0_1px_rgba(16,59,48,0.06)] border border-[#DFE7E0] overflow-hidden">
+    <div class="relative bg-white/98 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-9 shadow-[0_25px_65px_-15px_rgba(7,59,46,0.14),0_0_0_1px_rgba(16,59,48,0.06)] border border-[#DFE7E0] overflow-hidden">
         {{-- Top Specular Brand Accent Line --}}
         <div class="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#103B30] via-[#B7E532] to-[#103B30] shadow-[0_0_12px_#B7E532] z-20 pointer-events-none"></div>
         
@@ -247,7 +247,7 @@ $heroSlides = [
                     <i class="fa-solid fa-calculator text-[10px]"></i>
                     <span>Instant Moving Estimation</span>
                 </div>
-                <h2 class="text-2xl sm:text-3xl lg:text-[32px] font-black font-heading text-[#073B2E] tracking-tight mt-2.5">
+                <h2 class="text-xl min-[375px]:text-2xl sm:text-3xl lg:text-[32px] font-black font-heading text-[#073B2E] tracking-tight mt-2.5">
                     Where Are You Moving?
                 </h2>
             </div>
@@ -1107,7 +1107,7 @@ $localDubaiSlides = [
 {{-- ==========================================
      SECTION 6: WHY CHOOSE US (PREMIER MOVERS & PACKERS IN UAE - TEAM & FLEET SHOWCASE)
      ========================================== --}}
-<section class="py-20 sm:py-24 bg-white border-y border-[#E2E8E2] overflow-hidden" 
+<section class="py-18 sm:py-24 bg-white border-y border-[#E2E8E2] relative overflow-hidden" 
          id="why-choose-us"
          x-data="{
              currentSlide: 0,
@@ -1118,37 +1118,43 @@ $localDubaiSlides = [
                      image: '{{ asset('images/why-choose-us/movexa-why-choose-us-team-trucks-pose.webp') }}',
                      title: '15+ Full-Time Verified MOVEXA Team & Fleet',
                      subtitle: 'Official In-House Moving Crew & Daily Active Fleet in Dubai',
-                     tag: 'Official MOVEXA Crew'
+                     tag: 'Official MOVEXA Crew',
+                     icon: 'fa-solid fa-users-gear'
                  },
                  {
                      image: '{{ asset('images/why-choose-us/movexa-why-choose-us-composite-services.webp') }}',
                      title: 'Turnkey Packing, Assembly & Curtain Installation',
                      subtitle: '5-Ply Cartons, Bubble Wrap & Master Carpentry Handymen',
-                     tag: 'Turnkey Relocation'
+                     tag: 'Turnkey Relocation',
+                     icon: 'fa-solid fa-boxes-stacked'
                  },
                  {
                      image: '{{ asset('images/why-choose-us/movexa-why-choose-us-team-skyline.webp') }}',
                      title: 'Moving Across Dubai & All 7 UAE Emirates',
                      subtitle: 'Burj Khalifa Skyline & Daily Inter-City Relocations',
-                     tag: 'UAE-Wide Coverage'
+                     tag: 'UAE-Wide Coverage',
+                     icon: 'fa-solid fa-map-location-dot'
                  },
                  {
                      image: '{{ asset('images/why-choose-us/movexa-why-choose-us-villa-loading.webp') }}',
                      title: 'White-Glove Villa & Luxury Residence Care',
                      subtitle: 'Careful Loading for Palm Jumeirah, Arabian Ranches & Dubai Hills',
-                     tag: 'Luxury Villa Care'
+                     tag: 'Luxury Villa Care',
+                     icon: 'fa-solid fa-gem'
                  },
                  {
                      image: '{{ asset('images/why-choose-us/movexa-why-choose-us-crew-fleet.webp') }}',
                      title: 'Modern GPS-Tracked Closed Fleet & Tail-Lifts',
                      subtitle: 'Hydraulic Tail-Lifts, Heavy-Duty Ramps & Padded Wrapping',
-                     tag: 'Dedicated Fleet'
+                     tag: 'Dedicated Fleet',
+                     icon: 'fa-solid fa-truck-fast'
                  },
                  {
                      image: '{{ asset('images/why-choose-us/movexa-why-choose-us-packers-movers-banner.webp') }}',
                      title: 'Certified Movers & Packers in the UAE',
                      subtitle: 'Quick, Secure and Stress-Free Residential & Commercial Moves',
-                     tag: 'Certified Quality'
+                     tag: 'Certified Quality',
+                     icon: 'fa-solid fa-award'
                  }
              ],
              init() {
@@ -1177,98 +1183,153 @@ $localDubaiSlides = [
          }"
          @mouseenter="stopTimer()"
          @mouseleave="startTimer()">
-    <div class="max-w-7xl 2xl:max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-center">
 
-            {{-- Left Column: Authoritative Text, Wavy Decorative Accent & Feature Checklist --}}
+    {{-- Subtle Ambient Glows & Architectural Laser Line --}}
+    <div class="absolute -top-32 right-10 w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(216,243,107,0.10),transparent_70%)] blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute -bottom-32 left-10 w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(7,59,46,0.04),transparent_70%)] blur-3xl pointer-events-none -z-10"></div>
+    <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-70 pointer-events-none"></div>
+
+    <div class="max-w-7xl 2xl:max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-center">
+
+            {{-- Left Column: Brand Header, Authoritative Text & 6-Pillar Feature Matrix --}}
             <div class="lg:col-span-6 space-y-5 sm:space-y-6 text-left">
                 
-                {{-- Header with Wavy Accent Line and Team Slider Navigation Arrows --}}
-                <div class="flex items-center justify-between gap-3 sm:gap-4">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF5E7] border border-[#CFE8C7] text-[#073B2E] text-[11px] sm:text-xs font-extrabold uppercase tracking-wider mb-2">
-                            <i class="fa-solid fa-shield-halved text-[11px] text-[#073B2E]"></i>
-                            <span>The MOVEXA Advantage</span>
-                        </div>
-                        <h2 class="text-2xl min-[375px]:text-3xl sm:text-4xl lg:text-[38px] xl:text-[44px] 2xl:text-[46px] font-black font-heading text-[#073B2E] tracking-tight leading-[1.15]">
-                            Why Choose Us
-                        </h2>
-                        
-                        {{-- Decorative Wavy Line Accent --}}
-                        <div class="mt-2 sm:mt-2.5 flex items-center gap-2">
-                            <svg class="w-16 sm:w-20 h-2 sm:h-2.5" viewBox="0 0 80 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 5C7 1 11 1 16 5C21 9 25 9 30 5C35 1 39 1 44 5C49 9 53 9 58 5C63 1 67 1 72 5C75 7.5 77 7.5 78 5" stroke="#B7E532" stroke-width="3" stroke-linecap="round"/>
-                            </svg>
-                            <span class="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-[#073B2E]"></span>
-                        </div>
-                    </div>
-
-                    {{-- Navigation Arrows (< >) for Team Photo Slider (Matching Reference) --}}
-                    <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                        <button type="button" 
-                                @click="prev(); restartTimer();" 
-                                class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5DDD6] bg-white text-[#073B2E] hover:bg-[#073B2E] hover:text-[#B7E532] hover:border-[#073B2E] flex items-center justify-center transition-all duration-200 shadow-2xs hover:shadow-md focus:outline-none group/arrow"
-                                aria-label="Previous Team Image">
-                            <i class="fa-solid fa-chevron-left text-xs group-hover/arrow:-translate-x-0.5 transition-transform"></i>
-                        </button>
-                        <button type="button" 
-                                @click="next(); restartTimer();" 
-                                class="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#D5DDD6] bg-white text-[#073B2E] hover:bg-[#073B2E] hover:text-[#B7E532] hover:border-[#073B2E] flex items-center justify-center transition-all duration-200 shadow-2xs hover:shadow-md focus:outline-none group/arrow"
-                                aria-label="Next Team Image">
-                            <i class="fa-solid fa-chevron-right text-xs group-hover/arrow:translate-x-0.5 transition-transform"></i>
-                        </button>
+                {{-- Header Area with Modern Pill Badge & Architectural Accent Bar --}}
+                <div>
+                    <span class="forest-badge mb-3">
+                        <i class="fa-solid fa-shield-halved text-[#D8F36B]"></i>
+                        <span>The MOVEXA Advantage</span>
+                    </span>
+                    <h2 class="text-3xl min-[375px]:text-4xl sm:text-[40px] lg:text-[42px] xl:text-[46px] font-black font-heading text-[#073B2E] tracking-tight leading-[1.15]">
+                        Why Choose Us
+                    </h2>
+                    
+                    {{-- Clean Architectural Accent Bar --}}
+                    <div class="mt-2.5 sm:mt-3 flex items-center gap-2">
+                        <div class="w-12 sm:w-14 h-1 rounded-full bg-[#B7E532]"></div>
+                        <div class="w-2.5 h-1 rounded-full bg-[#073B2E]"></div>
                     </div>
                 </div>
 
                 {{-- Authoritative Introduction Paragraph --}}
-                <p class="text-xs sm:text-[14.5px] text-[#4E5B54] leading-relaxed font-normal">
-                    As one of the largest and most dependable moving &amp; relocation companies in the UAE, MOVEXA does not hire untrained contract or temporary moving laborers. We are affordable Movers &amp; Packers in the UAE whose full-time moving experts are trained to the highest standard of excellence and delivered with the utmost care, professionalism, and punctuality. MOVEXA provides turnkey Home Moving, Luxury Villa Relocations, Corporate Office Moves, and Secure Storage across Dubai, Abu Dhabi, and all 7 Emirates—earning a great reputation that we bring to each and every move.
+                <p class="text-[14.5px] sm:text-[16px] text-[#37473E] leading-[1.65] font-normal">
+                    As one of the UAE’s most dependable relocation specialists, MOVEXA never employs untrained temporary laborers. Every relocation is executed by our full-time, vetted moving masters—delivering turnkey care, master carpentry, and punctual service across Dubai, Abu Dhabi, and all 7 Emirates.
                 </p>
 
-                {{-- Feature Checklist with Chevron (>) Icons --}}
-                @php
-                $whyChoosePoints = [
-                    'Reasonable & Transparent Price (Guaranteed no hidden move-day surcharges)',
-                    'Professionally Trained & Background-Verified Full-Time Crew',
-                    'Covered GPS-Monitored Vehicles & Heavy-Duty 5-Ply Packing Materials',
-                    'Dedicated Moving & Relocation Advisory Services from Start to Finish',
-                    'Free On-Site or Virtual Survey & Accurate Price Estimation',
-                    'Professional Packing, Unpacking & Furniture Assembly Services',
-                    'Best Movers & Packers of the United Arab Emirates with Full Care',
-                ];
-                @endphp
-                <div class="space-y-2 sm:space-y-2.5 pt-0.5">
-                    @foreach ($whyChoosePoints as $pt)
-                    <div class="flex items-start gap-2.5 text-xs sm:text-[13.5px] text-[#202824] font-semibold leading-snug group/pt">
-                        <span class="w-4 h-4 rounded-full bg-[#EBF5E7] text-[#073B2E] flex items-center justify-center text-[9px] mt-0.5 shrink-0 group-hover/pt:bg-[#B7E532] transition-colors shadow-2xs">
-                            <i class="fa-solid fa-chevron-right text-[7.5px] font-black"></i>
-                        </span>
-                        <span class="flex-1">{{ $pt }}</span>
+                {{-- 6-Pillar Feature Grid (Structured Trust Micro-Cards) --}}
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-0.5">
+                    {{-- Card 1: Transparent Pricing --}}
+                    <div class="group/benefit flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#F8FAF8] border border-[#E4ECE5] hover:border-[#107050]/40 hover:bg-white hover:shadow-sm transition-all duration-200">
+                        <div class="w-8 h-8 rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center text-xs shrink-0 shadow-2xs group-hover/benefit:scale-105 transition-transform mt-0.5">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <div class="space-y-0.5 min-w-0">
+                            <h4 class="text-[13px] sm:text-[13.5px] font-bold text-[#073B2E] leading-snug">Transparent Pricing</h4>
+                            <p class="text-[11px] sm:text-[11.5px] text-[#55645A] leading-relaxed">Guaranteed fixed rates with zero hidden move-day surcharges.</p>
+                        </div>
                     </div>
-                    @endforeach
+
+                    {{-- Card 2: 100% Vetted Crew --}}
+                    <div class="group/benefit flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#F8FAF8] border border-[#E4ECE5] hover:border-[#107050]/40 hover:bg-white hover:shadow-sm transition-all duration-200">
+                        <div class="w-8 h-8 rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center text-xs shrink-0 shadow-2xs group-hover/benefit:scale-105 transition-transform mt-0.5">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div class="space-y-0.5 min-w-0">
+                            <h4 class="text-[13px] sm:text-[13.5px] font-bold text-[#073B2E] leading-snug">100% Vetted Crew</h4>
+                            <p class="text-[11px] sm:text-[11.5px] text-[#55645A] leading-relaxed">Full-time, background-verified movers in official uniform.</p>
+                        </div>
+                    </div>
+
+                    {{-- Card 3: 5-Ply Export Packing --}}
+                    <div class="group/benefit flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#F8FAF8] border border-[#E4ECE5] hover:border-[#107050]/40 hover:bg-white hover:shadow-sm transition-all duration-200">
+                        <div class="w-8 h-8 rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center text-xs shrink-0 shadow-2xs group-hover/benefit:scale-105 transition-transform mt-0.5">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <div class="space-y-0.5 min-w-0">
+                            <h4 class="text-[13px] sm:text-[13.5px] font-bold text-[#073B2E] leading-snug">5-Ply Protection</h4>
+                            <p class="text-[11px] sm:text-[11.5px] text-[#55645A] leading-relaxed">Heavy-duty export bubble wrap, padding &amp; custom crates.</p>
+                        </div>
+                    </div>
+
+                    {{-- Card 4: GPS Enclosed Fleet --}}
+                    <div class="group/benefit flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#F8FAF8] border border-[#E4ECE5] hover:border-[#107050]/40 hover:bg-white hover:shadow-sm transition-all duration-200">
+                        <div class="w-8 h-8 rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center text-xs shrink-0 shadow-2xs group-hover/benefit:scale-105 transition-transform mt-0.5">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div class="space-y-0.5 min-w-0">
+                            <h4 class="text-[13px] sm:text-[13.5px] font-bold text-[#073B2E] leading-snug">GPS Enclosed Fleet</h4>
+                            <p class="text-[11px] sm:text-[11.5px] text-[#55645A] leading-relaxed">Sanitized closed box trucks with hydraulic tail-lifts.</p>
+                        </div>
+                    </div>
+
+                    {{-- Card 5: Free Virtual Survey --}}
+                    <div class="group/benefit flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#F8FAF8] border border-[#E4ECE5] hover:border-[#107050]/40 hover:bg-white hover:shadow-sm transition-all duration-200">
+                        <div class="w-8 h-8 rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center text-xs shrink-0 shadow-2xs group-hover/benefit:scale-105 transition-transform mt-0.5">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <div class="space-y-0.5 min-w-0">
+                            <h4 class="text-[13px] sm:text-[13.5px] font-bold text-[#073B2E] leading-snug">Free Surveys</h4>
+                            <p class="text-[11px] sm:text-[11.5px] text-[#55645A] leading-relaxed">Fast virtual or on-site inventory &amp; binding price quote.</p>
+                        </div>
+                    </div>
+
+                    {{-- Card 6: Turnkey Handyman --}}
+                    <div class="group/benefit flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#F8FAF8] border border-[#E4ECE5] hover:border-[#107050]/40 hover:bg-white hover:shadow-sm transition-all duration-200">
+                        <div class="w-8 h-8 rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center text-xs shrink-0 shadow-2xs group-hover/benefit:scale-105 transition-transform mt-0.5">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <div class="space-y-0.5 min-w-0">
+                            <h4 class="text-[13px] sm:text-[13.5px] font-bold text-[#073B2E] leading-snug">Turnkey Handyman</h4>
+                            <p class="text-[11px] sm:text-[11.5px] text-[#55645A] leading-relaxed">Master carpentry, curtains hanging &amp; TV wall mounting.</p>
+                        </div>
+                    </div>
                 </div>
 
-                {{-- Action Buttons (Full width on small phones, side by side on tablets/laptops) --}}
-                <div class="pt-2 sm:pt-3 flex flex-col min-[420px]:flex-row items-stretch min-[420px]:items-center gap-2.5 sm:gap-3.5">
-                    <button type="button" 
-                            onclick="openQuoteModal('', 'Why Choose Us')" 
-                            class="btn-lime text-xs sm:text-sm font-bold py-3.5 px-6 shadow-sm flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-calculator text-xs"></i>
-                        <span>Get Free Moving Quote</span>
-                    </button>
-                    <a href="tel:0507060165" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full border-2 border-[#073B2E] text-[#073B2E] hover:bg-[#073B2E] hover:text-[#B7E532] font-bold text-xs sm:text-sm transition-all duration-200 shadow-2xs">
-                        <i class="fa-solid fa-phone text-xs"></i>
-                        <span>Call 050 706 0165</span>
-                    </a>
+                {{-- Certified UAE Operations Assurance Bar --}}
+                <div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-[#EBF5E7]/80 border border-[#CFE8C7] text-xs font-semibold text-[#073B2E]">
+                    <i class="fa-solid fa-circle-check text-emerald-600 shrink-0 text-sm"></i>
+                    <span>Licensed &amp; certified moving operations across all 7 UAE Emirates with full transit protection.</span>
+                </div>
+
+                {{-- Action Buttons & Trust Micro-Badges --}}
+                <div class="space-y-2.5 pt-1">
+                    <div class="flex flex-col min-[420px]:flex-row items-stretch min-[420px]:items-center gap-2.5 sm:gap-3.5">
+                        <button type="button" 
+                                onclick="openQuoteModal('', 'Why Choose Us')" 
+                                class="btn-lime text-xs sm:text-sm font-bold py-3.5 px-6 shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calculator text-xs"></i>
+                            <span>Get Free Moving Quote</span>
+                        </button>
+                        <a href="tel:0507060165" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full border-2 border-[#073B2E] text-[#073B2E] hover:bg-[#073B2E] hover:text-[#B7E532] font-bold text-xs sm:text-sm transition-all duration-200 shadow-2xs">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                            <span>Call 050 706 0165</span>
+                        </a>
+                    </div>
+                    
+                    {{-- Trust Micro-Indicators --}}
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11.5px] text-[#55645A] font-medium pt-1">
+                        <span class="inline-flex items-center gap-1 text-[#073B2E] font-semibold">
+                            <i class="fa-solid fa-star text-amber-500 text-[10.5px]"></i>
+                            <span>4.9/5 Rating</span>
+                        </span>
+                        <span class="w-1 h-1 rounded-full bg-[#CBD5CE]"></span>
+                        <span>Free Virtual Survey</span>
+                        <span class="w-1 h-1 rounded-full bg-[#CBD5CE]"></span>
+                        <span>Zero Obligation</span>
+                    </div>
                 </div>
             </div>
 
             {{-- Right Column: Heroic Branded MOVEXA Photography Slider & Thumbnail Gallery --}}
-            <div class="lg:col-span-6">
+            <div class="lg:col-span-6 space-y-3 sm:space-y-3.5">
                 
                 {{-- Main Featured Slide Card --}}
-                <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border-2 border-[#E2ECE2] aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] xl:aspect-[16/11] bg-gray-100 group/teamCard">
+                <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(7,59,46,0.16)] border-2 border-[#DCE4DC] aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] xl:aspect-[16/11] bg-[#073B2E] group/teamCard">
                     
+                    {{-- Top Laser Line Accent --}}
+                    <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent shadow-[0_0_12px_#D8F36B] z-30 pointer-events-none"></div>
+
                     {{-- 6 Branded Team Slides with Smooth Cross-Fade --}}
                     @php
                     $slidesData = [
@@ -1308,61 +1369,65 @@ $localDubaiSlides = [
                              loading="{{ $sIdx === 0 ? 'eager' : 'lazy' }}"
                              decoding="async">
                         {{-- Subtle Dark Vignette for Floating Overlay Contrast --}}
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/10"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10"></div>
                     </div>
                     @endforeach
 
-                    {{-- Overlay On-Image Left & Right Navigation Arrows --}}
+                    {{-- Floating Top-Left Badge: Official Team Status --}}
+                    <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#073B2E]/90 backdrop-blur-md text-white text-[11px] sm:text-xs font-bold border border-white/20 shadow-md">
+                        <span class="w-2 h-2 rounded-full bg-[#B7E532] animate-pulse"></span>
+                        <span x-text="slides[currentSlide].tag">Official MOVEXA Crew</span>
+                    </div>
+
+                    {{-- Top-Right Integrated Navigation & Counter Capsule --}}
+                    <div class="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 shadow-md">
+                        <span class="text-[11px] sm:text-xs font-bold text-white tracking-wider" x-text="(currentSlide + 1) + ' / ' + totalSlides">1 / 6</span>
+                        <div class="w-px h-3.5 bg-white/30"></div>
+                        <div class="flex items-center gap-1">
+                            <button type="button" 
+                                    @click="prev(); restartTimer();" 
+                                    class="w-6 h-6 rounded-full hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none" 
+                                    aria-label="Previous Slide">
+                                <i class="fa-solid fa-chevron-left text-[9px]"></i>
+                            </button>
+                            <button type="button" 
+                                    @click="next(); restartTimer();" 
+                                    class="w-6 h-6 rounded-full hover:bg-white/20 text-white flex items-center justify-center transition-colors focus:outline-none" 
+                                    aria-label="Next Slide">
+                                <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    {{-- Overlay On-Image Left & Right Navigation Arrows (Subtle on rest, clear on hover) --}}
                     <button type="button" 
                             @click="prev(); restartTimer();" 
-                            class="absolute left-2.5 sm:left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-white text-white hover:text-[#073B2E] backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-200 shadow-lg focus:outline-none"
+                            class="absolute left-2.5 sm:left-3.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/35 hover:bg-white text-white hover:text-[#073B2E] backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-200 shadow-lg focus:outline-none opacity-0 group-hover/teamCard:opacity-100"
                             aria-label="Previous Slide">
                         <i class="fa-solid fa-chevron-left text-[11px] sm:text-xs"></i>
                     </button>
                     <button type="button" 
                             @click="next(); restartTimer();" 
-                            class="absolute right-2.5 sm:right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/40 hover:bg-white text-white hover:text-[#073B2E] backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-200 shadow-lg focus:outline-none"
+                            class="absolute right-2.5 sm:right-3.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-black/35 hover:bg-white text-white hover:text-[#073B2E] backdrop-blur-md border border-white/20 flex items-center justify-center transition-all duration-200 shadow-lg focus:outline-none opacity-0 group-hover/teamCard:opacity-100"
                             aria-label="Next Slide">
                         <i class="fa-solid fa-chevron-right text-[11px] sm:text-xs"></i>
                     </button>
 
-                    {{-- Floating Top Badge: Full-Time Verified Moving Staff --}}
-                    <div class="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#073B2E]/90 backdrop-blur-md text-white text-[10.5px] sm:text-xs font-bold border border-white/20 shadow-md">
-                        <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#B7E532] animate-pulse"></span>
-                        <span x-text="slides[currentSlide].tag">Official MOVEXA Crew</span>
-                    </div>
-
-                    {{-- Top-Right Interactive Slide Counter & Dots --}}
-                    <div class="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-1.5 sm:gap-2 bg-black/55 backdrop-blur-md px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-white/20 shadow-md">
-                        <span class="text-[10px] sm:text-xs font-bold text-white tracking-wider" x-text="(currentSlide + 1) + ' / ' + totalSlides">1 / 6</span>
-                        <div class="hidden sm:block w-px h-3 bg-white/30"></div>
-                        <div class="hidden sm:flex items-center gap-1">
-                            <template x-for="(s, idx) in slides" :key="idx">
-                                <button type="button" 
-                                        @click="goTo(idx); restartTimer();" 
-                                        class="h-1.5 rounded-full transition-all duration-300 focus:outline-none" 
-                                        :class="currentSlide === idx ? 'w-4 bg-[#B7E532]' : 'w-1.5 bg-white/50 hover:bg-white'"
-                                        :aria-label="'Go to photo ' + (idx + 1)">
-                                </button>
-                            </template>
-                        </div>
-                    </div>
-
                     {{-- Floating Bottom Caption Card --}}
                     <div class="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-4 sm:left-4 sm:right-4 z-20">
-                        <div class="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 min-[375px]:p-3 sm:p-4 border border-white/40 shadow-xl flex items-center justify-between gap-2.5 sm:gap-3 transition-all duration-300">
-                            <div class="space-y-0.5">
-                                <h3 class="font-extrabold text-xs min-[375px]:text-sm sm:text-base text-[#073B2E] tracking-tight leading-tight"
+                        <div class="bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/60 shadow-[0_10px_30px_rgba(7,59,46,0.18)] flex items-center justify-between gap-3 sm:gap-4 transition-all duration-300">
+                            <div class="space-y-0.5 min-w-0">
+                                <h3 class="font-extrabold text-xs min-[375px]:text-sm sm:text-[15px] text-[#073B2E] tracking-tight leading-snug truncate"
                                     x-text="slides[currentSlide].title">
                                     15+ Full-Time Verified MOVEXA Team &amp; Fleet
                                 </h3>
-                                <p class="text-[10px] min-[375px]:text-[11px] sm:text-xs text-[#5A645E]"
+                                <p class="text-[10px] min-[375px]:text-[11px] sm:text-xs text-[#526058] leading-tight line-clamp-1"
                                    x-text="slides[currentSlide].subtitle">
                                     Official In-House Moving Crew &amp; Daily Active Fleet in Dubai
                                 </p>
                             </div>
-                            <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center text-[10px] sm:text-xs shrink-0 shadow-sm">
-                                <i class="fa-solid fa-truck-fast"></i>
+                            <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#073B2E] text-[#B7E532] flex items-center justify-center text-xs sm:text-sm shrink-0 shadow-sm ring-2 ring-[#B7E532]/30">
+                                <i :class="slides[currentSlide].icon"></i>
                             </span>
                         </div>
                     </div>
@@ -1370,14 +1435,14 @@ $localDubaiSlides = [
                 </div>
 
                 {{-- Interactive 6-Photo Thumbnail Gallery Strip --}}
-                <div class="mt-3 sm:mt-4 grid grid-cols-6 gap-1.5 sm:gap-2.5">
+                <div class="grid grid-cols-6 gap-1.5 sm:gap-2.5">
                     @foreach ($slidesData as $sIdx => $sData)
                     <button type="button" 
                             @click="goTo({{ $sIdx }}); restartTimer();" 
-                            class="group/thumb relative rounded-lg sm:rounded-2xl overflow-hidden aspect-square border-2 transition-all duration-200 focus:outline-none bg-gray-100"
+                            class="group/thumb relative rounded-lg sm:rounded-xl overflow-hidden aspect-[4/3] border-2 transition-all duration-200 focus:outline-none bg-gray-100"
                             :class="currentSlide === {{ $sIdx }} 
-                                ? 'border-[#073B2E] ring-2 ring-[#B7E532] shadow-md scale-102 opacity-100 z-10' 
-                                : 'border-[#E2ECE2] opacity-60 hover:opacity-100 hover:border-[#073B2E]/40 hover:scale-102'"
+                                ? 'border-[#073B2E] ring-2 ring-[#B7E532] shadow-md scale-[1.02] opacity-100 z-10' 
+                                : 'border-[#E2ECE2] opacity-60 hover:opacity-100 hover:border-[#073B2E]/40 hover:scale-[1.02]'"
                             aria-label="View photo {{ $sIdx + 1 }}">
                         <img src="{{ $sData['src'] }}" 
                              alt="{{ $sData['alt'] }}" 
@@ -1385,10 +1450,22 @@ $localDubaiSlides = [
                              loading="lazy"
                              decoding="async">
                         {{-- Active Accent Bar Indicator --}}
-                        <div class="absolute inset-x-0 bottom-0 h-0.5 sm:h-1 bg-[#B7E532] transition-opacity duration-200"
+                        <div class="absolute inset-x-0 bottom-0 h-1 bg-[#B7E532] transition-opacity duration-200"
                              :class="currentSlide === {{ $sIdx }} ? 'opacity-100' : 'opacity-0'"></div>
                     </button>
                     @endforeach
+                </div>
+
+                {{-- Live Operations Metadata Caption --}}
+                <div class="flex items-center justify-between text-[11px] sm:text-xs text-[#5A6860] px-1 font-medium">
+                    <div class="flex items-center gap-1.5">
+                        <i class="fa-solid fa-camera-retro text-[#073B2E]"></i>
+                        <span>100% Authentic MOVEXA Fleet &amp; Crew Operations</span>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-1.5 font-semibold text-[#073B2E]">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>Active Across All 7 Emirates</span>
+                    </div>
                 </div>
 
             </div>
@@ -1936,7 +2013,7 @@ $localDubaiSlides = [
                 <div class="flex transition-transform duration-700 ease-out"
                      :style="'transform: translateX(-' + (currentIndex * 100) + '%)'">
                     @foreach ($testimonials as $index => $t)
-                    <div class="w-full flex-shrink-0 p-6 sm:p-8 lg:p-9 relative flex flex-col justify-between">
+                    <div class="w-full flex-shrink-0 p-4 sm:p-8 lg:p-9 relative flex flex-col justify-between">
                         {{-- Large Decorative Quotation Watermark --}}
                         <div class="absolute right-6 top-6 text-[#103B30]/[0.04] pointer-events-none select-none text-7xl lg:text-8xl font-serif leading-none">
                             <i class="fa-solid fa-quote-right"></i>

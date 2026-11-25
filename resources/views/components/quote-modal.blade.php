@@ -1,53 +1,53 @@
-<div id="movexaQuoteModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-3 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-[#E2E8E2] overflow-hidden my-8">
+<div id="movexaQuoteModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-2.5 sm:p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="relative w-full max-w-2xl bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-[#E2E8E2] overflow-hidden my-4 sm:my-8">
 
         {{-- Modal Header --}}
-        <div class="bg-[#103B30] text-white px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-[#D8F36B] text-[#08271F] flex items-center justify-center font-bold text-lg">
+        <div class="bg-[#103B30] text-white px-4 py-3.5 sm:px-6 sm:py-5 flex items-center justify-between">
+            <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#D8F36B] text-[#08271F] flex items-center justify-center font-bold text-base sm:text-lg shrink-0">
                     <i class="fa-solid fa-calculator"></i>
                 </div>
-                <div>
-                    <h3 id="modalTitle" class="text-lg font-bold text-white font-heading">
+                <div class="min-w-0">
+                    <h3 id="modalTitle" class="text-base sm:text-lg font-bold text-white font-heading truncate">
                         Request a Free Moving Quote
                     </h3>
-                    <p class="text-xs text-[#D8F36B]">
+                    <p class="text-[11px] sm:text-xs text-[#D8F36B] truncate">
                         Fast, transparent quotation tailored to your move
                     </p>
                 </div>
             </div>
-            <button type="button" onclick="closeQuoteModal()" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-lg transition-colors focus:outline-none" aria-label="Close modal">
+            <button type="button" onclick="closeQuoteModal()" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-base sm:text-lg transition-colors focus:outline-none shrink-0 ml-2" aria-label="Close modal">
                 <i class="fa-solid fa-xmark"></i>
             </button>
         </div>
 
         {{-- Step Progress Bar --}}
-        <div class="bg-white px-6 py-3 border-b border-[#E2E8E2]">
+        <div class="bg-white px-4 py-2.5 sm:px-6 sm:py-3 border-b border-[#E2E8E2]">
             <div class="flex items-center justify-between text-xs font-bold text-[#747C76]">
-                <div id="stepIndicator1" class="flex items-center gap-2 text-[#103B30]">
-                    <span class="w-6 h-6 rounded-full bg-[#103B30] text-white flex items-center justify-center text-[11px]">1</span>
+                <div id="stepIndicator1" class="flex items-center gap-1.5 sm:gap-2 text-[#103B30]">
+                    <span class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#103B30] text-white flex items-center justify-center text-[10px] sm:text-[11px]">1</span>
                     <span class="hidden sm:inline">Moving Details</span>
                 </div>
-                <div class="w-8 sm:w-12 h-0.5 bg-[#E2E8E2]" id="stepBar1"></div>
-                <div id="stepIndicator2" class="flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-full bg-[#E2E8E2] text-[#747C76] flex items-center justify-center text-[11px]">2</span>
+                <div class="w-6 sm:w-12 h-0.5 bg-[#E2E8E2]" id="stepBar1"></div>
+                <div id="stepIndicator2" class="flex items-center gap-1.5 sm:gap-2">
+                    <span class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#E2E8E2] text-[#747C76] flex items-center justify-center text-[10px] sm:text-[11px]">2</span>
                     <span class="hidden sm:inline">Property</span>
                 </div>
-                <div class="w-8 sm:w-12 h-0.5 bg-[#E2E8E2]" id="stepBar2"></div>
-                <div id="stepIndicator3" class="flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-full bg-[#E2E8E2] text-[#747C76] flex items-center justify-center text-[11px]">3</span>
+                <div class="w-6 sm:w-12 h-0.5 bg-[#E2E8E2]" id="stepBar2"></div>
+                <div id="stepIndicator3" class="flex items-center gap-1.5 sm:gap-2">
+                    <span class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#E2E8E2] text-[#747C76] flex items-center justify-center text-[10px] sm:text-[11px]">3</span>
                     <span class="hidden sm:inline">Contact</span>
                 </div>
-                <div class="w-8 sm:w-12 h-0.5 bg-[#E2E8E2]" id="stepBar3"></div>
-                <div id="stepIndicator4" class="flex items-center gap-2">
-                    <span class="w-6 h-6 rounded-full bg-[#E2E8E2] text-[#747C76] flex items-center justify-center text-[11px]">4</span>
+                <div class="w-6 sm:w-12 h-0.5 bg-[#E2E8E2]" id="stepBar3"></div>
+                <div id="stepIndicator4" class="flex items-center gap-1.5 sm:gap-2">
+                    <span class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#E2E8E2] text-[#747C76] flex items-center justify-center text-[10px] sm:text-[11px]">4</span>
                     <span class="hidden sm:inline">Review</span>
                 </div>
             </div>
         </div>
 
         {{-- Form Content --}}
-        <form id="quoteMultiStepForm" onsubmit="event.preventDefault();" class="p-6">
+        <form id="quoteMultiStepForm" onsubmit="event.preventDefault();" class="p-4 sm:p-6">
 
             {{-- Validation Error Alert Box --}}
             <div id="formAlertBox" class="hidden mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold flex items-center gap-2">

@@ -43,8 +43,8 @@
 
     <div class="w-full max-w-7xl 2xl:max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         {{-- Header Bar Row (Static default height prevents CLS on initial page paint) --}}
-        <div class="flex items-center justify-between transition-all duration-300 gap-3 h-[70px] sm:h-[74px]"
-             :class="isScrolled ? '!h-[58px] sm:!h-[62px]' : ''">
+        <div class="flex items-center justify-between transition-all duration-300 gap-2 sm:gap-3 h-[66px] sm:h-[74px]"
+             :class="isScrolled ? '!h-[56px] sm:!h-[62px]' : ''">
 
             {{-- 1. MOVEXA Brand Logo (Static height & aspect ratio prevents any oversized flash/shift on refresh) --}}
             <div class="flex-shrink-0 flex items-center pr-0 sm:pr-1">
@@ -55,8 +55,8 @@
                          height="50"
                          fetchpriority="high"
                          decoding="async"
-                         class="movexa-header-logo w-auto h-[46px] sm:h-[50px] 2xl:h-[54px] object-contain object-left transition-all duration-300 group-hover:scale-[1.02] block"
-                         :class="isScrolled ? '!h-[38px] sm:!h-[42px]' : ''">
+                         class="movexa-header-logo w-auto h-[38px] min-[375px]:h-[44px] sm:h-[50px] 2xl:h-[54px] max-w-[140px] min-[375px]:max-w-[170px] sm:max-w-[220px] object-contain object-left transition-all duration-300 group-hover:scale-[1.02] block"
+                         :class="isScrolled ? '!h-[34px] min-[375px]:!h-[38px] sm:!h-[42px]' : ''">
                 </a>
             </div>
 
@@ -537,23 +537,37 @@
             </div>
 
             {{-- Mobile & Tablet Controls (visible below lg) --}}
-            <div class="flex items-center gap-2 lg:hidden shrink-0">
+            <div class="flex items-center gap-1.5 sm:gap-2 lg:hidden shrink-0">
                 <a href="tel:0507060165" 
-                   class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#B7E532] bg-[#EBF5E7] text-xs font-bold text-[#073B2E] shadow-2xs"
-                   title="Call 050 706 0165">
+                   class="inline-flex items-center justify-center gap-1.5 h-9 min-[375px]:h-10 px-2.5 min-[390px]:px-3.5 rounded-full border border-[#B7E532] bg-[#EBF5E7] text-[11px] min-[375px]:text-xs font-bold text-[#073B2E] shadow-2xs hover:bg-[#D8F36B] transition-colors"
+                   title="Call 050 706 0165"
+                   aria-label="Call MOVEXA 050 706 0165">
                     <i class="fa-solid fa-phone text-[#073B2E] text-[10px]"></i>
-                    <span>050 706 0165</span>
+                    <span class="hidden min-[390px]:inline">050 706 0165</span>
                 </a>
                 <button type="button" 
                         @click="mobileOpen = !mobileOpen" 
-                        class="w-9 h-9 rounded-xl bg-white border border-[#E2ECE2] text-[#073B2E] hover:bg-[#EBF5E7] flex items-center justify-center transition-colors focus:outline-none" 
-                        aria-label="Toggle Navigation Menu">
-                    <i class="fa-solid text-sm" :class="mobileOpen ? 'fa-xmark' : 'fa-bars'"></i>
+                        class="w-9 h-9 min-[375px]:w-10 min-[375px]:h-10 rounded-xl bg-white border border-[#E2ECE2] text-[#073B2E] hover:bg-[#EBF5E7] active:bg-[#DCEAD9] flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#073B2E]/20" 
+                        aria-label="Toggle Navigation Menu"
+                        :aria-expanded="mobileOpen">
+                    <i class="fa-solid text-sm min-[375px]:text-base" :class="mobileOpen ? 'fa-xmark' : 'fa-bars'"></i>
                 </button>
             </div>
 
         </div>
     </div>
+
+    {{-- Mobile & Tablet Backdrop Overlay (Closes drawer on outside tap) --}}
+    <div x-show="mobileOpen" 
+         x-cloak 
+         @click="mobileOpen = false" 
+         class="lg:hidden fixed inset-0 top-[66px] sm:top-[74px] bg-black/40 backdrop-blur-xs z-40 transition-opacity"
+         x-transition:enter="transition-opacity ease-out duration-200"
+         x-transition:enter-start="opacity-0"
+         x-transition:enter-end="opacity-100"
+         x-transition:leave="transition-opacity ease-in duration-150"
+         x-transition:leave-start="opacity-100"
+         x-transition:leave-end="opacity-0"></div>
 
     {{-- Mobile & Tablet Navigation Drawer (Clean, Modern Card Architecture / No Vertically Stretched Lists) --}}
     <div x-show="mobileOpen" 
@@ -564,7 +578,7 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 translate-y-0"
          x-transition:leave-end="opacity-0 -translate-y-3"
-         class="lg:hidden bg-white border-b border-[#E2ECE2] px-4 pt-3 pb-6 max-h-[82vh] overflow-y-auto shadow-2xl">
+         class="lg:hidden relative z-50 bg-white border-b border-[#E2ECE2] px-4 pt-3 pb-6 max-h-[calc(100vh-80px)] overflow-y-auto shadow-2xl overscroll-contain">
         
         <div class="space-y-1.5 text-sm font-semibold text-[#202A26]">
             {{-- 1. Home --}}

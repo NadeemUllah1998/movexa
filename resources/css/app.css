@@ -12,16 +12,37 @@
         font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
         color: #202824;
         background-color: #FFFFFF;
-        overflow-x: clip;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
     }
 
     body {
-        overflow-x: clip;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+        position: relative;
     }
 
     h1, h2, h3, h4, h5, h6 {
         font-family: 'Manrope', 'Plus Jakarta Sans', sans-serif;
         font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+        overflow-wrap: break-word;
+    }
+
+    p, span, a, label {
+        overflow-wrap: break-word;
+    }
+
+    /* Universal responsive media safeguards */
+    img, video, iframe, embed, object {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Touch-target optimization for mobile/touch screens */
+    button, [role="button"], input, select, textarea {
+        touch-action: manipulation;
     }
 }
 

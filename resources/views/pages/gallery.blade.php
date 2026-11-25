@@ -9,7 +9,7 @@
 <x-breadcrumb :items="[['label' => 'Moving Gallery', 'url' => '']]" />
 
 {{-- Hero Section with Full-Cover Background Image (No Green Color) --}}
-<section class="relative bg-neutral-900 text-white py-20 sm:py-28 overflow-hidden">
+<section class="relative bg-neutral-900 text-white py-10 sm:py-16 lg:py-24 overflow-hidden">
     {{-- Full Background Cover Picture --}}
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('images/gallery/movexa-gallery-skyline-crew-fleet.webp') }}" 
@@ -26,15 +26,15 @@
             <i class="fa-solid fa-camera text-[#B7E532]"></i>
             <span>Verified Operational Showcase</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-tight">
+        <h1 class="text-3xl min-[375px]:text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-white tracking-tight leading-tight">
             Our Moving Gallery
         </h1>
-        <p class="text-base sm:text-lg text-white/90 mt-4 leading-relaxed font-normal">
+        <p class="text-sm sm:text-base lg:text-lg text-white/90 mt-4 leading-relaxed font-normal">
             Take a visual tour of our daily relocation operations across Dubai and all 7 UAE Emirates. From white-glove villa loading to heavy-duty custom timber crates, enclosed GPS trucks, and master carpentry setup.
         </p>
 
         {{-- Operational Highlights Pills --}}
-        <div class="mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 text-xs font-semibold text-white/90">
+        <div class="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:gap-4 text-xs font-semibold text-white/90">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/15">
                 <span class="w-2 h-2 rounded-full bg-[#B7E532]"></span>
                 <span>{{ count($gallery) }} Verified Photos</span>
@@ -52,7 +52,7 @@
 </section>
 
 {{-- Gallery Section with Filter Tabs & Lightbox --}}
-<section class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" x-data="{ activeCategory: 'All' }">
+<section class="py-10 sm:py-14 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" x-data="{ activeCategory: 'All' }">
     
     {{-- Category Filters with Count Badges --}}
     @php
@@ -62,7 +62,7 @@
             $catCounts[$gItem['category']] = ($catCounts[$gItem['category']] ?? 0) + 1;
         }
     @endphp
-    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-12">
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-8 sm:mb-12">
         @foreach ($cats as $cat)
         <button type="button" @click="activeCategory = '{{ $cat }}'"
                 :class="activeCategory === '{{ $cat }}' 

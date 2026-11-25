@@ -9,24 +9,24 @@
 <x-breadcrumb :items="[['label' => 'Blog & Moving Guides', 'url' => '']]" />
 
 {{-- Hero Section --}}
-<section class="bg-[#103B30] text-white py-16 sm:py-20 relative overflow-hidden">
+<section class="bg-[#103B30] text-white py-10 sm:py-14 lg:py-18 relative overflow-hidden">
     <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#08271F] opacity-70 blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-3xl">
         <span class="lime-badge mb-4">
             <i class="fa-solid fa-newspaper"></i> Relocation Knowledge Base
         </span>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
+        <h1 class="text-3xl min-[375px]:text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
             Moving Guides & Expert Advice
         </h1>
-        <p class="text-base sm:text-lg text-white/80 mt-4 leading-relaxed font-normal">
+        <p class="text-sm sm:text-base lg:text-lg text-white/80 mt-4 leading-relaxed font-normal">
             Practical insights on Dubai rental NOCs, international customs declarations, container logistics, and professional furniture wrapping techniques.
         </p>
     </div>
 </section>
 
 {{-- Blog Grid --}}
-<section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-10 sm:py-14 lg:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         @foreach ($posts as $post)
         <article class="group bg-white rounded-3xl overflow-hidden border border-[#E2E8E2] shadow-sm hover:shadow-premium transition-all duration-300 flex flex-col justify-between card-hover">

@@ -204,9 +204,9 @@
 {{-- =========================================================================
      2. GLOBAL REACH CONTRAST RIBBON: High-Contrast Dark Emerald / Lime Bar
      ========================================================================= --}}
-<section class="bg-[#061D17] border-y border-white/10 text-white py-8 sm:py-10 relative overflow-hidden">
+<section class="bg-[#061D17] border-y border-white/10 text-white py-6 sm:py-8 lg:py-10 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+        <div class="grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 divide-y min-[480px]:divide-y-0 sm:divide-x divide-white/10">
             
             {{-- Stat 1 --}}
             <div class="pt-4 sm:pt-0 sm:px-6 first:pl-0 flex items-center gap-4">

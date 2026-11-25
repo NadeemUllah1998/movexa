@@ -12,14 +12,14 @@
 ]" />
 
 {{-- Destination Hero Section --}}
-<section class="bg-[#103B30] text-white py-16 sm:py-20 relative overflow-hidden">
+<section class="bg-[#103B30] text-white py-10 sm:py-14 lg:py-18 relative overflow-hidden">
     <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-[#08271F] opacity-70 blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {{-- Hero Left --}}
-            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-center lg:text-left">
                 <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
                     <span class="text-2xl p-1 bg-white/10 rounded-lg">{{ $destination['flag'] }}</span>
                     <span class="lime-badge">
@@ -31,15 +31,15 @@
                     </span>
                 </div>
 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
+                <h1 class="text-3xl min-[375px]:text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
                     {{ $destination['headline'] }}
                 </h1>
 
-                <p class="text-base sm:text-lg text-white/80 max-w-xl leading-relaxed font-normal">
+                <p class="text-sm sm:text-base lg:text-lg text-white/80 max-w-xl leading-relaxed font-normal">
                     {{ $destination['subheadline'] }}
                 </p>
 
-                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto lg:mx-0">
                     <button type="button" onclick="openQuoteModal('{{ $destination['country'] }}', 'International Moving')" class="btn-lime w-full sm:w-auto text-xs font-bold py-3.5 px-6 shadow-lime-glow">
                         <i class="fa-solid fa-file-invoice"></i>
                         <span>Get {{ $destination['country'] }} Moving Quote</span>
@@ -89,29 +89,29 @@
 </section>
 
 {{-- Destination Overview & Customs Regulations --}}
-<section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<section class="py-10 sm:py-14 lg:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
         
         {{-- Left: In-depth Route Narrative --}}
-        <div class="lg:col-span-7 space-y-8">
+        <div class="lg:col-span-7 space-y-6 sm:space-y-8">
             <div>
                 <span class="forest-badge mb-2">Route Analysis</span>
-                <h2 class="text-3xl font-extrabold font-heading text-[#202824] tracking-tight">
+                <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-[#202824] tracking-tight">
                     Relocation Overview: Dubai to {{ $destination['country'] }}
                 </h2>
-                <p class="text-sm text-[#747C76] leading-relaxed mt-4">
+                <p class="text-xs sm:text-sm text-[#747C76] leading-relaxed mt-3 sm:mt-4">
                     {{ $destination['intro'] }}
                 </p>
             </div>
 
             {{-- Customs Framework --}}
-            <div class="bg-white p-8 rounded-3xl border border-[#E2E8E2] shadow-sm space-y-4">
+            <div class="bg-white p-5 sm:p-7 md:p-8 rounded-3xl border border-[#E2E8E2] shadow-sm space-y-4">
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center font-bold">
                         <i class="fa-solid fa-stamp"></i>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold font-heading text-[#202824]">
+                        <h3 class="text-base sm:text-lg font-bold font-heading text-[#202824]">
                             Customs Relief & Duty-Free Status
                         </h3>
                         <span class="text-xs text-[#747C76]">Official Transfer of Residence Regulations</span>
@@ -122,7 +122,7 @@
                     {{ $destination['customs_overview'] }}
                 </p>
 
-                <div class="p-4 rounded-2xl bg-[#EBF2EB] border border-[#103B30]/20 flex items-start gap-3 text-xs text-[#08271F]">
+                <div class="p-3.5 sm:p-4 rounded-2xl bg-[#EBF2EB] border border-[#103B30]/20 flex items-start gap-3 text-xs text-[#08271F]">
                     <i class="fa-solid fa-lightbulb text-base text-[#103B30] mt-0.5"></i>
                     <div>
                         <span class="font-bold block">Important Customs Tip:</span>
@@ -133,12 +133,12 @@
 
             {{-- Shipping Modes Available --}}
             <div class="space-y-4">
-                <h3 class="text-xl font-bold font-heading text-[#202824]">
+                <h3 class="text-lg sm:text-xl font-bold font-heading text-[#202824]">
                     Available Freight Options for {{ $destination['country'] }}
                 </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                     @foreach ($destination['shipping_modes'] as $mode)
-                    <div class="p-4 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm text-xs space-y-1.5">
+                    <div class="p-3.5 sm:p-4 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm text-xs space-y-1.5">
                         <i class="fa-solid fa-ship text-[#103B30] text-sm"></i>
                         <p class="font-semibold text-[#202824] leading-tight">{{ $mode }}</p>
                     </div>
@@ -151,7 +151,7 @@
         <div class="lg:col-span-5 space-y-6">
             
             {{-- Document Checklist Card --}}
-            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-[#E2E8E2] shadow-sm space-y-4">
+            <div class="bg-white p-5 sm:p-7 md:p-8 rounded-3xl border border-[#E2E8E2] shadow-sm space-y-4">
                 <div class="flex items-center gap-3 pb-3 border-b border-[#E2E8E2]">
                     <span class="w-9 h-9 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-sm">
                         <i class="fa-solid fa-file-circle-check"></i>
@@ -181,7 +181,7 @@
             </div>
 
             {{-- Quick Quote Box for this country --}}
-            <div class="bg-[#08271F] text-white p-6 sm:p-8 rounded-3xl border border-white/10 shadow-xl space-y-4">
+            <div class="bg-[#08271F] text-white p-5 sm:p-7 md:p-8 rounded-3xl border border-white/10 shadow-xl space-y-4">
                 <span class="lime-badge">Route Quotation</span>
                 <h4 class="text-xl font-bold font-heading text-white">
                     Moving from Dubai to {{ $destination['country'] }}?

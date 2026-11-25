@@ -605,61 +605,137 @@ $narrativeSections = [
     </div>
 </section>
 
-{{-- Key Features & Inclusions Section --}}
-<section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E2E8E2] w-full">
+{{-- Executive Metrics Ribbon (Directly Beneath Hero) --}}
+<section class="bg-[#061D17] border-y border-[#164335] text-white py-5 sm:py-6 relative z-20">
+    <div class="max-w-7xl 2xl:max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            <div class="flex items-center gap-3.5 pt-3 sm:pt-0">
+                <span class="w-10 h-10 rounded-xl bg-white/5 border border-white/15 text-[#D8F36B] flex items-center justify-center text-sm shrink-0 shadow-2xs">
+                    <i class="fa-solid fa-users-gear"></i>
+                </span>
+                <div>
+                    <div class="text-sm sm:text-base font-black text-white font-heading">100% Full-Time Crew</div>
+                    <div class="text-[11px] text-[#A6C5B8] font-medium leading-tight">Zero casual day-laborers, certified in-house staff</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-3.5 pt-3 sm:pt-0 sm:pl-6">
+                <span class="w-10 h-10 rounded-xl bg-white/5 border border-white/15 text-[#D8F36B] flex items-center justify-center text-sm shrink-0 shadow-2xs">
+                    <i class="fa-solid fa-boxes-packing"></i>
+                </span>
+                <div>
+                    <div class="text-sm sm:text-base font-black text-white font-heading">5-Ply Export Packaging</div>
+                    <div class="text-[11px] text-[#A6C5B8] font-medium leading-tight">Crush-resistant cartons &amp; cell dividers</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-3.5 pt-3 sm:pt-0 sm:pl-6">
+                <span class="w-10 h-10 rounded-xl bg-white/5 border border-white/15 text-[#D8F36B] flex items-center justify-center text-sm shrink-0 shadow-2xs">
+                    <i class="fa-solid fa-building-circle-check"></i>
+                </span>
+                <div>
+                    <div class="text-sm sm:text-base font-black text-white font-heading">Dubai Developer NOCs</div>
+                    <div class="text-[11px] text-[#A6C5B8] font-medium leading-tight">Emaar, Nakheel &amp; DAMAC fast-track</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-3.5 pt-3 sm:pt-0 sm:pl-6">
+                <span class="w-10 h-10 rounded-xl bg-white/5 border border-white/15 text-[#D8F36B] flex items-center justify-center text-sm shrink-0 shadow-2xs">
+                    <i class="fa-solid fa-handshake-simple"></i>
+                </span>
+                <div>
+                    <div class="text-sm sm:text-base font-black text-white font-heading">Fixed-Price Guarantee</div>
+                    <div class="text-[11px] text-[#A6C5B8] font-medium leading-tight">Zero move-day surprise surcharges</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- Key Features & Inclusions Section (Enhanced High-Contrast Architecture) --}}
+<section class="py-14 sm:py-18 lg:py-22 bg-white border-b border-[#E0ECE0] w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         
-        {{-- Left: Secondary Visual & Quote Callout --}}
+        {{-- Left: Secondary Visual & Luxury Direct Assistance Card --}}
         <div class="lg:col-span-5 space-y-6">
-            <div class="rounded-3xl overflow-hidden shadow-lg border border-[#E2E8E2] aspect-[4/3] bg-gray-100">
-                <img src="{{ $service['secondary_image'] }}" alt="{{ $service['title'] }} packing and handling" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            <div class="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(7,59,46,0.18)] border-2 border-[#DCE7DC] aspect-[4/3] bg-[#07241C] group">
+                <img src="{{ $service['secondary_image'] }}" alt="{{ $service['title'] }} packing and handling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+                <div class="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-[#D8F36B] text-[11px] font-black uppercase tracking-wider border border-white/20 shadow-md">
+                    <i class="fa-solid fa-award text-xs text-[#B7E532]"></i>
+                    <span>MOVEXA Certified Protocol</span>
+                </div>
+                <div class="absolute bottom-4 left-4 right-4 text-white z-10 flex items-center gap-2.5 bg-black/50 backdrop-blur-md p-3 rounded-2xl border border-white/20">
+                    <i class="fa-solid fa-shield-halved text-xs text-[#B7E532] shrink-0"></i>
+                    <span class="text-[11px] font-semibold text-white/95">Full-Coverage Transit Care &amp; Licensed UAE Moving Fleet</span>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-3xl border border-[#E2E8E2] shadow-sm space-y-3">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center font-bold">
-                        <i class="fa-solid fa-phone"></i>
+            {{-- Luxury Direct Dispatch Help Card --}}
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-[#072F25] via-[#0A3D30] to-[#041913] text-white border border-white/10 shadow-xl space-y-4 relative overflow-hidden">
+                <div class="absolute -top-12 -right-12 w-32 h-32 bg-[#D8F36B]/10 rounded-full blur-2xl pointer-events-none"></div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-11 h-11 rounded-2xl bg-[#B7E532] text-[#073B2E] flex items-center justify-center font-bold text-base shadow-md">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] text-[#A6C5B8] uppercase font-bold tracking-wider block">Direct Relocation Desk</span>
+                            <a href="tel:{{ config('movexa.brand.phone_raw') }}" class="text-base font-black text-white hover:text-[#D8F36B] transition-colors">
+                                {{ config('movexa.brand.phone_display') }}
+                            </a>
+                        </div>
                     </div>
-                    <div>
-                        <span class="text-xs text-[#747C76] block">Need rapid assistance?</span>
-                        <a href="tel:{{ config('movexa.brand.phone_raw') }}" class="text-sm font-bold text-[#103B30] hover:underline">
-                            {{ config('movexa.brand.phone_display') }}
-                        </a>
-                    </div>
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#B7E532] opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#B7E532]"></span>
+                    </span>
                 </div>
-                <p class="text-[11px] text-[#747C76] leading-tight">
-                    Our Dubai team coordinates loading bay bookings, elevator passes, and packing schedules.
+                <p class="text-xs text-white/80 leading-relaxed font-normal">
+                    Our Dubai operations team coordinates developer NOC paperwork, loading bay clearances, and elevator reservations for a 100% turnkey experience.
                 </p>
+                <div class="pt-1">
+                    <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}?text={{ urlencode('Hello MOVEXA, I would like to schedule a survey for ' . $service['title'] . ' in Dubai.') }}" 
+                       target="_blank" 
+                       rel="noopener" 
+                       class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-white/10 hover:bg-[#25D366] text-white text-xs font-bold border border-white/20 transition-all shadow-2xs">
+                        <i class="fa-brands fa-whatsapp text-sm text-[#25D366] group-hover:text-white"></i>
+                        <span>Book Instant Video Survey on WhatsApp</span>
+                    </a>
+                </div>
             </div>
         </div>
 
-        {{-- Right: What is Included --}}
+        {{-- Right: What is Included (Advanced Process Inclusions) --}}
         <div class="lg:col-span-7 space-y-6">
-            <span class="forest-badge">
-                <i class="fa-solid fa-list-check"></i> Included In Every Move
-            </span>
-            <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#103B30] tracking-tight">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E7] text-[#073B2E] border border-[#D5E8D0] text-xs font-black uppercase tracking-wider">
+                <i class="fa-solid fa-list-check text-[#073B2E]"></i>
+                <span>End-to-End Residential Excellence</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-[40px] font-black font-heading text-[#073B2E] tracking-tight leading-tight">
                 Meticulous Standards For Your Peace of Mind
             </h2>
-            <p class="text-sm sm:text-base text-[#425048] leading-relaxed">
-                {{ $service['short_desc'] }} Our comprehensive service package is designed to relieve your stress from door to door.
+            
+            <p class="text-sm sm:text-base text-[#3A4B40] leading-relaxed font-normal">
+                {{ $service['short_desc'] }}
             </p>
 
-            {{-- Feature Checklist --}}
+            {{-- Feature Checklist Grid --}}
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 @foreach ($service['features'] as $feat)
-                <div class="flex items-start gap-3 p-3 rounded-2xl bg-white border border-[#E2E8E2] shadow-sm">
-                    <i class="fa-solid fa-circle-check text-sm text-[#103B30] mt-0.5"></i>
-                    <span class="text-xs sm:text-[13px] font-bold text-[#18221D]">{{ $feat }}</span>
+                <div class="flex items-start gap-3 p-3.5 rounded-2xl bg-[#F7FAF7] hover:bg-[#EEF6EF] border border-[#DEE8DF] hover:border-[#103B30] transition-all duration-200 shadow-2xs group">
+                    <span class="w-6 h-6 rounded-lg bg-[#103B30] text-[#D8F36B] flex items-center justify-center text-xs shrink-0 group-hover:bg-[#B7E532] group-hover:text-[#073B2E] transition-colors mt-0.5 shadow-2xs">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+                    <span class="text-xs sm:text-[13px] font-bold text-[#102A20] leading-snug">{{ $feat }}</span>
                 </div>
                 @endforeach
             </div>
 
-            <div class="pt-4">
-                <button type="button" onclick="openQuoteModal('', '{{ $service['title'] }}')" class="btn-forest text-xs font-bold py-3 px-6">
-                    <i class="fa-solid fa-calculator"></i>
+            <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <button type="button" onclick="openQuoteModal('', '{{ $service['title'] }}')" class="btn-forest text-xs font-black py-3.5 px-7 rounded-xl shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calculator text-xs"></i>
                     <span>Request Custom Quote for This Service</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
                 </button>
             </div>
         </div>
@@ -863,106 +939,242 @@ $narrativeSections = [
 </section>
 @endif
 
-{{-- Benefits Cards --}}
-<section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E2E8E2] w-full">
+{{-- Benefits / Advantage Pillars Section --}}
+<section class="py-14 sm:py-18 lg:py-22 bg-[#F8FAF8] border-b border-[#E0EBE0] w-full relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2">
-            <span class="forest-badge">Why MOVEXA</span>
-            <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#103B30] tracking-tight">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-3">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-[#103B30] border border-[#CFE0D1] text-xs font-black uppercase tracking-wider shadow-2xs">
+                <i class="fa-solid fa-medal text-[#103B30]"></i>
+                <span>Why Dubai Residents Choose MOVEXA</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-[40px] font-black font-heading text-[#073B2E] tracking-tight leading-tight">
                 The Advantage of Our {{ $service['title'] }} Service
             </h2>
+            <p class="text-sm sm:text-base text-[#46574D] leading-relaxed max-w-2xl mx-auto font-medium">
+                Uncompromising white-glove protocols, transparent binding pricing, and certified in-house craftsmen engineered for absolute peace of mind.
+            </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            @foreach ($service['benefits'] as $b)
-            <div class="p-7 sm:p-8 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm hover:shadow-md transition-all card-hover space-y-3.5">
-                <div class="w-10 h-10 rounded-xl bg-[#103B30] text-[#D8F36B] flex items-center justify-center font-bold text-sm">
-                    <i class="fa-solid fa-star"></i>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            @php
+                $benefitIcons = ['fa-shield-halved', 'fa-users-gear', 'fa-file-signature'];
+                $benefitTags = ['Binding Price Guarantee', '100% In-House Staff', 'Developer NOC Clearance'];
+            @endphp
+            @foreach ($service['benefits'] as $bIdx => $b)
+            <div class="relative bg-white rounded-3xl p-7 sm:p-8 border border-[#DEE7DF] shadow-[0_15px_40px_-12px_rgba(7,59,46,0.08)] hover:shadow-[0_20px_50px_-12px_rgba(7,59,46,0.14)] hover:border-[#CFDEC7] transition-all duration-300 card-hover flex flex-col justify-between group overflow-hidden">
+                {{-- Top Laser Accent --}}
+                <div class="absolute inset-x-0 top-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#D8F36B] to-transparent opacity-60 group-hover:opacity-100 transition-opacity"></div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="w-12 h-12 rounded-2xl bg-[#072F25] text-[#D8F36B] flex items-center justify-center font-bold text-base shadow-sm group-hover:bg-[#B7E532] group-hover:text-[#073B2E] transition-colors">
+                            <i class="fa-solid {{ $benefitIcons[$bIdx % 3] }}"></i>
+                        </div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-[#103B30] bg-[#F0F6F1] px-2.5 py-1 rounded-full border border-[#DCE6DC]">
+                            {{ $benefitTags[$bIdx % 3] }}
+                        </span>
+                    </div>
+                    <h3 class="text-xl font-black font-heading text-[#073B2E] leading-snug">{{ $b['title'] }}</h3>
+                    <p class="text-xs sm:text-[13.5px] text-[#3A4B40] leading-relaxed font-normal">{{ $b['desc'] }}</p>
                 </div>
-                <h3 class="text-xl font-black font-heading text-[#103B30]">{{ $b['title'] }}</h3>
-                <p class="text-sm text-[#425048] leading-relaxed">{{ $b['desc'] }}</p>
+
+                <div class="pt-5 mt-5 border-t border-[#EAEFEA] flex items-center gap-2 text-xs font-bold text-[#103B30]">
+                    <i class="fa-solid fa-circle-check text-[#B7E532] text-sm"></i>
+                    <span>Certified MOVEXA Standard</span>
+                </div>
             </div>
             @endforeach
         </div>
     </div>
 </section>
 
-{{-- Step-By-Step Workflow --}}
-<section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E2E8E2] w-full">
+{{-- Step-By-Step Workflow (Connected Operational Architecture) --}}
+<section class="py-14 sm:py-18 lg:py-22 bg-white border-b border-[#E0ECE0] w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-3">
-        <span class="forest-badge">How It Works</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-[#202824]">
-            Our 4-Stage Relocation Flow
-        </h2>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        @foreach ($service['process'] as $step)
-        <div class="p-6 rounded-3xl bg-white border border-[#E2E8E2] shadow-sm space-y-3 flex flex-col justify-between card-hover">
-            <div>
-                <span class="text-2xl font-black text-[#D8F36B] font-heading bg-[#103B30] px-3 py-1 rounded-xl inline-block mb-3">
-                    {{ $step['step'] }}
-                </span>
-                <h3 class="text-lg font-black font-heading text-[#103B30]">{{ $step['title'] }}</h3>
-                <p class="text-xs sm:text-sm text-[#425048] leading-relaxed mt-2">{{ $step['desc'] }}</p>
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-3">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF5E7] text-[#073B2E] border border-[#D5E8D0] text-xs font-black uppercase tracking-wider">
+                <i class="fa-solid fa-route text-[#073B2E]"></i>
+                <span>Operational Roadmap</span>
             </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-[40px] font-black font-heading text-[#073B2E] tracking-tight leading-tight">
+                Our 4-Stage Relocation Flow
+            </h2>
+            <p class="text-sm sm:text-base text-[#46574D] leading-relaxed max-w-2xl mx-auto font-medium">
+                A disciplined, milestone-driven protocol engineered to guarantee punctual dispatch, zero damage, and turnkey move-in comfort.
+            </p>
         </div>
-        @endforeach
-    </div>
+
+        @php
+            $stageTimelines = ['Stage 1: Pre-Move Planning', 'Stage 2: White-Glove Prep', 'Stage 3: Transit Execution', 'Stage 4: Turnkey Staging'];
+        @endphp
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+            @foreach ($service['process'] as $sIdx => $step)
+            <div class="p-6 sm:p-7 rounded-3xl bg-[#F8FAF8] border border-[#DEE7DF] hover:border-[#103B30] hover:bg-white shadow-[0_4px_16px_rgba(7,59,46,0.03)] hover:shadow-[0_15px_35px_-10px_rgba(7,59,46,0.1)] transition-all duration-300 flex flex-col justify-between group">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-black text-[#D8F36B] font-heading bg-[#072F25] px-3 py-1.5 rounded-xl inline-flex items-center gap-1.5 shadow-2xs">
+                            <i class="fa-solid fa-check text-[9px] text-[#B7E532]"></i>
+                            <span>Phase {{ $step['step'] }}</span>
+                        </span>
+                        <span class="text-[10px] font-black text-[#6C7E72] uppercase tracking-wider">
+                            {{ $stageTimelines[$sIdx % 4] }}
+                        </span>
+                    </div>
+                    <h3 class="text-lg font-black font-heading text-[#073B2E] leading-snug group-hover:text-[#103B30] transition-colors">
+                        {{ $step['title'] }}
+                    </h3>
+                    <p class="text-xs sm:text-[13px] text-[#3D4F44] leading-relaxed font-normal">
+                        {{ $step['desc'] }}
+                    </p>
+                </div>
+
+                <div class="pt-4 mt-4 border-t border-[#E3EBE3] flex items-center justify-between text-[11px] font-extrabold text-[#103B30]">
+                    <span>Movexa Milestone {{ $sIdx + 1 }}</span>
+                    <i class="fa-solid fa-arrow-right text-[10px] text-[#103B30] group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </div>
+            @endforeach
+        </div>
     </div>
 </section>
 
-{{-- Service-Specific FAQs --}}
+{{-- Major Dubai Communities Ribbon (High-Trust Local Relevance) --}}
+<section class="py-12 sm:py-14 bg-[#07241C] text-white border-b border-[#143B2F] w-full relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-white/10">
+            <div>
+                <span class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/10 text-[#D8F36B] text-[10.5px] font-black uppercase tracking-wider border border-white/15">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>All 7 UAE Emirates &amp; Premier Dubai Hubs</span>
+                </span>
+                <h3 class="text-xl sm:text-2xl font-black font-heading text-white tracking-tight mt-2">
+                    Serving Dubai's Major Residential Neighborhoods Daily
+                </h3>
+            </div>
+            <div class="text-xs text-white/80 font-medium max-w-md">
+                Pre-cleared developer documentation, direct gate access passes, and low-clearance basement fleet approvals ready across all major master developments.
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 sm:gap-3 pt-6">
+            @php
+                $communities = [
+                    ['name' => 'Downtown Dubai', 'dev' => 'Emaar Properties'],
+                    ['name' => 'Dubai Marina & JBR', 'dev' => 'Nakheel / Emaar'],
+                    ['name' => 'Palm Jumeirah', 'dev' => 'Nakheel Luxury Villas'],
+                    ['name' => 'Dubai Hills Estate', 'dev' => 'Emaar Master Community'],
+                    ['name' => 'Arabian Ranches I-III', 'dev' => 'Gated Villa Estates'],
+                    ['name' => 'Emirates Hills', 'dev' => 'Private Luxury Mansions'],
+                    ['name' => 'Jumeirah Islands & Park', 'dev' => 'Nakheel Communities'],
+                    ['name' => 'Business Bay Towers', 'dev' => 'High-Rise Logistics'],
+                    ['name' => 'Meydan & MBR City', 'dev' => 'District One Residences'],
+                    ['name' => 'DAMAC Hills & Akoya', 'dev' => 'DAMAC Properties'],
+                ];
+            @endphp
+            @foreach ($communities as $comm)
+            <div class="p-3 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+                <div class="text-xs font-black text-white truncate">{{ $comm['name'] }}</div>
+                <div class="text-[10px] text-[#A6C5B8] font-medium truncate mt-0.5">{{ $comm['dev'] }}</div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+{{-- Service-Specific FAQs (Elevated Luxury Accordion) --}}
 @if (!empty($service['faqs']))
-<section class="py-10 sm:py-12 lg:py-14 bg-white border-b border-[#E2E8E2] w-full">
+<section class="py-14 sm:py-18 lg:py-22 bg-[#F8FAF8] border-b border-[#E0EBE0] w-full">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10 space-y-2">
-            <span class="forest-badge">Questions Answered</span>
-            <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#103B30] tracking-tight">
+        <div class="text-center mb-10 sm:mb-12 space-y-3">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-[#073B2E] border border-[#CFE0D1] text-xs font-black uppercase tracking-wider shadow-2xs">
+                <i class="fa-solid fa-circle-question text-[#073B2E]"></i>
+                <span>Authoritative Guidance</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#073B2E] tracking-tight">
                 {{ $service['title'] }} FAQs
             </h2>
+            <p class="text-xs sm:text-sm text-[#46574D] font-medium max-w-xl mx-auto">
+                Clear answers regarding Dubai Move-In/NOC permits, fragile item crating, carpentry, and moving insurance.
+            </p>
         </div>
 
-        <div class="space-y-3" x-data="{ activeFaq: null }">
+        <div class="space-y-3.5" x-data="{ activeFaq: 0 }">
             @foreach ($service['faqs'] as $idx => $faq)
-            <div class="rounded-2xl border border-[#E2E8E2] overflow-hidden bg-white shadow-xs">
-                <button type="button" @click="activeFaq = (activeFaq === {{ $idx }} ? null : {{ $idx }})" class="w-full px-6 py-4 text-left flex items-center justify-between text-sm sm:text-base font-extrabold text-[#103B30] hover:text-[#073B2E] transition-colors focus:outline-none">
-                    <span>{{ $faq['q'] }}</span>
-                    <i class="fa-solid fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': activeFaq === {{ $idx }} }"></i>
+            <div class="rounded-2xl border transition-all duration-200 overflow-hidden shadow-2xs"
+                 :class="activeFaq === {{ $idx }} ? 'bg-white border-[#103B30] shadow-sm ring-1 ring-[#103B30]/10' : 'bg-white border-[#DEE7DF] hover:border-[#CFDEC7]'">
+                <button type="button" 
+                        @click="activeFaq = (activeFaq === {{ $idx }} ? null : {{ $idx }})" 
+                        class="w-full px-5 sm:px-6 py-4.5 text-left flex items-center justify-between gap-4 text-sm sm:text-base font-black text-[#073B2E] hover:text-[#103B30] transition-colors focus:outline-none">
+                    <span class="flex items-center gap-3">
+                        <span class="w-6 h-6 rounded-lg bg-[#EBF5E7] text-[#103B30] text-[11px] font-extrabold flex items-center justify-center shrink-0">
+                            Q{{ $idx + 1 }}
+                        </span>
+                        <span>{{ $faq['q'] }}</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-down text-xs text-[#103B30] transition-transform duration-200 shrink-0" 
+                       :class="{ 'rotate-180 text-[#B7E532]': activeFaq === {{ $idx }} }"></i>
                 </button>
-                <div x-show="activeFaq === {{ $idx }}" class="px-6 pb-4 pt-1 text-xs sm:text-sm text-[#425048] leading-relaxed border-t border-gray-100" style="display: none;">
-                    {{ $faq['a'] }}
+                <div x-show="activeFaq === {{ $idx }}" 
+                     x-cloak
+                     class="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-[13.5px] text-[#344439] leading-relaxed border-t border-[#EEF4EF] font-normal">
+                    <p class="pl-3.5 border-l-2 border-[#103B30]/30">{{ $faq['a'] }}</p>
                 </div>
             </div>
             @endforeach
+        </div>
+
+        {{-- Direct Assistance Help Box --}}
+        <div class="mt-8 p-4.5 rounded-2xl bg-white border border-[#DEE7DF] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xs">
+            <div class="flex items-center gap-3">
+                <span class="w-8 h-8 rounded-xl bg-[#EBF5E7] text-[#103B30] flex items-center justify-center text-xs shrink-0">
+                    <i class="fa-solid fa-comment-dots"></i>
+                </span>
+                <span class="text-xs font-bold text-[#102A20]">Have a question not listed here? Our moving coordinators are available 24/7.</span>
+            </div>
+            <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}?text={{ urlencode('Hello MOVEXA, I have a question about ' . $service['title'] . ' in Dubai.') }}" 
+               target="_blank" 
+               rel="noopener" 
+               class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#25D366] text-white text-xs font-extrabold hover:bg-[#20ba59] transition-all shadow-xs shrink-0">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>Ask on WhatsApp</span>
+            </a>
         </div>
     </div>
 </section>
 @endif
 
 {{-- Related Services Navigation --}}
-<section class="py-10 sm:py-12 bg-white border-b border-[#E2E8E2] w-full">
+<section class="py-12 sm:py-14 bg-white border-b border-[#E0ECE0] w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between mb-8">
-        <h3 class="text-xl font-bold font-heading text-[#202824]">Other Moving Services You Might Need</h3>
-        <a href="{{ route('services.index') }}" class="text-xs font-bold text-[#103B30] hover:underline">All Services →</a>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        @foreach (array_slice($all_services, 0, 4) as $other)
-            @if ($other['slug'] !== $slug)
-            <a href="{{ route('services.show', $other['slug']) }}" class="p-4 rounded-2xl bg-white border border-[#E2E8E2] hover:border-[#103B30] transition-colors flex items-center gap-3 group">
-                <span class="w-9 h-9 rounded-xl bg-[#EBF2EB] group-hover:bg-[#D8F36B] flex items-center justify-center text-[#103B30] text-sm transition-colors flex-shrink-0">
-                    <i class="fa-solid {{ $other['icon'] }}"></i>
-                </span>
-                <span class="text-xs font-bold text-[#202824] group-hover:text-[#103B30] transition-colors truncate">
-                    {{ $other['title'] }}
-                </span>
+        <div class="flex items-center justify-between mb-8">
+            <div>
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-[#103B30] block">Specialized Logistics Directory</span>
+                <h3 class="text-xl sm:text-2xl font-black font-heading text-[#073B2E]">Other Moving Services You Might Need</h3>
+            </div>
+            <a href="{{ route('services.index') }}" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F0F6F1] text-xs font-extrabold text-[#103B30] hover:bg-[#103B30] hover:text-[#D8F36B] transition-all shadow-2xs">
+                <span>All Services</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
             </a>
-            @endif
-        @endforeach
-    </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            @foreach (array_slice($all_services, 0, 4) as $other)
+                @if ($other['slug'] !== $slug)
+                <a href="{{ route('services.show', $other['slug']) }}" class="p-4.5 rounded-2xl bg-[#F8FAF8] border border-[#DEE7DF] hover:border-[#103B30] hover:bg-white transition-all shadow-2xs flex items-center gap-3.5 group">
+                    <span class="w-10 h-10 rounded-xl bg-[#EBF5E7] group-hover:bg-[#103B30] text-[#103B30] group-hover:text-[#D8F36B] flex items-center justify-center text-sm transition-colors flex-shrink-0 shadow-2xs">
+                        <i class="fa-solid {{ $other['icon'] }}"></i>
+                    </span>
+                    <div class="min-w-0 flex-1">
+                        <div class="text-xs sm:text-[13px] font-extrabold text-[#102A20] group-hover:text-[#073B2E] transition-colors truncate">
+                            {{ $other['title'] }}
+                        </div>
+                        <div class="text-[10.5px] text-[#6C7E72] truncate mt-0.5">Explore Specialized Protocol</div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-[9px] text-[#103B30] opacity-40 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all"></i>
+                </a>
+                @endif
+            @endforeach
+        </div>
     </div>
 </section>
 

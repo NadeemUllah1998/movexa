@@ -36,10 +36,10 @@
             </p>
 
             {{-- CTA Buttons & Direct Hotline --}}
-            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
+            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto">
                 <button type="button" 
                         onclick="openQuoteModal()" 
-                        class="inline-flex items-center justify-center gap-2.5 font-extrabold px-7 py-3.5 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-[#cbf54a] text-xs sm:text-sm shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none cursor-pointer">
+                        class="inline-flex items-center justify-center gap-2.5 font-extrabold px-6 py-3.5 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-[#cbf54a] text-xs sm:text-sm shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none cursor-pointer w-full sm:w-auto">
                     <i class="fa-solid fa-calculator text-xs"></i>
                     <span>Get a Free Moving Quote</span>
                     <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -48,7 +48,7 @@
                 <a href="https://wa.me/{{ config('movexa.brand.whatsapp_number') }}?text={{ urlencode('Hello MOVEXA, I would like to inquire about your moving services.') }}" 
                    target="_blank" 
                    rel="noopener" 
-                   class="inline-flex items-center justify-center gap-2.5 font-semibold px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-md text-xs sm:text-sm transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none shadow-md">
+                   class="inline-flex items-center justify-center gap-2.5 font-semibold px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/25 backdrop-blur-md text-xs sm:text-sm transition-all duration-200 transform hover:-translate-y-0.5 focus:outline-none shadow-md w-full sm:w-auto">
                     <i class="fa-brands fa-whatsapp text-base text-[#25D366] group-hover:text-white transition-colors"></i>
                     <span>Speak with an Advisor</span>
                 </a>
@@ -57,7 +57,7 @@
         </div>
 
         {{-- 4 Pillars Capability Metric Strip (Anchored inside Hero) --}}
-        <div class="mt-8 sm:mt-10 pt-6 border-t border-white/15 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+        <div class="mt-8 sm:mt-10 pt-6 border-t border-white/15 grid grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
             <div class="bg-white/[0.04] backdrop-blur-md rounded-2xl p-4 sm:p-5 border border-white/10 space-y-1.5">
                 <div class="w-8 h-8 rounded-xl bg-[#B7E532]/20 text-[#B7E532] flex items-center justify-center text-sm font-bold mb-2">
                     <i class="fa-solid fa-layer-group"></i>

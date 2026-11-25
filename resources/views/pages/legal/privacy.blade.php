@@ -8,12 +8,12 @@
 {{-- Breadcrumb --}}
 <x-breadcrumb :items="[['label' => 'Privacy Policy', 'url' => '']]" />
 
-<section class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-[#E2E8E2] shadow-sm space-y-6 text-xs sm:text-sm text-[#747C76] leading-relaxed">
+<section class="py-8 sm:py-12 lg:py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-3xl p-5 sm:p-8 md:p-12 border border-[#E2E8E2] shadow-sm space-y-6 text-xs sm:text-sm text-[#747C76] leading-relaxed">
         
         <div>
             <span class="forest-badge mb-2">Legal Compliance</span>
-            <h1 class="text-3xl font-extrabold font-heading text-[#202824] tracking-tight">
+            <h1 class="text-2xl sm:text-3xl font-extrabold font-heading text-[#202824] tracking-tight">
                 Privacy Policy
             </h1>
             <p class="text-xs text-[#747C76] mt-1">Last Updated: October 2026 • MOVEXA Relocations (Dubai, UAE)</p>
