@@ -7,62 +7,9 @@
     <div class="max-w-7xl 2xl:max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {{-- =========================================================================
-             1. TRUST ASSURANCE STRIP (TOP OF FOOTER)
+             MAIN FOOTER CONTENT GRID (12-COL BALANCED & MOBILE-FRIENDLY)
              ========================================================================= --}}
-        <div class="pb-10 sm:pb-12 border-b border-white/10">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-                
-                {{-- Pillar 1 --}}
-                <div class="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm">
-                    <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#D8F36B]/15 text-[#D8F36B] flex items-center justify-center text-sm shrink-0 shadow-2xs">
-                        <i class="fa-solid fa-user-shield"></i>
-                    </span>
-                    <div>
-                        <div class="text-xs sm:text-sm font-black text-white font-heading">100% In-House Crew</div>
-                        <div class="text-[10.5px] sm:text-[11px] text-[#A6C5B8] leading-tight">Vetted, salaried specialists</div>
-                    </div>
-                </div>
-
-                {{-- Pillar 2 --}}
-                <div class="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm">
-                    <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#D8F36B]/15 text-[#D8F36B] flex items-center justify-center text-sm shrink-0 shadow-2xs">
-                        <i class="fa-solid fa-building-circle-check"></i>
-                    </span>
-                    <div>
-                        <div class="text-xs sm:text-sm font-black text-white font-heading">Dubai NOC Permits</div>
-                        <div class="text-[10.5px] sm:text-[11px] text-[#A6C5B8] leading-tight">Emaar, Nakheel &amp; DAMAC</div>
-                    </div>
-                </div>
-
-                {{-- Pillar 3 --}}
-                <div class="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm">
-                    <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#D8F36B]/15 text-[#D8F36B] flex items-center justify-center text-sm shrink-0 shadow-2xs">
-                        <i class="fa-solid fa-truck-ramp-box"></i>
-                    </span>
-                    <div>
-                        <div class="text-xs sm:text-sm font-black text-white font-heading">Enclosed GPS Fleet</div>
-                        <div class="text-[10.5px] sm:text-[11px] text-[#A6C5B8] leading-tight">Carpet-lined box trucks</div>
-                    </div>
-                </div>
-
-                {{-- Pillar 4 --}}
-                <div class="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-sm">
-                    <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#D8F36B]/15 text-[#D8F36B] flex items-center justify-center text-sm shrink-0 shadow-2xs">
-                        <i class="fa-solid fa-handshake-simple"></i>
-                    </span>
-                    <div>
-                        <div class="text-xs sm:text-sm font-black text-white font-heading">Fixed-Price Quote</div>
-                        <div class="text-[10.5px] sm:text-[11px] text-[#A6C5B8] leading-tight">Zero surprise moving fees</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        {{-- =========================================================================
-             2. MAIN FOOTER CONTENT GRID (12-COL BALANCED & MOBILE-FRIENDLY)
-             ========================================================================= --}}
-        <div class="py-10 sm:py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 border-b border-white/10">
+        <div class="pb-10 sm:pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 border-b border-white/10">
 
             {{-- Column 1: Brand Info & Identity (4 Cols on Desktop) --}}
             <div class="md:col-span-2 lg:col-span-4 space-y-4">
