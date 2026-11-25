@@ -1160,7 +1160,8 @@ $localDubaiSlides = [
         <div class="absolute -top-28 -right-28 w-80 h-80 rounded-full bg-[#B7E532]/10 filter blur-3xl pointer-events-none"></div>
         <div class="absolute -bottom-28 -left-28 w-80 h-80 rounded-full bg-[#073B2E]/5 filter blur-3xl pointer-events-none"></div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-center relative z-10">
+        {{-- Desktop Two-Column Layout (Preserved Exactly) --}}
+        <div class="hidden lg:grid lg:grid-cols-12 gap-6 lg:gap-8 xl:gap-10 items-center relative z-10">
             
             {{-- Left Side: Compact Professional Content --}}
             <div class="lg:col-span-6 space-y-4 sm:space-y-4.5">
@@ -1320,6 +1321,211 @@ $localDubaiSlides = [
                         </div>
                     </div>
                 </div>
+            </div>
+
+        </div>
+
+        {{-- Mobile Layout (< lg): Modern, Clean & High-Conversion Mobile Experience --}}
+        <div class="block lg:hidden space-y-5 relative z-10"
+             x-data="{
+                 expanded: false,
+                 localSlide: 0,
+                 slides: {{ Js::from($localDubaiSlides) }},
+                 totalSlides: {{ count($localDubaiSlides) }},
+                 timer: null,
+                 startX: 0,
+                 startY: 0,
+                 currentX: 0,
+                 currentY: 0,
+                 isSwiping: false,
+                 next() { this.localSlide = (this.localSlide + 1) % this.totalSlides; },
+                 prev() { this.localSlide = (this.localSlide - 1 + this.totalSlides) % this.totalSlides; },
+                 goTo(idx) { this.localSlide = idx; this.resetTimer(); },
+                 startTimer() { this.timer = setInterval(() => this.next(), 4000); },
+                 stopTimer() { if (this.timer) clearInterval(this.timer); },
+                 resetTimer() { this.stopTimer(); this.startTimer(); },
+                 touchStart(e) {
+                     this.startX = e.touches[0].clientX;
+                     this.startY = e.touches[0].clientY;
+                     this.currentX = this.startX;
+                     this.currentY = this.startY;
+                     this.isSwiping = true;
+                     this.stopTimer();
+                 },
+                 touchMove(e) {
+                     if (!this.isSwiping) return;
+                     this.currentX = e.touches[0].clientX;
+                     this.currentY = e.touches[0].clientY;
+                 },
+                 touchEnd() {
+                     if (!this.isSwiping) return;
+                     const diffX = this.startX - this.currentX;
+                     const diffY = this.startY - this.currentY;
+                     const threshold = 35;
+                     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > threshold) {
+                         if (diffX > 0) {
+                             this.next();
+                         } else {
+                             this.prev();
+                         }
+                     }
+                     this.isSwiping = false;
+                     this.startTimer();
+                 }
+             }"
+             x-init="startTimer()">
+            
+            {{-- 1. Heading & Coverage Badge --}}
+            <div class="space-y-3 text-left">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EBF5E7] border border-[#CFE8C7] text-[#073B2E] text-[11px] font-extrabold uppercase tracking-wider shadow-2xs">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#107050] shadow-[0_0_5px_#107050]"></span>
+                    <i class="fa-solid fa-location-dot text-[#073B2E] text-[10px]"></i>
+                    <span>All 7 UAE Emirates Coverage</span>
+                </div>
+
+                <h2 class="text-2xl sm:text-3xl font-black font-heading text-[#073B2E] tracking-tight leading-tight">
+                    Moving Across Dubai &amp; UAE? <br>
+                    <span class="text-shine-forest">We've Got You Covered.</span>
+                </h2>
+            </div>
+
+            {{-- 2. Paragraph Content with Read More / Read Less Interaction --}}
+            <div class="pt-0.5">
+                <div class="relative">
+                    <p class="text-[14px] sm:text-[15px] text-black font-normal leading-[1.7] transition-all duration-300"
+                       :class="expanded ? '' : 'line-clamp-4'">
+                        Whether relocating into a high-rise residence in <span class="text-black font-bold">Dubai Marina and Downtown</span> or shifting an expansive family villa across <span class="text-black font-bold">Palm Jumeirah, Arabian Ranches, Abu Dhabi, Sharjah, or the Northern Emirates</span>, MOVEXA orchestrates your entire move with uncompromising care. Our certified moving crews manage all operational details from start to finish—including obtaining official <span class="text-black font-bold">Move-In and Move-Out NOC permits</span> across master developers (<span class="text-black font-semibold">Emaar, Nakheel, and DAMAC</span>), reserving building service elevator slots, and dispatching specialized low-clearance <span class="text-black font-bold">GPS-tracked box trucks</span> designed for underground basement access. With experienced move supervisors and master carpenters providing white-glove furniture disassembly, multi-layer protective packaging, and meticulous room-by-room setup, your furnishings arrive safely on schedule with zero stress.
+                    </p>
+                    {{-- Soft fade-out bottom gradient when collapsed --}}
+                    <div x-show="!expanded" class="absolute bottom-0 inset-x-0 h-6 bg-gradient-to-t from-[#FAFBF9] to-transparent pointer-events-none"></div>
+                </div>
+                <button type="button" 
+                        @click="expanded = !expanded" 
+                        class="inline-flex items-center gap-1.5 mt-2 text-xs font-bold text-[#073B2E] hover:text-[#107050] transition-colors focus:outline-none py-1">
+                    <span x-text="expanded ? 'Read Less' : 'Read More'">Read More</span>
+                    <i class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300" :class="expanded ? 'rotate-180' : ''"></i>
+                </button>
+            </div>
+
+            {{-- 3. Moving Service Image Slider & Overlapping Contact Card --}}
+            <div class="relative pt-1 select-none">
+                {{-- 16:9 Image Frame with Rounded Corners and Indicators --}}
+                <div class="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg border border-[#DFE7E1] bg-[#E9EFEA]"
+                     @touchstart.passive="touchStart($event)"
+                     @touchmove.passive="touchMove($event)"
+                     @touchend="touchEnd()">
+                    
+                    @foreach ($localDubaiSlides as $idx => $s)
+                    <div class="absolute inset-0 transition-opacity duration-700 ease-in-out"
+                         :class="localSlide === {{ $idx }} ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'"
+                         {{ $idx !== 0 ? 'x-cloak' : '' }}>
+                        <img src="{{ $s['image'] }}" 
+                             alt="{{ $s['title'] }}" 
+                             loading="lazy"
+                             decoding="async"
+                             class="w-full h-full object-cover"
+                             style="object-position: {{ $s['position'] ?? 'center' }};">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+                    </div>
+                    @endforeach
+
+                    {{-- Top Left Indicator Badge: All 7 UAE States --}}
+                    <div class="absolute top-3 left-3 z-30 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] sm:text-[10.5px] font-bold border border-white/20">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[#B7E532] animate-pulse"></span>
+                        <span>7 UAE States Active</span>
+                    </div>
+
+                    {{-- Floating Progress Indicator Pills (Top Right) --}}
+                    <div class="absolute top-3 right-3 z-30 flex items-center gap-1 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                        <template x-for="i in totalSlides" :key="i">
+                            <button type="button" 
+                                    @click.stop="goTo(i - 1)" 
+                                    class="h-1 rounded-full transition-all duration-300 focus:outline-none" 
+                                    :class="localSlide === (i - 1) ? 'w-3.5 bg-[#B7E532]' : 'w-1 bg-white/50 hover:bg-white'">
+                            </button>
+                        </template>
+                    </div>
+
+                    {{-- Prev / Next Touch Arrows --}}
+                    <button type="button" 
+                            @click.stop="prev(); resetTimer();" 
+                            class="absolute left-2 top-1/2 -translate-y-1/2 z-30 w-7 h-7 rounded-full bg-black/45 hover:bg-[#B7E532] text-white hover:text-[#073B2E] backdrop-blur-md flex items-center justify-center text-xs transition-all shadow-md focus:outline-none"
+                            aria-label="Previous Slide">
+                        <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                    </button>
+
+                    <button type="button" 
+                            @click.stop="next(); resetTimer();" 
+                            class="absolute right-2 top-1/2 -translate-y-1/2 z-30 w-7 h-7 rounded-full bg-black/45 hover:bg-[#B7E532] text-white hover:text-[#073B2E] backdrop-blur-md flex items-center justify-center text-xs transition-all shadow-md focus:outline-none"
+                            aria-label="Next Slide">
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                {{-- 4. Floating Contact Card (Overlapping Bottom of Image) --}}
+                <div class="relative -mt-10 sm:-mt-12 z-30 mx-auto w-[92%] max-w-[340px] sm:max-w-[360px]">
+                    <div class="relative overflow-hidden bg-[#073B2E] text-white rounded-2xl p-3.5 text-center border-2 border-[#B7E532]/40 shadow-[0_15px_35px_rgba(7,59,46,0.35),0_0_20px_rgba(183,229,50,0.15)]">
+                        {{-- Subtle Emerald & Lime Glow Reflections --}}
+                        <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-36 h-16 bg-[#B7E532]/15 rounded-full blur-xl pointer-events-none"></div>
+                        <div class="absolute -bottom-6 right-3 w-28 h-12 bg-[#10b981]/20 rounded-full blur-lg pointer-events-none"></div>
+
+                        {{-- Card Title (Dynamic Slide Title) --}}
+                        <h3 class="relative z-10 text-base font-black font-heading text-white tracking-tight leading-tight mb-0.5"
+                            x-text="slides[localSlide].title">
+                            {{ $localDubaiSlides[0]['title'] }}
+                        </h3>
+                        
+                        {{-- Subtitle badge / desc --}}
+                        <p class="relative z-10 text-[10.5px] text-[#B7E532] font-semibold mb-2 tracking-wide"
+                           x-text="slides[localSlide].subtitle">
+                            {{ $localDubaiSlides[0]['subtitle'] }}
+                        </p>
+
+                        {{-- Direct Call Pill Button (Prominent Clickable Call Button) --}}
+                        <a href="tel:0507060165" 
+                           class="relative z-10 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-white hover:text-[#073B2E] font-black text-xs shadow-sm transition-all duration-200 w-full">
+                            <i class="fa-solid fa-phone text-[11px]"></i>
+                            <span>050 706 0165</span>
+                        </a>
+                        
+                        {{-- Trust Accent --}}
+                        <div class="relative z-10 mt-1.5 flex items-center justify-center gap-1.5 text-[9.5px] text-white/90 font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-[#B7E532] shadow-[0_0_5px_#B7E532]"></span>
+                            <span x-text="slides[localSlide].trust">{{ $localDubaiSlides[0]['trust'] }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- 5. UAE Coverage Information Badges --}}
+            <div class="pt-1 text-left">
+                <div class="flex items-center gap-1.5 mb-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-[#073B2E]"></span>
+                    <p class="text-[11px] font-extrabold uppercase tracking-wider text-[#073B2E]">Serving All 7 UAE States &amp; Key Communities:</p>
+                </div>
+                <div class="flex flex-wrap gap-1.5 text-xs">
+                    @foreach (['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Ras Al Khaimah', 'Fujairah', 'Umm Al Quwain', 'Dubai Marina', 'Downtown Dubai', 'Palm Jumeirah', 'Arabian Ranches', 'Dubai Hills'] as $area)
+                    <span class="px-2.5 py-1 rounded-full bg-white hover:bg-[#073B2E] hover:text-[#B7E532] transition-all duration-200 text-[#073B2E] font-bold text-[10.5px] border border-[#CFE2D4] shadow-[0_1px_4px_rgba(7,59,46,0.04)] cursor-default">
+                        {{ $area }}
+                    </span>
+                    @endforeach
+                </div>
+            </div>
+
+            {{-- 6. Action Buttons (Stacked Vertically, Full Width, Touch-Friendly) --}}
+            <div class="pt-2 flex flex-col gap-2.5 w-full">
+                <a href="{{ route('local-moving') }}" 
+                   class="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-[#B7E532] text-[#073B2E] hover:bg-[#073B2E] hover:text-[#B7E532] font-bold text-xs sm:text-sm shadow-sm hover:shadow-md transition-all duration-200">
+                    <span>Explore UAE Local Moving</span>
+                    <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                </a>
+
+                <button type="button" 
+                        onclick="openQuoteModal('', 'UAE Relocations')" 
+                        class="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full border-2 border-[#073B2E] bg-white hover:bg-[#073B2E] hover:text-white text-[#073B2E] font-bold text-xs sm:text-sm shadow-2xs transition-all duration-200">
+                    <i class="fa-solid fa-calculator text-xs"></i>
+                    <span>Get Free Moving Quote</span>
+                </button>
             </div>
 
         </div>
